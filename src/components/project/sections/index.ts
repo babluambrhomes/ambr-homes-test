@@ -1,0 +1,11 @@
+export { ProjectHero } from "./ProjectHero";
+export { ProjectGallery } from "./ProjectGallery";
+export { ProjectFacts } from "./ProjectFacts";
+export { ProjectConfigs } from "./ProjectConfigs";
+export { ProjectWhy } from "./ProjectWhy";
+export { ProjectBenefits } from "./ProjectBenefits";
+export { ProjectTech } from "./ProjectTech";
+export { ProjectAudience } from "./ProjectAudience";
+export { ProjectWorkflow } from "./ProjectWorkflow";
+export { ProjectFAQ } from "./ProjectFAQ";
+export { ProjectCTA } from "./ProjectCTA";
