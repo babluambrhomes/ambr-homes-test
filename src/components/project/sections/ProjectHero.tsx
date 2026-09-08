@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Reveal } from "@/components/shared/Reveal";
 import { Button } from "@/components/shared/Button";
 import { Media, Pill } from "@/components/shared/ui";
-import type { Project } from "@/lib/projects";
+import type { Project } from "@/lib/data";
 
 export function ProjectHero({ project }: { project: Project }) {
   const heroRef = useRef<HTMLElement>(null);

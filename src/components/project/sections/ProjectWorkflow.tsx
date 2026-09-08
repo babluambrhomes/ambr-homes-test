@@ -6,7 +6,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/shared/Reveal";
 import { Heading } from "@/components/shared/ui";
-import type { Project } from "@/lib/projects";
+import type { Project } from "@/lib/data";
 
 export function ProjectWorkflow({ project }: { project: Project }) {
   const swiper = useRef<any>(null);

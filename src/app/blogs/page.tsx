@@ -8,8 +8,7 @@ import { ArrowUpRight, CalendarDays, Clock, Tag } from "lucide-react";
 import { Reveal } from "@/components/shared/Reveal";
 import { Heading, Media } from "@/components/shared/ui";
 import { RedCta } from "@/components/shared/RedCta";
-import { BLOG_CATEGORIES, BLOG_POSTS } from "@/lib/blog";
-import { IMG } from "@/lib/images";
+import { BLOG_CATEGORIES, BLOG_POSTS } from "@/lib/data";
 
 const ALL = "All";
 const PER_PAGE = 3;
@@ -42,7 +41,7 @@ export default function BlogsPage() {
       {/* Hero — parallax + overlay */}
       <section ref={heroRef} className="relative overflow-hidden bg-ink pb-36 pt-[clamp(90px,15vw,180px)] text-white">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <Media img={IMG.dusk} priority sizes="100vw" />
+          <Media img={{ src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }} priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/40 to-ink" />
         </motion.div>
 

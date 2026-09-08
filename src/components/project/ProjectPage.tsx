@@ -1,4 +1,4 @@
-import type { Project } from "@/lib/projects";
+import type { Project } from "@/lib/data";
 import {
   ProjectHero,
   ProjectGallery,

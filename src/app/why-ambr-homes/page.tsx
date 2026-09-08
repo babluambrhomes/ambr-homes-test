@@ -35,7 +35,6 @@ import { RedCta } from "@/components/shared/RedCta";
 import { OverlayCard } from "@/components/shared/OverlayCard";
 import { FromAmbrSection } from "@/components/shared/FromAmbrSection";
 import { ParallaxShowcase } from "@/components/shared/ParallaxShowcase";
-import { IMG } from "@/lib/images";
 
 const STATS = [
   { value: "15+", label: "Years building", icon: Calendar },
@@ -112,25 +111,25 @@ const TABLE_ROWS = [
 
 const ADVANTAGES = [
   {
-    img: IMG.dusk,
+    img: { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" },
     icon: MapPin,
     title: "One corridor, five addresses",
     body: "Three projects in Bishrakh, two in Vaidpura — a service call is a drive, not a dispatch.",
   },
   {
-    img: IMG.construction,
+    img: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80", alt: "Under construction at an Ambr Homes project" },
     icon: Users,
     title: "The same crew, fifteen years",
     body: "Site teams and finishing crews have moved with us from Ambrosia to Vaidpura. Standards travel with people.",
   },
   {
-    img: IMG.interior,
+    img: { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" },
     icon: KeyRound,
     title: "Finished stock you can walk through",
     body: "Amore is complete. Stand in the actual flat, on the actual balcony, before committing to anything.",
   },
   {
-    img: IMG.community,
+    img: { src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes residential community in Greater Noida West" },
     icon: Award,
     title: "Twelve years of evidence",
     body: "Families in our earliest project have lived through a decade of monsoons. That record is a short drive away.",
@@ -138,9 +137,9 @@ const ADVANTAGES = [
 ];
 
 const SHOWCASE_CARDS = [
-  { img: IMG.exterior, label: "Ambr Residency" },
-  { img: IMG.courtyard, label: "The Courtyard" },
-  { img: IMG.night, label: "After Dusk" },
+  { img: { src: "/images/hero-3.jpeg", alt: "Ambr Homes building exterior" }, label: "Ambr Residency" },
+  { img: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80", alt: "Courtyard garden at an Ambr Homes community" }, label: "The Courtyard" },
+  { img: { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes building at dusk" }, label: "After Dusk" },
 ];
 
 const PRAISE = [
@@ -165,41 +164,41 @@ const PRAISE = [
 ];
 
 const FROM_ARMB_ITEMS = [
-  { img: IMG.plan, tag: "Before you commit", title: "Read the RERA number, not the brochure", body: "Every Ambr project carries an UP RERA registration number. Check it yourself at up-rera.in before you put anything down." },
-  { img: IMG.balcony, tag: "The floor plate", title: "A balcony, or a ledge?", body: "If a balcony cannot take two chairs and a table, it is a ledge. Ours are measured for the chairs before the layout is signed." },
-  { img: IMG.interior, tag: "Orientation", title: "Cross ventilation & morning light", body: "We test how light and air move through every layout before it is drawn, so the rooms you live in stay cooler for longer." },
-  { img: IMG.construction, tag: "On a site visit", title: "What to inspect, not just admire", body: "Look at joints, drips and finishing. Ask for a delivered flat years old — not renderings — and read the updates on the one under construction." },
-  { img: IMG.dusk, tag: "The agreement", title: "The full cost, in writing", body: "Payment schedule, handover date and delay compensation all sit in the agreement for sale — read it in full before anything is signed." },
+  { img: { src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80", alt: "Home layout plan" }, tag: "Before you commit", title: "Read the RERA number, not the brochure", body: "Every Ambr project carries an UP RERA registration number. Check it yourself at up-rera.in before you put anything down." },
+  { img: { src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80", alt: "Balcony view at an Ambr Homes flat" }, tag: "The floor plate", title: "A balcony, or a ledge?", body: "If a balcony cannot take two chairs and a table, it is a ledge. Ours are measured for the chairs before the layout is signed." },
+  { img: { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" }, tag: "Orientation", title: "Cross ventilation & morning light", body: "We test how light and air move through every layout before it is drawn, so the rooms you live in stay cooler for longer." },
+  { img: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80", alt: "Under construction at an Ambr Homes project" }, tag: "On a site visit", title: "What to inspect, not just admire", body: "Look at joints, drips and finishing. Ask for a delivered flat years old — not renderings — and read the updates on the one under construction." },
+  { img: { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }, tag: "The agreement", title: "The full cost, in writing", body: "Payment schedule, handover date and delay compensation all sit in the agreement for sale — read it in full before anything is signed." },
 ];
 
 const LIFE_STAGES = [
   {
     year: "01",
-    img: IMG.interior,
+    img: { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" },
     title: "The handover",
     body: "You move in on the date written into the agreement. Snag list closed, maintenance handover done, keys given by the people who built the flat.",
   },
   {
     year: "03",
-    img: IMG.exterior,
+    img: { src: "/images/hero-3.jpeg", alt: "Ambr Homes building exterior" },
     title: "First monsoons",
     body: "Waterproofing, balconies and drainage falls face three full rainy seasons — the parts nobody photographs, tested by the weather itself.",
   },
   {
     year: "06",
-    img: IMG.construction,
+    img: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80", alt: "Under construction at an Ambr Homes project" },
     title: "The machines",
     body: "Lifts, motors and pumps complete their heaviest daily cycles. When one needs a visit, the crew is a half-hour drive, not a logged ticket.",
   },
   {
     year: "10",
-    img: IMG.lounge,
+    img: { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80", alt: "Lounge interior at an Ambr Homes flat" },
     title: "The finish",
     body: "Flooring, fittings and railings — chosen to look right a decade in, not just on handover day. The finish that photographs best rarely lasts.",
   },
   {
     year: "12+",
-    img: IMG.community,
+    img: { src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes residential community in Greater Noida West" },
     title: "Still answering",
     body: "Residents from our earliest estates still reach the people who built for them. Maintenance, association support — all part of the job.",
   },
@@ -254,7 +253,7 @@ export default function WhyAmbrHomesPage() {
       {/* Hero — parallax + overlay */}
       <section ref={heroRef} className="relative overflow-hidden bg-ink pb-40 pt-[clamp(90px,15vw,180px)] text-white">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <Media img={IMG.night} priority sizes="100vw" />
+          <Media img={{ src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes building at dusk" }} priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/40 to-ink" />
         </motion.div>
 
@@ -470,7 +469,7 @@ export default function WhyAmbrHomesPage() {
 
       {/* Parallax showcase */}
       <ParallaxShowcase
-        bg={IMG.dusk}
+        bg={{ src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }}
         cards={SHOWCASE_CARDS}
         title="One Corridor"
         eyebrow="Three addresses · One way of building"

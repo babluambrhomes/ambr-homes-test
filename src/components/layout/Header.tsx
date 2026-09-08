@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, ArrowRight, MapPin } from "lucide-react";
-import { PROJECTS } from "@/lib/projects";
-import { NAV } from "@/lib/site";
+import { PROJECTS } from "@/lib/data";
+import { NAV } from "@/lib/data";
 import { MobileDrawer } from "./MobileDrawer";
 
 const STATUS_TONE: Record<string, string> = {

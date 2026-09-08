@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { IMG } from "@/lib/images";
-import { NAV, CONTACT, SOCIALS } from "@/lib/site";
-import { PROJECTS } from "@/lib/projects";
+import { NAV, CONTACT, SOCIALS } from "@/lib/data";
+import { PROJECTS } from "@/lib/data";
 
 const SOCIAL_ICONS: Record<string, React.ReactNode> = {
   Instagram: (

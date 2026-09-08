@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Img } from "@/lib/images";
+import type { Img } from "@/lib/data";
 
 export function Heading({
   eyebrow = "Contact Us",

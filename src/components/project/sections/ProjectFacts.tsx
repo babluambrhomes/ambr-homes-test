@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/shared/Reveal";
 import { Glass } from "@/components/shared/Glass";
-import type { Project } from "@/lib/projects";
+import type { Project } from "@/lib/data";
 
 const FACTS = (p: Project) => [
   {

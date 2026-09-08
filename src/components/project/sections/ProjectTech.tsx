@@ -3,10 +3,9 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import type { Project } from "@/lib/projects";
-import { IMG } from "@/lib/images";
+import type { Project } from "@/lib/data";
 
-const FLYERS = [IMG.park, IMG.interior, IMG.community];
+const FLYERS = [{ src: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1600&q=80", alt: "Park-facing home at Ambr Homes" }, { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" }, { src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes residential community in Greater Noida West" }];
 
 export function ProjectTech({ project }: { project: Project }) {
   const ref = useRef<HTMLElement>(null);
@@ -41,8 +40,8 @@ export function ProjectTech({ project }: { project: Project }) {
         className="absolute -inset-y-[15%] inset-x-0"
       >
         <Image
-          src={IMG.dusk.src}
-          alt={IMG.dusk.alt}
+          src={"https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80"}
+          alt={"Ambr Homes community at dusk"}
           fill
           sizes="100vw"
           className="object-cover opacity-60"

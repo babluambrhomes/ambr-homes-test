@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, Clock, Share2 } from "lucide-react";
 import { Heading, Media } from "../shared/ui";
 import { RedCta } from "../shared/RedCta";
-import { getRelatedPosts } from "@/lib/blog";
-import type { BlogPost } from "@/lib/blog";
+import { getRelatedPosts } from "@/lib/data";
+import type { BlogPost } from "@/lib/data";
 
 export function BlogPostPage({ post }: { post: BlogPost }) {
   const related = getRelatedPosts(post.slug);

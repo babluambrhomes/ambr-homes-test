@@ -6,8 +6,6 @@ import Link from "next/link";
 import { ArrowLeft, Home, MapPin, MessageSquare } from "lucide-react";
 import { Media } from "@/components/shared/ui";
 import { Button } from "@/components/shared/Button";
-import { IMG } from "@/lib/images";
-
 export default function NotFound() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -19,7 +17,7 @@ export default function NotFound() {
   return (
     <section ref={ref} className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-ink px-6 pt-[clamp(80px,12vw,140px)] text-white">
       <motion.div style={{ y }} className="absolute inset-0">
-        <Media img={IMG.night} sizes="100vw" />
+        <Media img={{ src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes building at dusk" }} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/90 via-ink/60 to-ink" />
       </motion.div>
 

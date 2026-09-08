@@ -6,7 +6,7 @@ import { Swiper as SwiperReact, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Heading, Media } from "./ui";
-import type { Img } from "@/lib/images";
+import type { Img } from "@/lib/data";
 
 export type FromAmbrItem = {
   img: Img;

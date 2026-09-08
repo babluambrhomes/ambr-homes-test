@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { PROJECTS } from "@/lib/projects";
-import { NAV } from "@/lib/site";
+import { PROJECTS } from "@/lib/data";
+import { NAV } from "@/lib/data";
 
 export function MobileDrawer({
   open,

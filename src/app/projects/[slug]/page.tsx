@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getProject, PROJECTS } from "@/lib/projects";
+import { getProject, PROJECTS } from "@/lib/data";
 import { ProjectPage } from "@/components/project/ProjectPage";
 
 type Props = { params: Promise<{ slug: string }> };

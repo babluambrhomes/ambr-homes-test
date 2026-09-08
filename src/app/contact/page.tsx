@@ -6,8 +6,7 @@ import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import { Reveal } from "@/components/shared/Reveal";
 import { Heading, Media } from "@/components/shared/ui";
 import { Button } from "@/components/shared/Button";
-import { CONTACT, SOCIALS } from "@/lib/site";
-import { IMG } from "@/lib/images";
+import { CONTACT, SOCIALS } from "@/lib/data";
 
 const FIELD =
   "w-full rounded-lg border border-white/20 bg-white/[0.07] px-3.5 py-3 text-sm text-white outline-none backdrop-blur-md transition-colors placeholder:text-white/40 focus:border-brand focus:bg-white/[0.12]";
@@ -59,7 +58,7 @@ export default function ContactPage() {
       {/* Hero — parallax + overlay */}
       <section ref={heroRef} className="relative overflow-hidden bg-ink pb-40 pt-[clamp(90px,15vw,180px)] text-white">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <Media img={IMG.dusk} priority sizes="100vw" />
+          <Media img={{ src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }} priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/40 to-ink" />
         </motion.div>
 
@@ -168,7 +167,7 @@ export default function ContactPage() {
           {/* Right — image + overlay */}
           <Reveal delay={0.1} className="h-full">
             <div className="relative h-full overflow-hidden rounded-[1.5rem] ">
-              <Media img={IMG.office} sizes="(max-width: 768px) 100vw, 50vw" className="absolute inset-0 h-full w-full object-cover" />
+              <Media img={{ src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes site office, Bishrakh" }} sizes="(max-width: 768px) 100vw, 50vw" className="absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
               <div className="relative z-10 flex h-full flex-col justify-end p-8 sm:p-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">Arriving</p>

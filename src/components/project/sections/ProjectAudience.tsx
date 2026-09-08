@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/shared/Reveal";
 import { Heading, Media } from "@/components/shared/ui";
-import type { Project } from "@/lib/projects";
+import type { Project } from "@/lib/data";
 
 export function ProjectAudience({ project }: { project: Project }) {
   return (

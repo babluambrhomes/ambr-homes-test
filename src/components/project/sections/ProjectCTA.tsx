@@ -1,5 +1,5 @@
 import { RedCta } from "@/components/shared/RedCta";
-import type { Project } from "@/lib/projects";
+import type { Project } from "@/lib/data";
 
 export function ProjectCTA({ project }: { project: Project }) {
   return (

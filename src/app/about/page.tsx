@@ -23,7 +23,6 @@ import {
   Handshake,
   TrendingUp,
 } from "lucide-react";
-import { IMG } from "@/lib/images";
 
 const STATS = [
   { value: "15+", label: "Years building", icon: Calendar },
@@ -35,25 +34,25 @@ const STATS = [
 const STORY_CHAPTERS = [
   {
     year: "2010",
-    img: IMG.office,
+    img: { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes site office, Bishrakh" },
     title: "Two brothers and one site office",
     body: "Ambr Homes began as two brothers, a desk and a promise at a site office in Bishrakh — build homes the way we would want our own family to live in them.",
   },
   {
     year: "2013",
-    img: IMG.exterior,
+    img: { src: "/images/hero-3.jpeg", alt: "Ambr Homes building exterior" },
     title: "The first handover — on the date we said",
     body: "Our first community was delivered before the date we had put in writing. That habit — meeting the date — became the rule every project has followed since.",
   },
   {
     year: "2016",
-    img: IMG.dusk,
+    img: { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" },
     title: "The corridor takes shape",
     body: "Instead of spreading projects across the city, we chose to stay on one short corridor between Bishrakh and Vaidpura — so every resident is minutes, not dispatches, from us.",
   },
   {
     year: "Today",
-    img: IMG.community,
+    img: { src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes residential community in Greater Noida West" },
     title: "Five communities, one standard",
     body: "Aspire pre-bookings are open in Vaidpura, and families from our first handovers still live three streets away. One corridor, five addresses, one way of building.",
   },
@@ -105,7 +104,7 @@ export default function AboutPage() {
       {/* Hero — parallax + overlay */}
       <section ref={heroRef} className="relative overflow-hidden bg-ink pb-40 pt-[clamp(90px,15vw,180px)] text-white">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <Media img={IMG.night} priority sizes="100vw" />
+          <Media img={{ src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes building at dusk" }} priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/40 to-ink" />
         </motion.div>
 
@@ -277,21 +276,21 @@ export default function AboutPage() {
         title="Things Worth Knowing Before You Buy A Home"
         description="The questions everyone should ask, answered plainly. Scroll through what to read, what to inspect and what to put in writing — before you sign."
         items={[
-          { img: IMG.plan, tag: "Before you commit", title: "Read the RERA number, not the brochure", body: "Every Ambr project carries an UP RERA registration number. Check it yourself at up-rera.in before you put anything down." },
-          { img: IMG.balcony, tag: "The floor plate", title: "A balcony, or a ledge?", body: "If a balcony cannot take two chairs and a table, it is a ledge. Ours are measured for the chairs before the layout is signed." },
-          { img: IMG.interior, tag: "Orientation", title: "Cross ventilation & morning light", body: "We test how light and air move through every layout before it is drawn, so the rooms you live in stay cooler for longer." },
-          { img: IMG.construction, tag: "On a site visit", title: "What to inspect, not just admire", body: "Look at joints, drips and finishing. Ask for a delivered flat years old — not renderings — and read the updates on the one under construction." },
-          { img: IMG.dusk, tag: "The agreement", title: "The full cost, in writing", body: "Payment schedule, handover date and delay compensation all sit in the agreement for sale — read it in full before anything is signed." },
+          { img: { src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80", alt: "Home layout plan" }, tag: "Before you commit", title: "Read the RERA number, not the brochure", body: "Every Ambr project carries an UP RERA registration number. Check it yourself at up-rera.in before you put anything down." },
+          { img: { src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80", alt: "Balcony view at an Ambr Homes flat" }, tag: "The floor plate", title: "A balcony, or a ledge?", body: "If a balcony cannot take two chairs and a table, it is a ledge. Ours are measured for the chairs before the layout is signed." },
+          { img: { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" }, tag: "Orientation", title: "Cross ventilation & morning light", body: "We test how light and air move through every layout before it is drawn, so the rooms you live in stay cooler for longer." },
+          { img: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80", alt: "Under construction at an Ambr Homes project" }, tag: "On a site visit", title: "What to inspect, not just admire", body: "Look at joints, drips and finishing. Ask for a delivered flat years old — not renderings — and read the updates on the one under construction." },
+          { img: { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }, tag: "The agreement", title: "The full cost, in writing", body: "Payment schedule, handover date and delay compensation all sit in the agreement for sale — read it in full before anything is signed." },
         ]}
       />
 
       {/* Where we build — parallax showcase */}
       <ParallaxShowcase
-        bg={IMG.dusk}
+        bg={{ src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }}
         cards={[
-          { img: IMG.exterior, },
-          { img: IMG.courtyard, },
-          { img: IMG.night,  },
+          { img: { src: "/images/hero-3.jpeg", alt: "Ambr Homes building exterior" }, },
+          { img: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80", alt: "Courtyard garden at an Ambr Homes community" }, },
+          { img: { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes building at dusk" },  },
         ]}
         title="Two Localities"
         eyebrow="Where we build"

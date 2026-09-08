@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Reveal } from "@/components/shared/Reveal";
 import { Heading } from "@/components/shared/ui";
-import type { Project } from "@/lib/projects";
+import type { Project } from "@/lib/data";
 
 export function ProjectFAQ({ project }: { project: Project }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);

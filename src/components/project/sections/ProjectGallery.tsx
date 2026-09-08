@@ -1,8 +1,7 @@
 import { Reveal } from "@/components/shared/Reveal";
 import { Heading, Media } from "@/components/shared/ui";
-import type { Img } from "@/lib/images";
-import type { Project } from "@/lib/projects";
-import { IMG } from "@/lib/images";
+import type { Img } from "@/lib/data";
+import type { Project } from "@/lib/data";
 
 type GalleryItem = { img: Img; label?: string; large?: boolean };
 
@@ -11,8 +10,8 @@ export function ProjectGallery({ project }: { project: Project }) {
     { img: project.heroImg, label: project.name, large: true },
     { img: project.configs[0]?.img ?? project.heroImg, label: project.configs[0]?.tag ?? "" },
     { img: project.configs[1]?.img ?? project.heroImg, label: project.configs[1]?.tag ?? "" },
-    { img: IMG.balcony, label: "Balcony" },
-    { img: IMG.interior, label: "Interior" },
+    { img: { src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80", alt: "Balcony view at an Ambr Homes flat" }, label: "Balcony" },
+    { img: { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" }, label: "Interior" },
   ];
 
   return (

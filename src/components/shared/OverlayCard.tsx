@@ -1,5 +1,5 @@
 import { Media } from "./ui";
-import type { Img } from "@/lib/images";
+import type { Img } from "@/lib/data";
 
 export function OverlayCard({
   img,
