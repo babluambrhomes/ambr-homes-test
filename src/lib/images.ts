@@ -8,19 +8,19 @@ const U = (id: string) =>
 
 export const IMG = {
   hero: {
-    src: U("photo-1600585154340-be6161a56a0c"),
+    src: '/images/hero-1.jpeg',
     alt: "Modern residential building at Ambr Homes, Greater Noida West",
   },
   landscape: {
-    src: U("photo-1600607687939-ce8a6c25118c"),
+    src: '/images/hero-2.jpeg',
     alt: "Landscaped shared space at an Ambr Homes community",
   },
   exterior: {
-    src: U("photo-1600566753190-17f0baa2a6c3"),
+    src: '/images/hero-3.jpeg',
     alt: "Ambr Homes building exterior",
   },
   interior: {
-    src: U("photo-1522708323590-d24dbb6b0267"),
+    src: '/images/hero-4.jpeg',
     alt: "Finished living room at an Ambr Homes flat",
   },
   balcony: {
