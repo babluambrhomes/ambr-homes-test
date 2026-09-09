@@ -22,14 +22,14 @@ export function FreeModeStrip({
     <Swiper
       modules={[FreeMode]}
       spaceBetween={22}
-      slidesPerView={slidesPerView}
+      slidesPerView={3}
       freeMode
       grabCursor
       className=""
       breakpoints={{
         0: { slidesPerView: 1.15 },
         640: { slidesPerView: 2.1 },
-        1024: { slidesPerView: slidesPerView },
+        1024: { slidesPerView: 3} ,
       }}
     >
       {items.map((it, i) => (

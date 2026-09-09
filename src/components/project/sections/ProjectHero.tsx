@@ -16,6 +16,19 @@ export function ProjectHero({ project }: { project: Project }) {
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0.2]);
 
+  const isAspire = project.slug === "aspire";
+
+  const tagline = isAspire ? "ASPIRE" : project.tagline;
+  const heading = isAspire
+    ? "More Room For The Life Ahead."
+    : project.heading;
+  const intro = isAspire
+    ? "A home should have room for the people you are today — and the people your family may become. Aspire brings together 2 & 3 BHK homes in Vaidpura, with generous balconies, natural light, ventilation and spaces made for everyday family life."
+    : project.intro;
+  const statusLabel = isAspire
+    ? "Under Construction · Pre-booking"
+    : project.statusLabel;
+
   return (
     <section
       ref={heroRef}
@@ -31,19 +44,21 @@ export function ProjectHero({ project }: { project: Project }) {
         <div className="max-w-3xl">
           <Reveal>
             <div className="mb-6">
-              <Pill label={project.statusLabel} tone={project.statusTone} />
+              <Pill label={statusLabel} tone={project.statusTone} />
             </div>
+
             <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
-              {project.tagline}
+              {tagline}
             </span>
           </Reveal>
 
           <Reveal delay={0.08}>
             <h1 className="mt-5 text-[clamp(2.4rem,5.2vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
-              {project.heading}
+              {heading}
             </h1>
+
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">
-              {project.intro}
+              {intro}
             </p>
           </Reveal>
 
@@ -51,8 +66,12 @@ export function ProjectHero({ project }: { project: Project }) {
             <div className="mt-8">
               <Button href="/contact">Book A Site Visit</Button>
             </div>
+
             <div className="mt-8 flex flex-wrap gap-3">
-              {[`${project.locality}, Greater Noida West`, "RERA Registered"].map((t) => (
+              {[
+                `${project.locality}, Greater Noida West`,
+                "RERA Registered",
+              ].map((t) => (
                 <span
                   key={t}
                   className="rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-[0.12em] text-white ring-1 ring-white/20 backdrop-blur-md"
@@ -61,6 +80,12 @@ export function ProjectHero({ project }: { project: Project }) {
                 </span>
               ))}
             </div>
+
+            {isAspire && (
+              <p className="mt-5 text-sm leading-relaxed text-white/70">
+                Come see the plans. Walk the spaces. Take your time.
+              </p>
+            )}
           </Reveal>
         </div>
       </div>

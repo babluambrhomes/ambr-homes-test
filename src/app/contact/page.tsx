@@ -8,14 +8,42 @@ import { Heading, Media } from "@/components/shared/ui";
 import { Button } from "@/components/shared/Button";
 import { CONTACT, SOCIALS } from "@/lib/data";
 
+const PHONE = "+91 90900 90032";
+const PHONE_HREF = "tel:+919090090032";
+const WHATSAPP_HREF = "https://wa.me/919090090032";
+
 const FIELD =
   "w-full rounded-lg border border-white/20 bg-white/[0.07] px-3.5 py-3 text-sm text-white outline-none backdrop-blur-md transition-colors placeholder:text-white/40 focus:border-brand focus:bg-white/[0.12]";
 
 const QUICK = [
-  { icon: Phone, label: "Call us", value: CONTACT.phone, href: CONTACT.phoneHref },
-  { icon: Mail, label: "Email us", value: CONTACT.email, href: CONTACT.emailHref },
-  { icon: Clock, label: "Office hours", value: "10am — 7pm, daily", href: "#enquiry" },
-  { icon: MapPin, label: "Visit the office", value: "Bishrakh · Greater Noida West", href: "#office" },
+  {
+    icon: Phone,
+    label: "CALL US",
+    value: PHONE,
+    desc: "For a quick question or to speak to someone directly.",
+    href: PHONE_HREF,
+  },
+  {
+    icon: Phone,
+    label: "WHATSAPP",
+    value: PHONE,
+    desc: "Send a message when it suits you. We’ll take it from there.",
+    href: WHATSAPP_HREF,
+  },
+  {
+    icon: MapPin,
+    label: "VISIT THE OFFICE",
+    value: "Bishrakh · Greater Noida West",
+    desc: "",
+    href: "#office",
+  },
+  {
+    icon: Clock,
+    label: "OFFICE HOURS",
+    value: "10 AM – 7 PM",
+    desc: "",
+    href: "#office",
+  },
 ];
 
 const FAQS = [
@@ -65,22 +93,30 @@ export default function ContactPage() {
         <div className="wrap relative">
           <div className="max-w-3xl">
             <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
-              Contact Us
+              LET'S TALK ABOUT THE HOME
             </span>
             <h1 className="mt-5 text-[clamp(2.4rem,5.2vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
               Tell Us What You&apos;re Looking For
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-              One office, one corridor — every enquiry is read by someone at the site office, not routed to a call
-              centre. Reply is usually within one working day.
+              Buying a home deserves more than a callback request. Tell us what you need, ask the question you have, or simply come and see what we&apos;ve built. We&apos;ll help you understand the options without rushing you into a decision.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              {["EST. 2010", "UP RERA", "Bishrakh · Vaidpura"].map((t) => (
-                <span key={t} className="rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-[0.12em] text-white ring-1 ring-white/20 backdrop-blur-md">
-                  {t}
-                </span>
-              ))}
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Button href="/contact">
+                Book A Site Visit →
+              </Button>
+
+              <a
+                href={PHONE_HREF}
+                className="rounded-lg border border-white/20 bg-white/[0.07] px-5 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/[0.12]"
+              >
+                Call AMBR · WhatsApp Us
+              </a>
+
+              <span className="basis-full text-sm text-white/60">
+                No long form. No pressure. Just a useful conversation.
+              </span>
             </div>
           </div>
         </div>
@@ -88,6 +124,12 @@ export default function ContactPage() {
 
       {/* Quick contact band */}
       <section className="relative z-10 -mt-20">
+        <div className="wrap mb-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+            CHOOSE WHAT IS EASIEST FOR YOU
+          </p>
+        </div>
+
         <div className="wrap grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {QUICK.map((c, i) => {
             const Icon = c.icon;
@@ -104,8 +146,13 @@ export default function ContactPage() {
                 <span className="relative grid h-12 w-12 place-items-center rounded-2xl bg-brand/10 text-brand transition-all duration-500 group-hover:rotate-6 group-hover:bg-brand group-hover:text-white">
                   <Icon size="22" strokeWidth={1.8} />
                 </span>
-                <p className="relative mt-4 text-sm font-semibold uppercase tracking-[0.1em] text-muted">{c.label}</p>
+                <p className="relative mt-4 text-sm font-semibold uppercase tracking-[0.1em] text-muted">
+                  {c.label}
+                </p>
                 <span className="relative mt-1 block font-medium text-ink">{c.value}</span>
+                {c.desc && (
+                  <p className="mt-2 text-xs text-muted/70">{c.desc}</p>
+                )}
               </a>
             );
           })}
@@ -115,16 +162,21 @@ export default function ContactPage() {
       {/* Our Office */}
       <section id="office" className="wrap py-[clamp(64px,8vw,120px)]">
         <div className="">
-          <Heading eyebrow="Our Office" title="Where We Operate" description="One office, one corridor — every project within a half-hour drive of this desk." />
+          <Heading
+            eyebrow="COME SEE US. TAKE YOUR TIME."
+            title="Where We Operate"
+            description="Our office is in Bishrakh, Greater Noida West — close to the communities we build and the people who live in them."
+          />
         </div>
 
         <div className="mt-12 grid items-stretch gap-8 md:grid-cols-2">
           {/* Left — office info */}
           <Reveal className="h-full">
             <div className="flex h-full flex-col rounded-[1.5rem] border border-line bg-white p-8">
-              <h3 className="text-2xl font-medium text-ink">Bishrakh, Greater Noida West</h3>
+              <h3 className="text-2xl font-medium text-ink">AMBR Homes Site Office</h3>
+
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                {CONTACT.addressLine1} {CONTACT.addressLine2}
+                Plot No. 768, Near ACE Divine, Sector 1, Aimnabad, Bisrakh Jalalpur, Greater Noida, Uttar Pradesh 201318
               </p>
 
               <div className="mt-7 space-y-4">
@@ -153,12 +205,20 @@ export default function ContactPage() {
                 })}
               </div>
 
-              {/* How to reach */}
+              {/* Here, you can */}
               <div className="mt-auto pt-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-muted">How to reach</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-2">
-                  From Noida-Greater Noida Expressway, take the Gaur City exit. Site office is on the main road,
-                  2 minutes from the roundabout. Parking available on-site.
+                <p className="text-xs font-semibold uppercase tracking-widest text-muted">Here, you can</p>
+
+                <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ink-2">
+                  <li>Talk through your requirement</li>
+                  <li>Compare available homes</li>
+                  <li>Understand plans and specifications</li>
+                  <li>Ask about the next steps</li>
+                  <li>Arrange a site visit</li>
+                </ul>
+
+                <p className="mt-5 text-sm leading-relaxed text-ink-2">
+                  The office should be a place where questions get clearer — not where you feel pushed to buy.
                 </p>
               </div>
             </div>
@@ -208,9 +268,9 @@ export default function ContactPage() {
           <div>
             <Heading
               light
-              eyebrow="Get In Touch"
-              title="Reach Out To Us"
-              description="Every enquiry is read by someone at the site office. If you are asking about a specific project, say which one and we will send the sanctioned plans with our reply."
+              eyebrow="KEEP IT HUMAN"
+              title="We Only Need Enough To Start The Conversation."
+              description="A contact form should not feel like an application form. If you want us to call you, we only need your name and phone number. Everything else can be discussed when we speak."
             />
             <div className="mt-9 space-y-4">
               {[
@@ -284,23 +344,41 @@ export default function ContactPage() {
                   <input required className={FIELD} type="text" autoComplete="name" />
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2" >
+                <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-white/60">Email *</label>
-                    <input required className={FIELD} type="email" autoComplete="email" />
+                    <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-white/60">
+                      Phone number *
+                    </label>
+                    <input
+                      required
+                      className={FIELD}
+                      type="tel"
+                      autoComplete="tel"
+                      placeholder="910000000000"
+                    />
                   </div>
 
                   <div>
-                    <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-white/60">Phone Number *</label>
-                    <input required className={FIELD} type="tel" autoComplete="tel" placeholder="910000000000" />
+                    <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-white/60">
+                      What can we help you with?
+                    </label>
+                    <input
+                      className={FIELD}
+                      type="text"
+                      placeholder="Tell us what you need"
+                    />
                   </div>
-
-
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-white/60">Subject</label>
-                  <input required className={FIELD} type="text" autoComplete="Subject" />
+                  <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-white/60">
+                    Preferred project / home type
+                  </label>
+                  <input
+                    className={FIELD}
+                    type="text"
+                    placeholder="Project or home type"
+                  />
                 </div>
 
 

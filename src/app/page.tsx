@@ -21,7 +21,7 @@ import {
 import { PROJECTS } from "@/lib/data";
 
 
- const FROM_ARMB_ITEMS = [
+const FROM_ARMB_ITEMS = [
   { img: { src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80", alt: "Home layout plan" }, tag: "Before you commit", title: "Read the RERA number, not the brochure", body: "Every Ambr project carries an UP RERA registration number. Check it yourself at up-rera.in before you put anything down." },
   { img: { src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80", alt: "Balcony view at an Ambr Homes flat" }, tag: "The floor plate", title: "A balcony, or a ledge?", body: "If a balcony cannot take two chairs and a table, it is a ledge. Ours are measured for the chairs before the layout is signed." },
   { img: { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" }, tag: "Orientation", title: "Cross ventilation & morning light", body: "We test how light and air move through every layout before it is drawn, so the rooms you live in stay cooler for longer." },
@@ -29,72 +29,84 @@ import { PROJECTS } from "@/lib/data";
   { img: { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }, tag: "The agreement", title: "The full cost, in writing", body: "Payment schedule, handover date and delay compensation all sit in the agreement for sale — read it in full before anything is signed." },
 ];
 
- const STATS = [
-  { value: "15+", label: "Years building", icon: Calendar },
-  { value: "4", label: "Communities delivered", icon: Building2 },
-  { value: "2 & 3", label: "BHK homes", icon: Layers },
-  { value: "100%", label: "RERA registered", icon: ShieldCheck },
+const STATS = [
+  { value: "6+", label: "Years Building Homes", icon: Calendar },
+  { value: "4", label: "Completed Communities", icon: Building2 },
+  { value: "250+", label: "Homes Under Construction", icon: LandPlot },
+  { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
 ];
 
- const HERO_SLIDES = [
+const HERO_SLIDES = [
   {
     img: "/images/hero-1.jpeg",
-    alt: "Modern residential building at Ambr Homes, Greater Noida West",
+    alt: "An Ambr Homes residential building in Greater Noida West at dusk",
     eyebrow: "Greater Noida West",
-    title: "Built The Way We Would Want Ours Built",
-    body: "Five communities. All RERA registered. Designed for the twelve years after handover — not just the day you get the keys.",
+    title: "A Home Should Fit The Life You Live.",
+    body: "Thoughtfully planned homes in Greater Noida West, made for the everyday moments that matter.",
   },
   {
     img: "/images/hero-3.jpeg",
-    alt: "Ambr Homes building exterior",
-    eyebrow: "Five Communities",
-    title: "Homes Designed Around The Life After Keys",
-    body: "Every layout tested for cross ventilation and morning light, delivered on the date we gave at booking.",
+    alt: "Ambr Aura residential building by Ambr Homes",
+    eyebrow: "Ready to move in",
+    title: "Come See The Home. Then Take Your Time.",
+    body: "See the rooms. Check the light. Stand on the balcony. Ask every question before you decide.",
   },
   {
-    img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
-    alt: "Lounge interior at an Ambr Homes flat",
-    eyebrow: "Vaidpura & Bishrakh",
-    title: "One Corridor. Five Addresses.",
-    body: "Three projects in Bishrakh and two in Vaidpura — all within a half-hour drive of each other.",
+    img: "/images/hero-1.jpeg",
+    alt: "Ambr Droplets residential building by Ambr Homes",
+    eyebrow: "Under construction",
+    title: "The Next Address Is Taking Shape.",
+    body: "Magnolia and Aspire are taking shape. Come see what is being built, ask what matters, and choose with clarity.",
   },
 ];
 
 
- const PARALLAX_CARDS = [
-  { img: { src: "/images/hero-3.jpeg", alt: "Ambr Homes building exterior" }  },
+const PARALLAX_CARDS = [
+  { img: { src: "/images/hero-3.jpeg", alt: "Ambr Homes building exterior" } },
   { img: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80", alt: "Courtyard garden at an Ambr Homes community" } },
-  { img: { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes building at dusk" }},
+  { img: { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes building at dusk" } },
 ];
 
- const STORY_CHAPTERS = [
+const STORY_CHAPTERS = [
   {
     year: "2010",
-    img: { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes site office, Bishrakh" },
-    title: "Two brothers and one site office",
-    body: "Ambr Homes began as two brothers, a desk and a promise at a site office in Bishrakh — build homes the way we would want our own family to live in them.",
+    img: {
+      src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+      alt: "Ambr Homes site office, Bishrakh",
+    },
+    title: "It Started With A Simple Idea.",
+    body: "Build homes the way we would want our own family to live in them. That meant thinking beyond the elevation — about the rooms, the light, the everyday movement and the small things that make a home feel comfortable once life takes over. The first address gave us our starting point. The families who moved in gave us our standard.",
   },
   {
     year: "2013",
-    img: { src: "/images/hero-3.jpeg", alt: "Ambr Homes building exterior" },
-    title: "The first handover — on the date we said",
-    body: "Our first community was delivered before the date we had put in writing. That habit — meeting the date — became the rule every project has followed since.",
+    img: {
+      src: "/images/hero-3.jpeg",
+      alt: "Ambr Homes building exterior",
+    },
+    title: "The First Handover Changed Everything.",
+    body: "The first families didn't just receive keys. They started living the life we had been building towards. That was when the questions became real: Does the home work on a busy morning? Is there enough room when everyone is home? Does the building still feel cared for after possession? The answers shaped everything we built next.",
   },
   {
     year: "2016",
-    img: { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" },
-    title: "The corridor takes shape",
-    body: "Instead of spreading projects across the city, we chose to stay on one short corridor between Bishrakh and Vaidpura — so every resident is minutes, not dispatches, from us.",
+    img: {
+      src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+      alt: "Ambr Homes community at dusk",
+    },
+    title: "We Chose To Stay Close.",
+    body: "Instead of scattering projects across the city, we kept building in the same Greater Noida West corridor. Because staying close changes the relationship. You know the neighbourhood. You know what residents need. And when someone needs you, you're close enough to show up. For us, being nearby was never just a location strategy. It became part of how we work.",
   },
   {
-    year: "Today",
-    img: { src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes residential community in Greater Noida West" },
-    title: "Five communities, one standard",
-    body: "Aspire pre-bookings are open in Vaidpura, and families from our first handovers still live three streets away. One corridor, five addresses, one way of building.",
+    year: "TODAY",
+    img: {
+      src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80",
+      alt: "Ambr Homes residential community in Greater Noida West",
+    },
+    title: "Five Communities. One Standard.",
+    body: "Today, AMBR has completed communities where families already live, a ready-to-move home you can walk through, and new homes taking shape for the next generation of families. The addresses have grown. The principle hasn't. Build well. Stay close. Keep making the next home better.",
   },
 ];
 
- const PARTNER_ITEMS = [
+const PARTNER_ITEMS = [
   {
     icon: LandPlot,
     title: "Landowners & Joint Ventures",
@@ -112,21 +124,85 @@ import { PROJECTS } from "@/lib/data";
   },
 ];
 
- const WHY_ITEMS = [
-  { img: { src: "/images/hero-3.jpeg", alt: "Ambr Homes building exterior" }, tag: "Evidence, not assurance", title: "See It Before You Sign", body: "Every claim on this site can be checked in person — walk a delivered flat, a finished balcony and a community that has been lived in for years." },
-  { img: { src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes residential community in Greater Noida West" }, tag: "Built first, promised later", title: "Streets That Are Lived In", body: "Our first buyers are still neighbours three streets away. Ten years on, the buildings stand, the corridors hold and families stay." },
-  { img: { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" }, tag: "Fifteen monsoons", title: "Finishes That Lasted", body: "The wall, the floor, the balcony rail — chosen to look right on move-in day and still right a decade of monsoons later." },
-  { img: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80", alt: "Under construction at an Ambr Homes project" }, tag: "You can verify", title: "Updates You Can Check", body: "Dated construction photographs and written progress reports, published every month for every pre-booked buyer." },
-  { img: { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }, tag: "One corridor", title: "A Community, Not A Brokerage", body: "Five addresses within a half-hour drive of one site office. When something needs a visit, it's a drive — not a logged ticket." },
+const WHY_ITEMS = [
+  {
+    img: {
+      src: "/images/hero-3.jpeg",
+      alt: "Clear project information",
+    },
+    tag: "01",
+    title: "Clarity Before Commitment",
+    body: "Plans, specifications, pricing details and project information should be clear before you make a decision. We believe you deserve to know what you are buying.",
+  },
+  {
+    img: {
+      src: "/images/hero-1.jpeg",
+      alt: "Commitment to handover",
+    },
+    tag: "02",
+    title: "A Date Should Mean Something",
+    body: "A home is not just a purchase date. It is the life you are planning around it. That is why timelines should be treated as commitments, not loose promises.",
+  },
+  {
+    img: {
+      src: "/images/hero-3.jpeg",
+      alt: "Experienced building team",
+    },
+    tag: "03",
+    title: "People Who Know The Work",
+    body: "Good work comes from people who know the details. Our teams carry lessons from one site to the next, so experience becomes part of every new home.",
+  },
+  {
+    img: {
+      src: "/images/hero-4.jpeg",
+      alt: "Family-first layouts",
+    },
+    tag: "04",
+    title: "Made For Real Family Days",
+    body: "Room for breakfast before school, a kitchen that stays connected to the living room, a balcony you can actually sit on, and storage that keeps up with family life.",
+  },
+  {
+    img: {
+      src: "/images/hero-1.jpeg",
+      alt: "Support after handover",
+    },
+    tag: "05",
+    title: "A Home Is More Than Handover Day",
+    body: "The relationship should not end when the keys are handed over. From the final checks to settling into the community, the details still matter.",
+  },
 ];
 
- const STRIP_ITEMS = [
-  { img: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80", alt: "Balcony view at an Ambr Homes flat", title: "Balconies you can use", sub: "Deep enough for two chairs" },
-  { img: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat", title: "Finished interiors", sub: "Chosen for ten monsoons" },
-  { img: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1600&q=80", alt: "Park-facing home at Ambr Homes", title: "Park-facing plans", sub: "Morning light in every room" },
-  { img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80", alt: "Home layout plan", title: "Sanctioned layouts", sub: "Published before booking" },
-  { img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80", alt: "Under construction at an Ambr Homes project", title: "Monthly updates", sub: "Dated progress photographs" },
-  { img: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes residential community in Greater Noida West", title: "Communities", sub: "That outlast the launch" },
+const STRIP_ITEMS = [
+  {
+    img: "/images/hero-1.jpeg",
+    alt: "Naturally bright and ventilated home",
+    title: "Light Before Luxury",
+    sub: "Because a beautiful room is better when it is naturally bright, well ventilated and comfortable through the day.",
+  },
+  {
+    img: "/images/hero-4.jpeg",
+    alt: "Quality materials and finishes",
+    title: "Materials That Hold Up",
+    sub: "We look beyond the first impression and pay attention to how finishes, fittings and everyday surfaces are expected to perform over time.",
+  },
+  {
+    img: "/images/hero-3.jpeg",
+    alt: "Community spaces for families",
+    title: "Spaces That Bring People Together",
+    sub: "A good community needs places to pause, play, walk, meet neighbours and let children be children. That is what turns buildings into a neighbourhood.",
+  },
+  {
+    img: "/images/hero-4.jpeg",
+    alt: "Home designed for everyday movement",
+    title: "04 — Built For The Way You Move",
+    sub: "A home is not a collection of rooms. You move through it every day — from the bedroom to the kitchen, from the lift to the front door, from the balcony back to the living room. We pay attention to those little journeys because they become your routine.",
+  },
+  {
+    img: "/images/hero-1.jpeg",
+    alt: "Thoughtfully planned community spaces",
+    title: "05 — The Space Between Matters",
+    sub: "The home does not end at the front door. Walkways, open areas, planting, play spaces and places to sit shape how a community feels once people move in. We think about those spaces as carefully as the homes around them.",
+  },
 ];
 
 
@@ -154,9 +230,9 @@ export default function HomePage() {
         <StatCards stats={STATS} />
       </section>
 
-    
-     
-     
+
+
+
       <section className="pt-24">
         <div className="wrap mb-6 ">
           <Heading
@@ -170,15 +246,14 @@ export default function HomePage() {
         </div>
       </section>
 
-       {/* Our Story */}
+      {/* Our Story */}
       <section className="relative pt-28">
         <div className="wrap">
           <div className="mx-auto max-w-3xl text-center">
             <Heading
               align="center"
-              eyebrow="Our story"
-              title="Built Around A Promise We Made In 2010"
-              description="Fifteen years of saying what we will do, then doing it on the date we said. This is the short version — in four chapters, one corridor, five addresses."
+              eyebrow="02 Our Story"
+              title="We Build Homes For People Who Plan To Make Them Their Own."
             />
           </div>
         </div>
@@ -189,38 +264,31 @@ export default function HomePage() {
             <div className="relative overflow-hidden rounded-[1.8rem] bg-ink p-8 text-white shadow-[0_40px_90px_-40px_rgba(16,16,16,0.55)] sm:p-10">
               <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand/25 blur-[80px]" />
               <div className="relative">
+
                 <span className="inline-flex items-center gap-2.5 rounded-full bg-white/10 px-3.5 py-1.5 text-[0.7rem] font-semibold tracking-[0.14em] text-white ring-1 ring-white/20">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-                  EST. 2010 · GREATER NOIDA WEST
+                  02 OUR STORY
                 </span>
+
                 <h3 className="mt-6 text-[clamp(1.6rem,2.6vw,2.2rem)] font-medium leading-snug text-white">
-                  A service call is a drive, not a dispatch.
+                  We Build Homes For People Who Plan To Make Them Their Own.
                 </h3>
+
                 <p className="mt-4 text-white/75">
-                  Three projects in Bishrakh and two in Vaidpura — all within a half-hour drive of each other.
-                  We have never built outside this corridor, so when something needs a visit, it is a short
-                  drive, not a logged ticket.
+                  Ambr Homes is built on a simple idea: a home should work for the
+                  people living in it. Over the years, that has meant paying attention
+                  to the everyday things — the morning light, the kitchen, the balcony,
+                  the lift ride home, the space where children play and the quiet corner
+                  you eventually call your own. Today, four communities are complete
+                  and more homes are taking shape in Greater Noida West.
                 </p>
 
-                <div className="mt-7 grid grid-cols-3 divide-x divide-white/15 rounded-2xl border border-white/10 bg-white/5 p-4">
-                  {[
-                    ["15+", "Years"],
-                    ["4", "Delivered"],
-                    ["100%", "RERA"],
-                  ].map(([v, l]) => (
-                    <div key={l} className="px-3 text-center">
-                      <p className="bg-gradient-to-br from-white to-white/60 bg-clip-text text-xl font-medium text-transparent sm:text-2xl">
-                        {v}
-                      </p>
-                      <p className="mt-1 text-[0.68rem] uppercase tracking-[0.12em] text-white/60">{l}</p>
-                    </div>
-                  ))}
+                <div className="mt-7">
+                  <Button href="/about">
+                    Meet Ambr Homes
+                  </Button>
                 </div>
 
-                <Link href="/about" className="group mt-7 inline-flex items-center gap-2 text-brand">
-                  <span className="text-sm font-semibold tracking-[0.06em] uppercase">Read the full story</span>
-                  <ArrowUpRight size="16" className="text-brand transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
               </div>
             </div>
           </div>
@@ -337,12 +405,13 @@ export default function HomePage() {
             <div className="relative flex flex-col justify-center gap-6 p-8 sm:p-10 lg:p-14">
               <span className="text-[clamp(2.6rem,6vw,5rem)] font-semibold leading-[0.9] tracking-[-0.03em]">
                 <span className="bg-gradient-to-br from-white to-white/40 bg-clip-text text-transparent">
-                  Our Most Generous Plans Yet
+                  Come See The Home.
+                  Then Take Your Time.
                 </span>
               </span>
+
               <p className="max-w-md text-lg leading-relaxed text-white/75">
-                Wider balconies, larger kitchens and a park edge that most homes look directly onto. Aspire is
-                designed for families buying their second home — not their first compromise.
+                Thoughtful plans for families who want a little more room to live. Wider balconies, generous kitchens and homes planned to make everyday space feel genuinely useful.
               </p>
 
               {/* config pills */}
@@ -355,10 +424,12 @@ export default function HomePage() {
                     <span className="relative h-14 w-16 flex-none overflow-hidden rounded-lg">
                       <Media img={c.img} sizes="64px" className="transition-transform duration-700 group-hover/config:scale-110" />
                     </span>
+
                     <div className="flex-1">
                       <p className="text-sm font-medium text-white">{c.tag}</p>
                       <p className="text-xs text-white/60">{c.t}</p>
                     </div>
+
                     <span className="grid h-9 w-9 place-items-center rounded-full bg-white/10 text-white transition-all duration-300 group-hover/config:bg-brand group-hover/config:text-white">
                       <ArrowUpRight size="15" />
                     </span>
@@ -371,6 +442,7 @@ export default function HomePage() {
                 <Button href="/projects/aspire" className="!bg-white !text-ink hover:!bg-brand hover:!text-white">
                   Explore Aspire
                 </Button>
+
                 <Button href="/contact" variant="ghost" className="border border-white/30 text-white hover:!bg-white hover:!text-ink">
                   Book A Site Visit
                 </Button>
@@ -387,11 +459,11 @@ export default function HomePage() {
       <ParallaxShowcase
         bg={{ src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }}
         cards={PARALLAX_CARDS}
-        title="One Corridor"
-        eyebrow="Three addresses · One way of building"
-        desc="Five communities, all registered before a single flat goes to market. Every project within a half-hour drive of one site office — so a service call is a drive, not a dispatch."
-        link="/why"
-        linkLabel="Why we build this way"
+        title="One Corridor. A Place We Know Well."
+        eyebrow="06 — ONE CORRIDOR"
+        desc="We chose to keep building close to home. Not everywhere. Not wherever the next plot appeared. Here. Because when your projects stay close, you learn the neighbourhood differently. You know how people live, what families ask for, what changes around them and what a community needs after the buildings are finished. Five addresses later, Greater Noida West isn't just where we build. It's where we know our work."
+        link="/projects"
+        linkLabel="Explore The Location"
       />
 
       {/* Coverflow communities gallery */}
@@ -424,11 +496,11 @@ export default function HomePage() {
         <div className="grid gap-12 lg:grid-cols-[0.3fr_0.7fr] lg:items-center">
           {/* Left — narrative */}
           <div className="lg:pr-8">
-            
+
             <Heading
-                eyebrow="Why Ambr Homes"
-                title="A Home Is A Big Decision. We Keep It Simple."
-              />
+              eyebrow="Why Ambr Homes"
+              title="A Home Is A Big Decision. We Keep It Simple."
+            />
             <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-2">
               You should not have to take a builder's word for everything. Come, look closely. Ask the
               practical questions. See what has already been built and understand what is still being built.
@@ -499,14 +571,23 @@ export default function HomePage() {
       <FromAmbrSection items={FROM_ARMB_ITEMS} />
 
       <RedCta
-        eyebrow="Ready to see it for yourself"
-        title="Come And See What We've Built"
-        description="Whether you are comparing 2 and 3 BHK options, ready to pre-book, or just want to walk through something we finished years ago — tell us when you are free and we will keep the flat open."
+        eyebrow="THE PROOF"
+        title="Judge Us By Something We Finished."
+        description="Don't judge AMBR by this website. Don't judge us by a brochure. Don't judge us by what we promise about the future. Go and see something we have already built. Walk through it. Look at the details. Notice what works. Talk to people. Then decide."
         buttons={[
-          { label: "Book A Site Visit", href: "tel:+910000000000", className: "border border-white/40 hover:!bg-white hover:!text-ink" },
-          { label: "+91 00000 00000", href: "/contact", className: "!bg-white !text-brand hover:!bg-ink hover:!text-white" },
+          {
+            label: "See Our Completed Homes",
+            href: "/projects",
+            className: "border border-white/40 hover:!bg-white hover:!text-ink",
+          },
+          {
+            label: "Book A Site Visit",
+            href: "/contact",
+            className: "!bg-white !text-brand hover:!bg-ink hover:!text-white",
+          },
         ]}
       />
+      
     </>
   );
 }

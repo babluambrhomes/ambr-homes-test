@@ -68,7 +68,7 @@ export function Footer() {
 
           <div>
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.13em] text-white/50">
-              Quick Links
+              Explore
             </h4>
             <ul className="space-y-2.5">
               {NAV.map((l) => (
@@ -98,7 +98,7 @@ export function Footer() {
 
           <div>
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.13em] text-white/50">
-              Contact Us
+              Talk To Us
             </h4>
             <ul className="space-y-2.5">
               <li>
@@ -128,7 +128,7 @@ export function Footer() {
         </p>
 
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 py-6">
-         
+
           <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Legal">
             {["Privacy Policy", "Terms & Conditions", "Disclaimer", "Sitemap"].map((l) => (
               <a key={l} href="#" className="text-[0.82rem] text-white/50 hover:text-white">
