@@ -26,7 +26,7 @@ import {
 const STATS = [
   { value: "6+", label: "Years Building Homes", icon: Calendar },
   { value: "4", label: "Completed Communities", icon: Building2 },
-  { value: "250+", label: "Homes Under Construction", icon: LandPlot },
+  { value: "250+", label: "Units Under Construction", icon: LandPlot },
   { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
 ];
 
@@ -34,11 +34,11 @@ const STORY_CHAPTERS = [
   {
     year: "2010",
     img: {
-      src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/about1.jpg",
       alt: "Ambr Homes site office, Bishrakh",
     },
     title: "It Started With A Simple Idea.",
-    body: "Build homes the way we would want our own family to live in them. That meant thinking beyond the elevation — about the rooms, the light, the everyday movement and the small things that make a home feel comfortable once life takes over. The first address gave us our starting point. The families who moved in gave us our standard.",
+    body: "Build homes the way we would want our own family to live in them. The first address gave us a place to start. The families who moved in gave us something more important — a standard to live up to.",
   },
   {
     year: "2013",
@@ -46,49 +46,49 @@ const STORY_CHAPTERS = [
       src: "/images/hero-3.jpeg",
       alt: "Ambr Homes building exterior",
     },
-    title: "The First Handover Changed Everything.",
-    body: "The first families didn't just receive keys. They started living the life we had been building towards. That was when the questions became real: Does the home work on a busy morning? Is there enough room when everyone is home? Does the building still feel cared for after possession? The answers shaped everything we built next.",
+    title: "The First Handover.",
+    body: "The day a family gets the keys is not the end of a project. It is the beginning of everything the building was meant for. That first handover taught us to look at a home differently — not just as something we build, but as somewhere someone will actually live.",
   },
   {
     year: "2016",
     img: {
-      src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/ambr41.jpeg",
       alt: "Ambr Homes community at dusk",
     },
     title: "We Chose To Stay Close.",
-    body: "Instead of scattering projects across the city, we kept building in the same Greater Noida West corridor. Because staying close changes the relationship. You know the neighbourhood. You know what residents need. And when someone needs you, you're close enough to show up. For us, being nearby was never just a location strategy. It became part of how we work.",
+    body: "Rather than spread ourselves across the city, we continued building along the Greater Noida West corridor we knew. The reason was simple. Being close means you cannot become distant from your own work.",
   },
   {
     year: "TODAY",
     img: {
-      src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/ambr37.jpeg",
       alt: "Ambr Homes residential community in Greater Noida West",
     },
-    title: "Five Communities. One Standard.",
-    body: "Today, AMBR has completed communities where families already live, a ready-to-move home you can walk through, and new homes taking shape for the next generation of families. The addresses have grown. The principle hasn't. Build well. Stay close. Keep making the next home better.",
+    title: "Five Addresses. One Standard.",
+    body: "Today, AMBR has completed communities, homes ready for families to move into and new projects taking shape. The scale has changed. The reason for building hasn't. Build well. Stay close. Keep improving.",
   },
 ];
 
 const VALUES = [
   {
-    title: "Act With Integrity.",
-    desc: "We believe in being clear about what we build, what it costs and when it will be ready. No fine print designed to confuse. No promises we can't keep.",
+    title: "Be Clear From The Start.",
+    desc: "No confusing promises. No hiding behind fine print. Tell people what they are buying, what is being built and what comes next.",
   },
   {
-    title: "Build For The Long Term.",
-    desc: "The things that matter most are often the things nobody sees. Structure, waterproofing, plumbing, electrical work and materials chosen to hold up over time.",
+    title: "Build To Last.",
+    desc: "The finish should look good on day one. The construction should still matter years later.",
   },
   {
-    title: "Stay Close.",
-    desc: "We build where we know the neighbourhood. Staying close means knowing the community, understanding what families need and being there when they need us.",
+    title: "A Date Should Mean Something.",
+    desc: "When we give a family a date, it should not be just another line in a brochure. A date creates expectations. We take that seriously.",
   },
   {
-    title: "Think About Real Life.",
-    desc: "A home is not a brochure. It's where people wake up, eat, work, play, host friends and grow older. Every decision starts with how the space will actually be lived in.",
+    title: "Leave Room For People.",
+    desc: "Homes aren't showrooms. Children grow. Families change. Parents visit. Friends stay late. We build spaces that can keep up.",
   },
   {
-    title: "Keep Getting Better.",
-    desc: "Every home teaches us something. We carry those lessons into the next project, because the next family deserves a better home than the last one.",
+    title: "Don't Disappear After The Keys.",
+    desc: "Possession is where the family's relationship with the home begins. It should not be where ours ends.",
   },
 ];
 const CONSULTANTS = [
@@ -114,7 +114,7 @@ export default function AboutPage() {
       {/* Hero — parallax + overlay */}
       <section ref={heroRef} className="relative overflow-hidden bg-ink pb-40 pt-[clamp(90px,15vw,180px)] text-white">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <Media img={{ src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes building at dusk" }} priority sizes="100vw" />
+          <Media img={{ src: "/images/ambr41.jpeg", alt: "Ambr Homes building at dusk" }} priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/40 to-ink" />
         </motion.div>
 
@@ -181,7 +181,7 @@ export default function AboutPage() {
               <Heading
                 eyebrow="Our Story"
                 title="Built Around A Promise We Made In 2010."
-                description="A home is a big promise. So is building one. Our story is not really about how many years we have been around. It is about what we have learned by staying close to the homes, the neighbourhood and the families who live in them. Four chapters. One corridor. Five addresses."
+                description="Four moments tell the story better than a long company profile. A beginning in Bishrakh. A first handover. A decision to stay close to one corridor. And today — five addresses, with families already living in some and new homes taking shape in others. We have grown by building here, learning here and staying close enough to see what happens after possession"
               />
             </div>
 
@@ -274,11 +274,11 @@ export default function AboutPage() {
           <div>
             <Heading
               eyebrow="Core Values"
-              title="What We Believe"
+              title="Built On The Things That Matter When No One Is Looking."
             />
 
             <p className="mt-4 leading-relaxed text-ink-2">
-              The principles that guide how we build, how we work and how we stay connected to the families and communities around us.
+              A building shows you what a developer wants you to see. Our values show up in the things you may never notice. How we communicate. How we handle a problem. How carefully we finish something that won't make it into a photograph. That's where trust is built.
             </p>
           </div>
 
@@ -302,34 +302,34 @@ export default function AboutPage() {
       <FromAmbrSection
         eyebrow="Before You Buy"
         title="Things Worth Knowing Before You Buy A Home."
-        description="The right home isn't just about the number on the price sheet. It's about whether the home, building and neighbourhood will work for your family."
+        description="Buying a home comes with enough questions already. So we would rather help you ask the right ones."
         items={[
           {
             img: {
-              src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80",
+              src: "/images/about2.jpg",
               alt: "Home layout plan",
             },
             tag: "01",
-            title: "2 BHK Or 3 BHK?",
-            body: "Don't only count bedrooms. Think about who will live with you now, who might live with you later, and what you don't want to compromise on.",
+            title: "Read The RERA Number, Not The Brochure.",
+            body: "A project should be easy to verify. Know the registration details. Check the documents. Understand what is promised before you book.",
           },
           {
             img: {
-              src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80",
+              src: "/images/about3.jpg",
               alt: "Balcony view at an Ambr Homes flat",
             },
             tag: "02",
-            title: "Carpet Area Is Where Life Happens.",
-            body: "Super built-up numbers can sound impressive. Your everyday life happens in the space you can actually use.",
+            title: "A Balcony, Or A Ledge?",
+            body: "The difference matters. Think about how you'll actually use the space — morning tea, plants, children, evenings, guests.",
           },
           {
             img: {
-              src: "/images/hero-4.jpeg",
+              src: "/images/about4.jpg",
               alt: "Finished living room at an Ambr Homes flat",
             },
             tag: "03",
-            title: "Visit Before You Decide.",
-            body: "Photos show a home. A visit lets you hear it, walk it, feel the light and imagine a normal Tuesday there.",
+            title: "Cross Ventilation & Morning Light.",
+            body: "Visit at different times of day. See where the light comes from. Notice how air moves through the home.",
           },
         ]}
       />
@@ -337,7 +337,7 @@ export default function AboutPage() {
       {/* Where we build — parallax showcase */}
       <ParallaxShowcase
         bg={{
-          src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+          src: "/images/ambr46.jpeg",
           alt: "Ambr Homes community at dusk",
         }}
         cards={[
@@ -349,20 +349,20 @@ export default function AboutPage() {
           },
           {
             img: {
-              src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80",
+              src: "/images/aspire-01.jpeg",
               alt: "Courtyard garden at an Ambr Homes community",
             },
           },
           {
             img: {
-              src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
+              src: "/images/ambr39.jpeg",
               alt: "Ambr Homes building at dusk",
             },
           },
         ]}
         title="One Corridor. A Place We Know Well."
         eyebrow="06 — ONE CORRIDOR"
-        desc="We chose to keep building close to home. Not everywhere. Not wherever the next plot appeared. Here. Because when your projects stay close, you learn the neighbourhood differently. You know how people live, what families ask for, what changes around them and what a community needs after the buildings are finished. Five addresses later, Greater Noida West isn't just where we build. It's where we know our work."
+        desc="We didn't try to be everywhere. We chose to know one place properly. The roads. The neighbourhoods. The everyday routes. The questions families ask before buying. And what happens after they move in. From Bishrakh towards Vaidpura, our projects sit within a corridor we have kept coming back to. Because being close changes the way you build."
         link="/projects"
         linkLabel="Explore The Location"
       />

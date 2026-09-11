@@ -40,7 +40,7 @@ const STATS = [
   { value: "6+", label: "Years Building Homes", icon: Calendar },
   { value: "4", label: "Completed Communities", icon: Building2 },
   { value: "2 & 3", label: "BHK Homes", icon: Layers },
-  { value: "250+", label: "Homes Under Construction", icon: ShieldCheck },
+  { value: "250+", label: "Units Under Construction", icon: ShieldCheck },
 ];
 
 const SIX_THINGS = [
@@ -112,7 +112,7 @@ const TABLE_ROWS = [
 const ADVANTAGES = [
   {
     img: {
-      src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/aspire-03.jpeg",
       alt: "Ambr Homes community at dusk",
     },
     icon: MapPin,
@@ -121,7 +121,7 @@ const ADVANTAGES = [
   },
   {
     img: {
-      src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/ambr43.jpeg",
       alt: "Under construction at an Ambr Homes project",
     },
     icon: Users,
@@ -139,7 +139,7 @@ const ADVANTAGES = [
   },
   {
     img: {
-      src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/hero-1.jpeg",
       alt: "Ambr Homes residential community in Greater Noida West",
     },
     icon: Award,
@@ -149,8 +149,8 @@ const ADVANTAGES = [
 ];
 const SHOWCASE_CARDS = [
   { img: { src: "/images/hero-3.jpeg", alt: "Ambr Homes building exterior" }, label: "Ambr Residency" },
-  { img: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80", alt: "Courtyard garden at an Ambr Homes community" }, label: "The Courtyard" },
-  { img: { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes building at dusk" }, label: "After Dusk" },
+  { img: { src: "/images/ambr18.jpeg", alt: "Courtyard garden at an Ambr Homes community" }, label: "The Courtyard" },
+  { img: { src: "/images/ambr36.jpeg", alt: "Ambr Homes building at dusk" }, label: "After Dusk" },
 ];
 
 const PRAISE = [
@@ -175,11 +175,10 @@ const PRAISE = [
     years: "",
   },
 ];
-
 const FROM_ARMB_ITEMS = [
   {
     img: {
-      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/unsp11.jpg",
       alt: "Home layout plan",
     },
     tag: "READ THE PLAN",
@@ -188,7 +187,7 @@ const FROM_ARMB_ITEMS = [
   },
   {
     img: {
-      src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/unsp13.jpg",
       alt: "Balcony view at an Ambr Homes flat",
     },
     tag: "DRIVE THE ROUTE",
@@ -197,7 +196,7 @@ const FROM_ARMB_ITEMS = [
   },
   {
     img: {
-      src: "/images/hero-4.jpeg",
+      src: "/images/unsp14.jpg",
       alt: "Finished living room at an Ambr Homes flat",
     },
     tag: "LOOK BEYOND THE SHOW HOME",
@@ -206,7 +205,7 @@ const FROM_ARMB_ITEMS = [
   },
   {
     img: {
-      src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/unsp15.jpg",
       alt: "Under construction at an Ambr Homes project",
     },
     tag: "SEE SOMETHING FINISHED",
@@ -215,7 +214,7 @@ const FROM_ARMB_ITEMS = [
   },
   {
     img: {
-      src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/unsp19.jpg",
       alt: "Ambr Homes community at dusk",
     },
     tag: "ASK WHAT HAPPENS AFTER",
@@ -228,7 +227,7 @@ const LIFE_STAGES = [
   {
     year: "01",
     img: {
-      src: "/images/hero-4.jpeg",
+      src: "/images/unsp7.jpg",
       alt: "Finished living room at an Ambr Homes flat",
     },
     title: "THE FIRST MORNING",
@@ -237,7 +236,7 @@ const LIFE_STAGES = [
   {
     year: "02",
     img: {
-      src: "/images/hero-3.jpeg",
+      src: "/images/unsp8.jpg",
       alt: "Ambr Homes building exterior",
     },
     title: "THE ROUTINE",
@@ -246,7 +245,7 @@ const LIFE_STAGES = [
   {
     year: "03",
     img: {
-      src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/unsp9.jpg",
       alt: "Under construction at an Ambr Homes project",
     },
     title: "THE FAMILY GROWS",
@@ -255,7 +254,7 @@ const LIFE_STAGES = [
   {
     year: "04",
     img: {
-      src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/unsp10.jpg",
       alt: "Lounge interior at an Ambr Homes flat",
     },
     title: "PEOPLE COME OVER",
@@ -264,7 +263,7 @@ const LIFE_STAGES = [
   {
     year: "05",
     img: {
-      src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/unsp12.jpg",
       alt: "Ambr Homes residential community in Greater Noida West",
     },
     title: "THE HOME CHANGES",
@@ -273,7 +272,7 @@ const LIFE_STAGES = [
   {
     year: "06",
     img: {
-      src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+      src: "/images/hero-1.jpeg",
       alt: "Ambr Homes community at dusk",
     },
     title: "YEARS LATER",
@@ -337,7 +336,7 @@ export default function WhyAmbrHomesPage() {
         >
           <Media
             img={{
-              src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
+              src: "/images/aspire-01.jpeg",
               alt: "Ambr Homes building at dusk",
             }}
             priority
@@ -528,7 +527,7 @@ export default function WhyAmbrHomesPage() {
                   <thead>
                     <tr className="border-b border-white/10">
                       <th className="px-6 py-5 text-sm font-semibold text-white/50">
-                        What you&apos;re comparing
+                        What you're comparing
                       </th>
                       <th className="px-6 py-5 text-sm font-semibold text-white/50">
                         What often happens

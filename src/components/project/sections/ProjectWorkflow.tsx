@@ -21,7 +21,12 @@ export function ProjectWorkflow({ project }: { project: Project }) {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="mx-auto max-w-3xl text-center md:mx-0 md:text-left">
             <Reveal>
-              <Heading light eyebrow="Construction Workflow" title="From Foundation To Keys" />
+              <Heading
+                light
+                eyebrow="CONSTRUCTION WORKFLOW"
+                title="From Foundation To Keys"
+                description="A home takes more than a floor plan to become real. Here is the simple version of what has to happen before a family turns a key."
+              />
             </Reveal>
           </div>
           <div className="flex items-center gap-3">

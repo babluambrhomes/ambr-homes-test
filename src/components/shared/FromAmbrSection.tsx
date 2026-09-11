@@ -18,7 +18,7 @@ export type FromAmbrItem = {
 export function FromAmbrSection({
   eyebrow = "BEFORE YOU BUY",
   title = "Things Worth Knowing Before You Buy A Home",
-  description = "The right home isn't necessarily the one with the biggest promise. It's the one that makes sense when you look closely.",
+  description = "The right home isn't just about the number on the price sheet. It is about whether the home, building and neighbourhood will work for your family.",
   items,
 }: {
   eyebrow?: string;

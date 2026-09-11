@@ -68,7 +68,7 @@ export default function BlogsPage() {
       {/* Hero — parallax + overlay */}
       <section ref={heroRef} className="relative overflow-hidden bg-ink pb-36 pt-[clamp(90px,15vw,180px)] text-white">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <Media img={{ src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }} priority sizes="100vw" />
+          <Media img={{ src: "/images/ambr42.jpeg", alt: "Ambr Homes community at dusk" }} priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/40 to-ink" />
         </motion.div>
 
@@ -210,7 +210,7 @@ export default function BlogsPage() {
           {!wp.hasMore && (
             <p className="mt-12 flex items-center justify-center gap-2 text-center text-sm text-muted">
               <Tag size="15" className="text-brand" />
-              You&apos;ve seen all {wp.posts.length} articles
+              You've seen all {wp.posts.length} articles
             </p>
           )}
         </div>

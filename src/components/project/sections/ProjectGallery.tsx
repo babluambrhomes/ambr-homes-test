@@ -24,14 +24,14 @@ export function ProjectGallery({ project }: { project: Project }) {
     },
     {
       img: {
-        src: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80",
+        src: "/images/ambr38.jpeg",
         alt: "Balcony view at an Ambr Homes flat",
       },
       label: isAspire ? "A kitchen made for more than cooking." : "Balcony",
     },
     {
       img: {
-        src: "/images/hero-4.jpeg",
+        src: "/images/ambr18.jpeg",
         alt: "Finished living room at an Ambr Homes flat",
       },
       label: isAspire ? "A balcony you can actually use." : "Interior",
@@ -102,14 +102,14 @@ export function ProjectGallery({ project }: { project: Project }) {
           </Reveal>
         ))}
       </div>
-
+{/* 
       {isAspire && (
         <Reveal delay={0.25}>
           <div className="mt-8">
             <Button href="/projects">Explore The Homes</Button>
           </div>
         </Reveal>
-      )}
+      )} */}
     </section>
   );
 }

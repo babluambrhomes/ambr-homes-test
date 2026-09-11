@@ -27,7 +27,7 @@ const QUICK = [
     icon: Phone,
     label: "WHATSAPP",
     value: PHONE,
-    desc: "Send a message when it suits you. We’ll take it from there.",
+    desc: "Send a message when it suits you. We'll take it from there.",
     href: WHATSAPP_HREF,
   },
   {
@@ -40,7 +40,7 @@ const QUICK = [
   {
     icon: Clock,
     label: "OFFICE HOURS",
-    value: "10 AM – 7 PM",
+    value: "10 AM - 7 PM",
     desc: "",
     href: "#office",
   },
@@ -48,24 +48,24 @@ const QUICK = [
 
 const FAQS = [
   {
-    q: "Are all Ambr Homes projects RERA registered?",
-    a: "Yes. Every project is registered with UP RERA before a single flat is sold, and the registration number for each one is published on its project page. You can verify any of them independently at up-rera.in before you commit to anything.",
+    q: "Can I visit before I decide to buy?",
+    a: "Yes. The site visit is there to help you understand the home and make an informed decision — not to force one.",
   },
   {
-    q: "Can I see a finished home rather than a sample flat?",
-    a: "Yes, and we would encourage it. Amore is complete and ready to move into, so you can stand in the actual flat and on the actual balcony. Ambrosia and Atlanta have been occupied for years — the more useful visit, if you want to see how our buildings age.",
+    q: "Can I ask about more than one project?",
+    a: "Yes. If you're comparing options, tell us what matters to you and we can help you understand the relevant choices.",
   },
   {
-    q: "What does pre-booking at Magnolia or Aspire involve?",
-    a: "Pre-booking gives you first pick of floor, facing and corner units at pre-launch pricing. The payment schedule, cancellation terms and refund conditions are set out in the agreement for sale, which we will send you to read in full before anything is signed.",
+    q: "What should I bring for a site visit?",
+    a: "Nothing special. Come with your questions. If you already know your preferred budget, home size or project, sharing that can make the conversation more useful.",
   },
   {
-    q: "Do you help with home loans and documentation?",
-    a: "We can share the approved-project paperwork that lenders ask for and point you to banks that have financed our earlier projects. We do not act as a broker or take a commission on financing — the arrangement stays between you and your lender.",
+    q: "Can I just ask one question?",
+    a: "Absolutely. You don't need to fill out a long form or know exactly what you want before contacting us.",
   },
   {
-    q: "What happens after I get the keys?",
-    a: "A snag list is walked with you before handover and closed out afterwards. Maintenance is handed over to the resident association with our team supporting the transition, and the same site office stays reachable — buyers from our earliest project still call it.",
+    q: "What happens after I contact AMBR?",
+    a: "Someone from the team will understand what you're looking for and help with the next useful step — a call, information, or a site visit.",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
       {/* Hero — parallax + overlay */}
       <section ref={heroRef} className="relative overflow-hidden bg-ink pb-40 pt-[clamp(90px,15vw,180px)] text-white">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <Media img={{ src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes community at dusk" }} priority sizes="100vw" />
+          <Media img={{ src: "/images/ambr46.jpeg", alt: "Ambr Homes community at dusk" }} priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/40 to-ink" />
         </motion.div>
 
@@ -96,15 +96,15 @@ export default function ContactPage() {
               LET'S TALK ABOUT THE HOME
             </span>
             <h1 className="mt-5 text-[clamp(2.4rem,5.2vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
-              Tell Us What You&apos;re Looking For
+              Tell Us What You're Looking For.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-              Buying a home deserves more than a callback request. Tell us what you need, ask the question you have, or simply come and see what we&apos;ve built. We&apos;ll help you understand the options without rushing you into a decision.
+              Buying a home deserves more than a callback request. Tell us what you need, ask the question you have, or simply come and see what we've built. We'll help you understand the options without rushing you into a decision.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button href="/contact">
-                Book A Site Visit →
+                Book A Site Visit 
               </Button>
 
               <a
@@ -227,11 +227,11 @@ export default function ContactPage() {
           {/* Right — image + overlay */}
           <Reveal delay={0.1} className="h-full">
             <div className="relative h-full overflow-hidden rounded-[1.5rem] ">
-              <Media img={{ src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes site office, Bishrakh" }} sizes="(max-width: 768px) 100vw, 50vw" className="absolute inset-0 h-full w-full object-cover" />
+              <Media img={{ src: "/images/ambr6.jpeg", alt: "Ambr Homes site office, Bishrakh" }} sizes="(max-width: 768px) 100vw, 50vw" className="absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
               <div className="relative z-10 flex h-full flex-col justify-end p-8 sm:p-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">Arriving</p>
-                <h3 className="mt-2 text-2xl font-medium text-white">The site office you&apos;ll meet</h3>
+                <h3 className="mt-2 text-2xl font-medium text-white">The site office you'll meet</h3>
                 <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/70">
                   Every project is within a half-hour drive of this desk — so a site visit can usually be arranged the
                   same week you ask for one. Evening visits can be arranged on request.
@@ -398,8 +398,11 @@ export default function ContactPage() {
                   type="submit"
                   className="group w-full flex justify-center gap-3 rounded-full bg-brand py-2 px-5 text-base font-medium text-white transition-all duration-[0.45s] ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-brand-dark hover:shadow-[0_16px_40px_-12px_rgba(226,1,15,0.55)] hover:-translate-y-0.5 focus-visible:outline-none"
                 >
-                  Submit Enquiry
+                  Talk To AMBR →
                 </button>
+                <p className="mt-3 text-center text-xs text-white/60">
+                  We’ll understand what you need and suggest the most useful next step.
+                </p>
 
               </form>
             )}
@@ -453,9 +456,9 @@ export default function ContactPage() {
         <div className="grid items-end gap-10 rounded-[1.5rem] border border-line bg-white p-8 md:grid-cols-2 md:p-12">
           <div>
             <Heading
-              eyebrow="Expert Assistance"
-              title="Already Living In An Ambr Home?"
-              description="Snag lists, maintenance handover, documentation and resident association queries all go to the same site office — not to a helpline that closes when the project does."
+              eyebrow="FOR EXISTING AMBR HOMEOWNERS"
+              title="Already Living In An AMBR Home?"
+              description="If you already live in an AMBR home, you should not have to start from the beginning every time you need help. For maintenance, handover documentation or resident questions, contact us and we’ll connect you with the right team."
             />
           </div>
           <div className="flex flex-wrap gap-4 md:justify-end">
@@ -470,7 +473,11 @@ export default function ContactPage() {
       {/* FAQ */}
       <section className="wrap pb-[clamp(56px,6vw,96px)]">
         <div className="mx-auto max-w-2xl text-center">
-          <Heading align="center" eyebrow="Questions" title="Everything You Want To Know" />
+          <Heading
+            align="center"
+            eyebrow="QUESTIONS YOU MAY BE WONDERING"
+            title="Before You Call, Here Are A Few Answers."
+          />
         </div>
         <div className="mx-auto mt-10 max-w-3xl space-y-3">
           {FAQS.map((f) => (

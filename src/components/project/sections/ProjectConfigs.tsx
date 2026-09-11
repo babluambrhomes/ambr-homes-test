@@ -17,7 +17,7 @@ export function ProjectConfigs({ project }: { project: Project }) {
           ...project.configs[1],
           tag: "3 BHK",
           title: "3 BHK",
-          desc: "More flexibility as life changes — a child's room, guest room, study, or simply more space between everyone.",
+          desc: "A 3 BHK gives a growing family more flexibility — a child’s room, guest room, study or simply more breathing room as life changes.",
         },
       ]
     : project.configs;
