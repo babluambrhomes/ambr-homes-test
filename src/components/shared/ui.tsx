@@ -30,17 +30,17 @@ export function Heading({
         {eyebrow}
       </span>
       <Tag
-        className={`mt-5 font-medium ${
+        className={`mt-4 sm:mt-5 font-medium ${
           level === 1
-            ? "text-[clamp(2.4rem,5.2vw,4.6rem)] leading-[1.05] tracking-[-0.02em]"
-            : "text-[clamp(2rem,3.4vw,3.5rem)] leading-[1.1] tracking-[-0.015em]"
+            ? "text-[clamp(1.9rem,4.8vw,4.6rem)] leading-[1.08] sm:leading-[1.05] tracking-[-0.02em]"
+            : "text-[clamp(1.65rem,3.2vw,3.5rem)] leading-[1.15] sm:leading-[1.1] tracking-[-0.015em]"
         } ${light ? "text-white" : "text-ink"} ${centered ? "text-center" : ""}`}
       >
         {title}
       </Tag>
       {description ? (
         <p
-          className={`mt-5 max-w-[52ch] text-lg leading-relaxed ${
+          className={`mt-4 sm:mt-5 max-w-[52ch] text-base sm:text-lg leading-relaxed ${
             light ? "text-white/85" : "text-ink-2"
           } ${centered ? "mx-auto text-center" : ""}`}
         >

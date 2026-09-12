@@ -24,24 +24,24 @@ import {
   TrendingUp,
 } from "lucide-react";
 const STATS = [
-  { value: "6+", label: "Years Building Homes", icon: Calendar },
-  { value: "4", label: "Completed Communities", icon: Building2 },
-  { value: "250+", label: "Units Under Construction", icon: LandPlot },
+  { value: "4+", label: "Years Building Homes", icon: Calendar },
+  { value: "11", label: "Completed Communities", icon: Building2 },
+  { value: "250+", label: "Homes Under Construction", icon: LandPlot },
   { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
 ];
 
 const STORY_CHAPTERS = [
   {
-    year: "2010",
+    year: "2022",
     img: {
       src: "/images/sp1.jpg",
       alt: "Ambr Homes site office, Bishrakh",
     },
     title: "It Started With A Simple Idea.",
-    body: "Build homes the way we would want our own family to live in them. The first address gave us a place to start. The families who moved in gave us something more important — a standard to live up to.",
+    body: "Build homes the way we would want our own family to live in them. The first address gave us a place to start in 2022. The families who moved in gave us something more important — a standard to live up to.",
   },
   {
-    year: "2013",
+    year: "2023",
     img: {
       src: "/images/sp2.jpg",
       alt: "Ambr Homes building exterior",
@@ -50,7 +50,7 @@ const STORY_CHAPTERS = [
     body: "The day a family gets the keys is not the end of a project. It is the beginning of everything the building was meant for. That first handover taught us to look at a home differently — not just as something we build, but as somewhere someone will actually live.",
   },
   {
-    year: "2016",
+    year: "2025",
     img: {
       src: "/images/ambr41.jpeg",
       alt: "Ambr Homes community at dusk",
@@ -59,10 +59,10 @@ const STORY_CHAPTERS = [
     body: "Rather than spread ourselves across the city, we continued building along the Greater Noida West corridor we knew. The reason was simple. Being close means you cannot become distant from your own work.",
   },
   {
-    year: "TODAY",
+    year: "2026",
     img: {
-      src: "/images/ambr19.jpeg",
-      alt: "Ambr Homes residential community in Greater Noida West",
+      src: "/images/ambr10.jpeg",
+      alt: "Ambr Amore residential community in Greater Noida West",
     },
     title: "Five Addresses. One Standard.",
     body: "Today, AMBR has completed communities, homes ready for families to move into and new projects taking shape. The scale has changed. The reason for building hasn't. Build well. Stay close. Keep improving.",
@@ -114,8 +114,8 @@ export default function AboutPage() {
       {/* Hero — parallax + overlay */}
       <section ref={heroRef} className="relative overflow-hidden bg-ink pb-40 pt-[clamp(90px,15vw,180px)] text-white">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <Media img={{ src: "/images/ambr41.jpeg", alt: "Ambr Homes building at dusk" }} priority sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/40 to-ink" />
+          <Media img={{ src: "/images/ambr41.jpeg", alt: "Ambr Homes building at dusk" }} priority sizes="100vw" className="opacity-70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/35 to-ink" />
         </motion.div>
 
         <div className="wrap relative">
@@ -123,12 +123,12 @@ export default function AboutPage() {
             <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
               About Us
             </span>
-            <h1 className="mt-5 text-[clamp(2.4rem,5.2vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
+            <h1 className="mt-5 text-[clamp(1.9rem,4.8vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
               We Build Homes. You Make Them Ghar.
             </h1>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {["EST. 2010", "UP RERA", "Bishrakh · Vaidpura"].map((t) => (
+              {["EST. 2022", "UP RERA", "Bishrakh · Vaidpura"].map((t) => (
                 <span key={t} className="rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-[0.12em] text-white ring-1 ring-white/20 backdrop-blur-md">
                   {t}
                 </span>
@@ -180,8 +180,8 @@ export default function AboutPage() {
             <div className="max-w-2xl">
               <Heading
                 eyebrow="Our Story"
-                title="Built Around A Promise We Made In 2010."
-                description="Four moments tell the story better than a long company profile. A beginning in Bishrakh. A first handover. A decision to stay close to one corridor. And today — five addresses, with families already living in some and new homes taking shape in others. We have grown by building here, learning here and staying close enough to see what happens after possession"
+                title="Built Around A Promise We Made In 2022."
+                description="Four moments tell the story better than a long company profile. A beginning in Bishrakh in 2022. A first handover. A decision to stay close to one corridor. And today — five addresses, with families already living in some and new homes taking shape in others. We have grown by building here, learning here and staying close enough to see what happens after possession."
               />
             </div>
 
@@ -231,7 +231,7 @@ export default function AboutPage() {
               className="!overflow-visible !pb-4"
             >
               {STORY_CHAPTERS.map((ch, i) => (
-                <SwiperSlide key={ch.year} className="!h-auto">
+                <SwiperSlide key={`${ch.year}-${i}`} className="!h-auto">
                   <Reveal delay={i * 0.05}>
                     <div className="group relative min-h-[440px] overflow-hidden rounded-t-[2rem] rounded-b-[1rem]">
                       <Media
@@ -366,8 +366,6 @@ export default function AboutPage() {
         link="/projects"
         linkLabel="Explore The Location"
       />
-
-
 
       {/* Partner With Us */}
       <PartnerSection

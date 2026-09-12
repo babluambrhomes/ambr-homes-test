@@ -15,26 +15,32 @@ export function ProjectGallery({ project }: { project: Project }) {
       large: true,
     },
     {
-      img: project.configs[0]?.img ?? project.heroImg,
-      label: isAspire ? "A home that opens up to light." : project.configs[0]?.tag ?? "",
-    },
-    {
-      img: project.configs[1]?.img ?? project.heroImg,
-      label: isAspire ? "Green space around the everyday." : project.configs[1]?.tag ?? "",
+      img: {
+        src: "/images/cross.jpg",
+        alt: "Sunlit living room with natural light and cross ventilation",
+      },
+      label: isAspire ? "A home that opens up to light." : "Light & Air",
     },
     {
       img: {
-        src: "/images/ambr38.jpeg",
-        alt: "Balcony view at an Ambr Homes flat",
+        src: "/images/park.jpg",
+        alt: "Landscaped green park and courtyard at Ambr Homes",
       },
-      label: isAspire ? "A kitchen made for more than cooking." : "Balcony",
+      label: isAspire ? "Green space around the everyday." : "Park Facing",
     },
     {
       img: {
-        src: "/images/ambr18.jpeg",
-        alt: "Finished living room at an Ambr Homes flat",
+        src: "/images/unsp14.jpg",
+        alt: "Modern modular kitchen at Ambr Homes",
       },
-      label: isAspire ? "A balcony you can actually use." : "Interior",
+      label: isAspire ? "A kitchen made for more than cooking." : "Modular Kitchen",
+    },
+    {
+      img: {
+        src: "/images/bal.jpg",
+        alt: "Spacious usable balcony at Ambr Homes",
+      },
+      label: isAspire ? "A balcony you can actually use." : "Wide Balcony",
     },
   ];
 

@@ -56,7 +56,7 @@ export function ProjectHero({ project }: { project: Project }) {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h1 className="mt-5 text-[clamp(2.4rem,5.2vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
+            <h1 className="mt-5 text-[clamp(1.9rem,4.8vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
               {heading}
             </h1>
 
@@ -77,7 +77,7 @@ export function ProjectHero({ project }: { project: Project }) {
 
               {/* VIEW BROCHURE */}
               <a
-                href={`/Brochure/${project.slug}.pdf`}
+                href={project.slug === "amore" ? "/Brochure/aspire.pdf" : `/Brochure/${project.slug}.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex min-h-[54px] items-center gap-3 rounded-xl border border-white/35 bg-white/10 px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_10px_30px_-18px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-white/70 hover:bg-white hover:text-ink hover:shadow-[0_16px_35px_-15px_rgba(0,0,0,0.45)]"

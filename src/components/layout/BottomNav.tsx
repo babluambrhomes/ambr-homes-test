@@ -22,8 +22,8 @@ export function BottomNav() {
         <Link
           key={href}
           href={href}
-          className={`flex-1 py-4 text-center text-sm transition-colors ${
-            pathname === href ? "font-medium text-brand" : "text-ink-2"
+          className={`flex-1 py-2.5 sm:py-3.5 text-center text-xs sm:text-sm transition-colors ${
+            pathname === href ? "font-semibold text-brand" : "text-ink-2 font-medium"
           }`}
         >
           {label}

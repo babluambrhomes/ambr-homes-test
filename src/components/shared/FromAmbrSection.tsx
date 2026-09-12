@@ -95,33 +95,42 @@ export function FromAmbrSection({
           >
             {items.map((c, i) => (
               <SwiperSlide key={c.title} className="!h-auto">
-                <div className="group relative h-[430px] overflow-hidden rounded-[1.5rem]">
+                <div className="group relative h-[430px] overflow-hidden rounded-[1.5rem] bg-ink shadow-lg transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-[0_30px_70px_-25px_rgba(226,1,15,0.3)]">
                   <Media
                     img={c.img}
                     sizes="(max-width: 1024px) 90vw, 33vw"
-                    className="transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
+                    className="transition-transform duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+                  {/* Gradient Overlay with smooth transition on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/20 transition-all duration-500 group-hover:from-black/98 group-hover:via-black/75" />
 
-                  <span className="absolute left-5 top-5 rounded-full bg-white/15 px-3.5 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md ring-1 ring-white/20">
+                  {/* Top Left Tag Badge */}
+                  <span className="absolute left-5 top-5 rounded-full bg-black/40 px-3.5 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:border-brand group-hover:bg-brand">
                     {c.tag}
                   </span>
 
-                  <span className="absolute right-5 top-5 grid h-9 w-9 place-items-center rounded-full bg-white/15 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/20">
+                  {/* Top Right Number Badge */}
+                  <span className="absolute right-5 top-5 grid h-9 w-9 place-items-center rounded-full bg-black/40 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/20 transition-transform duration-300 group-hover:scale-110">
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
-                  <div className="absolute inset-x-0 bottom-0 p-7">
-                    <span className="mb-4 block h-0.5 w-12 bg-brand transition-all duration-500 group-hover:w-20" />
+                  {/* Bottom Content Area with Hover Reveal */}
+                  <div className="absolute inset-x-0 bottom-0 p-7 flex flex-col justify-end">
+                    <span className="mb-3 block h-1 w-10 bg-brand transition-all duration-500 group-hover:w-20 rounded-full" />
 
-                    <h4 className="text-[1.35rem] font-medium leading-snug text-white">
+                    <h4 className="text-[1.35rem] font-bold leading-snug text-white drop-shadow-sm transition-transform duration-300 group-hover:-translate-y-0.5">
                       {c.title}
                     </h4>
 
-                    <p className="mt-2.5 text-sm leading-relaxed text-white/75">
-                      {c.body}
-                    </p>
+                    {/* Smooth Hover Expansion for Description Text */}
+                    <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-out group-hover:grid-rows-[1fr] group-hover:opacity-100">
+                      <div className="overflow-hidden">
+                        <p className="pt-2 text-sm leading-relaxed text-white/90 font-normal">
+                          {c.body}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>

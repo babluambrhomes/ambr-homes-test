@@ -71,7 +71,7 @@ export function Coverflow({
         {items.map((it, i) => (
           <SwiperSlide
             key={i}
-            className="!w-[70%] sm:!w-[46%] md:!w-[34%] lg:!w-[24%]"
+            className="!w-[82%] sm:!w-[52%] md:!w-[34%] lg:!w-[24%]"
           >
             <div
               className="

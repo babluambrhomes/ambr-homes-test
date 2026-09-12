@@ -27,7 +27,7 @@ const FROM_ARMB_ITEMS = [
       alt: "Home layout plan",
     },
     tag: "READ THE PLAN",
-    title: "READ THE PLAN",
+    title: "Read The Plan",
     body: "Don't just look at the number of bedrooms. Look at room sizes, movement, balconies, windows and how your furniture might actually fit.",
   },
   {
@@ -36,7 +36,7 @@ const FROM_ARMB_ITEMS = [
       alt: "Balcony view at an Ambr Homes flat",
     },
     tag: "DRIVE THE ROUTE",
-    title: "DRIVE THE ROUTE",
+    title: "Drive The Route",
     body: "A location looks different at 11 AM than it does at 8:30 AM on a weekday. Try the journey you will actually make.",
   },
   {
@@ -45,34 +45,34 @@ const FROM_ARMB_ITEMS = [
       alt: "Finished living room at an Ambr Homes flat",
     },
     tag: "LOOK BEYOND THE SHOW HOME",
-    title: "LOOK BEYOND THE SHOW HOME",
+    title: "Look Beyond The Show Home",
     body: "Ask what is standard. Ask what is optional. Ask what is included. Read the specifications.",
   },
   {
     img: {
-      src: "/images/unsp15.jpg",
+      src: "/images/builds.jpg",
       alt: "Under construction at an Ambr Homes project",
     },
     tag: "SEE SOMETHING FINISHED",
-    title: "SEE SOMETHING FINISHED",
+    title: "See Something Finished",
     body: "A render shows what a home is supposed to become. A completed home shows what a builder actually builds.",
   },
   {
     img: {
-      src: "/images/unsp19.jpg",
+      src: "/images/keys.jpg",
       alt: "Ambr Homes community at dusk",
     },
     tag: "ASK WHAT HAPPENS AFTER",
-    title: "ASK WHAT HAPPENS AFTER",
+    title: "Ask What Happens After",
     body: "The sale is one day. Living in the home is years. Know who remains responsible when the keys are handed over.",
   },
 ];
 
 const STATS = [
-  { value: "6+", label: "Years Building Homes", icon: Calendar },
-  { value: "4", label: "Completed Communities", icon: Building2 },
-  { value: "2 & 3 BHK", label: "Family Homes", icon: Layers },
-  { value: "250+", label: "Units Under Construction", icon: LandPlot },
+  { value: "4+", label: "Years Building Homes", icon: Calendar },
+  { value: "11", label: "Completed Communities", icon: Building2 },
+  { value: "250+", label: "Homes Under Construction", icon: LandPlot },
+  { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
 ];
 
 const HERO_SLIDES = [
@@ -107,40 +107,76 @@ const PARALLAX_CARDS = [
 
 const STORY_CHAPTERS = [
   {
-    year: "2010",
+    year: "2022",
     img: {
-      src: "/images/ambr39.jpeg",
+      src: "/images/WhatsApp Image 2026-09-07 at 6.03.05 PM.jpeg",
       alt: "Ambr Homes site office, Bishrakh",
     },
     title: "It Started With A Simple Idea.",
-    body: "Build homes the way we would want our own family to live in them. The first address gave us a place to start. The families who moved in gave us something more important — a standard to live up to.",
+    body: "Build homes the way we would want our own family to live in them. Our journey began in 2022 with our first residential development in Bishrakh, establishing a benchmark for quality and trust.",
   },
   {
-    year: "2013",
+    year: "2022",
     img: {
-      src: "/images/ambr40.jpeg",
+      src: "/images/sp2.jpg",
       alt: "Ambr Homes building exterior",
     },
     title: "The First Handover.",
-    body: "The day a family gets the keys is not the end of a project. It is the beginning of everything the building was meant for. That first handover taught us to look at a home differently — not just as something we build, but as somewhere someone will actually live.",
+    body: "The day a family gets the keys is not the end of a project — it is the beginning of everything the building was meant for. That first handover taught us that a home is more than a building; it is where life unfolds.",
   },
   {
-    year: "2016",
+    year: "2023",
     img: {
-      src: "/images/ambr41.jpeg",
+      src: "/images/hero-1.jpeg",
       alt: "Ambr Homes community at dusk",
     },
     title: "We Chose To Stay Close.",
-    body: "Rather than spread ourselves across the city, we continued building along the Greater Noida West corridor we knew. The reason was simple. Being close means you cannot become distant from your own work.",
+    body: "Rather than spreading across multiple cities, we focused exclusively on the Greater Noida West corridor we knew. Being close to our developments means we remain deeply connected to our craft and residents.",
   },
   {
-    year: "TODAY",
+    year: "2024",
     img: {
-      src: "/images/ambr37.jpeg",
-      alt: "Ambr Homes residential community in Greater Noida West",
+      src: "/images/contact-03.jpeg",
+      alt: "Quality material testing at site",
     },
-    title: "Five Addresses. One Standard.",
-    body: "Today, AMBR has completed communities, homes ready for families to move into and new projects taking shape. The scale has changed. The reason for building hasn't. Build well. Stay close. Keep improving.",
+    title: "Rigid Quality Standards.",
+    body: "Delivering over 200+ premium apartments across Greater Noida West. We mandated strict independent lab testing for concrete, steel, and waterproofing before any structure moved to execution.",
+  },
+  {
+    year: "2024",
+    img: {
+      src: "/images/Bambrosia.jpeg",
+      alt: "Ambrosia by Ambr Homes",
+    },
+    title: "Ambrosia & Multi-Block Living.",
+    body: "Delivering landmark developments like Ambrosia in Bishrakh. We prioritized 4-side open layouts, park-facing balconies, and high-speed elevators for everyday resident comfort.",
+  },
+  {
+    year: "2025",
+    img: {
+      src: "/images/ambr-aura.jpeg",
+      alt: "Aura by Ambr Homes",
+    },
+    title: "Aura & Uninterrupted Execution.",
+    body: "Delivering Aura and advancing ongoing projects on schedule. Our dedicated site teams protected material supply chains and construction standards so families receive keys without compromise.",
+  },
+  {
+    year: "2026",
+    img: {
+      src: "/images/Batlanta.jpg",
+      alt: "Atlanta by Ambr Homes",
+    },
+    title: "Atlanta — Landmark Luxury.",
+    body: "Introducing Atlanta, our landmark luxury development offering low-rise, low-density 2 & 3 BHK residences with Vastu-compliant planning, 3-tier gated security, and wide balconies.",
+  },
+  {
+    year: "2026",
+    img: {
+      src: "/images/ambr10.jpeg",
+      alt: "Ambr Amore residential community in Greater Noida West",
+    },
+    title: "Amore — Classical Refinement.",
+    body: "Launching Amore, blending timeless classical architecture with smart digital door locks, wooden flooring, and eco-friendly design — completing 5 flagship addresses across the corridor.",
   },
 ];
 
@@ -214,38 +250,38 @@ const STRIP_ITEMS = [
   {
     img: "/images/unsp1.jpg",
     alt: "Naturally bright and ventilated home",
-    title: "The First Light",
-    sub: "Natural light where mornings begin, and spaces that feel open before you even switch on a light.",
+    title: "Daylight & Cross-Ventilation",
+    sub: "East-west oriented layouts engineered to maximize natural morning sunlight, continuous cross-ventilation, and bright living rooms.",
   },
   {
     img: "/images/unsp2.jpg",
     alt: "Family living space at an Ambr Homes community",
-    title: "The Family Room",
-    sub: "A living space for weekday dinners, Sunday lunches, movie nights and conversations that run longer than planned.",
+    title: "Expansive Living Proportions",
+    sub: "Generous living and dining zones planned for comfortable daily movement, family gatherings, and flexible furniture arrangements.",
   },
   {
     img: "/images/unsp3.jpg",
     alt: "Green community space for families",
-    title: "The Green Corner",
-    sub: "Greenery, open areas and balconies that give you somewhere to sit when you don't want to stay indoors.",
+    title: "Landscaped Balcony Views",
+    sub: "Wide step-out balconies overlooking green open spaces, providing a peaceful outdoor extension for morning tea and evening relaxation.",
   },
   {
     img: "/images/unsp4.jpg",
     alt: "Thoughtfully planned home interior",
-    title: "The Details",
-    sub: "Storage where you need it. Practical kitchens. Comfortable movement. Finishes that make sense beyond the handover day.",
+    title: "Precision Space Planning",
+    sub: "Dedicated wardrobe niches, practical modular kitchen counters, and zero-waste corridor planning engineered for maximum usable carpet area.",
   },
   {
     img: "/images/unsp5.jpg",
     alt: "Thoughtfully planned community spaces",
-    title: "Made For Real Life",
-    sub: "The morning rush, the afternoon nap, homework at the dining table, tea on the balcony and family coming over without warning.",
+    title: "Gated Safety & Amenities",
+    sub: "3-tier security infrastructure, high-speed dual elevators, uninterrupted power backup, and step-free access designed for all age groups.",
   },
 ];
 
 
-const COVERFLOW_ITEMS = PROJECTS.slice(0, 5).map((p, i) => ({
-  img: i % 2 ? p.configs[0].img.src : p.heroImg.src,
+const COVERFLOW_ITEMS = PROJECTS.slice(0, 5).map((p) => ({
+  img: p.heroImg.src,
   alt: p.heroAlt,
   label: `${p.name} · ${p.statusLabel}`,
 }));
@@ -290,7 +326,7 @@ A Place We Know Well."
           <Heading
             eyebrow="Made For Real Life"
             title="Designed For How A Home Is Lived In."
-            description="The morning rush. The afternoon nap. Homework at the dining table. Tea on the balcony. Family coming over without warning. A good home has to make room for all of it."
+            description="Thoughtfully planned room dimensions, continuous ventilation, zero-waste spatial layouts, and durable finishes engineered to support family life for decades to come."
           />
         </div>
 
@@ -308,7 +344,7 @@ A Place We Know Well."
             <Heading
               align="center"
               eyebrow="Our Story"
-              title="Built Around A Promise We Made In 2010."
+              title="Built Around A Promise We Made In 2022."
             />
           </div>
         </div>
@@ -316,7 +352,7 @@ A Place We Know Well."
         <div className="wrap relative mt-16 grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           {/* Sticky narrative panel */}
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <div className="relative overflow-hidden rounded-[1.8rem] bg-ink p-8 text-white shadow-[0_40px_90px_-40px_rgba(16,16,16,0.55)] sm:p-10">
+            <div className="relative overflow-hidden rounded-[1.5rem] sm:rounded-[1.8rem] bg-ink p-6 text-white shadow-[0_40px_90px_-40px_rgba(16,16,16,0.55)] sm:p-10">
               <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand/25 blur-[80px]" />
 
               <div className="relative">
@@ -325,15 +361,15 @@ A Place We Know Well."
                   02 OUR STORY
                 </span>
 
-                <h3 className="mt-6 text-[clamp(1.6rem,2.6vw,2.2rem)] font-medium leading-snug text-white">
+                <h3 className="mt-5 text-[clamp(1.35rem,2.5vw,2.2rem)] font-medium leading-snug text-white">
                   We Build Homes For People Who Plan To Make Them Their Own.
                 </h3>
 
-                <p className="mt-4 text-white/75">
-                  A home is a big promise. So is building one. Our story is not really about how many years we have been around. It is about what we have learned by staying close to the homes, the neighbourhood and the families who live in them. Four chapters. One corridor. Five addresses.
+                <p className="mt-3.5 text-sm sm:text-base text-white/75">
+                  A home is a big promise. So is building one. Our story is not really about how many years we have been around. It is about what we have learned by staying close to the homes, the neighbourhood and the families who live in them. Eight chapters. One corridor. Five addresses.
                 </p>
 
-                <div className="mt-7">
+                <div className="mt-6">
                   <Button href="/about">
                     Meet Ambr Homes
                   </Button>
@@ -351,8 +387,8 @@ A Place We Know Well."
 
               return (
                 <div
-                  key={c.year}
-                  className={`relative lg:grid lg:grid-cols-2 lg:gap-16 ${i !== STORY_CHAPTERS.length - 1 ? "lg:pb-16" : ""
+                  key={`${c.year}-${i}`}
+                  className={`relative lg:grid lg:grid-cols-2 lg:gap-16 ${i !== STORY_CHAPTERS.length - 1 ? "pb-8 lg:pb-16" : ""
                     }`}
                 >
                   <span className="absolute left-1/2 top-2 hidden -translate-x-1/2 lg:block">
@@ -365,13 +401,13 @@ A Place We Know Well."
 
                   <Reveal
                     className={`${left ? "lg:col-start-2" : "lg:col-start-1"
-                      } pt-10 lg:pt-0`}
+                      } pt-4 lg:pt-0`}
                   >
                     <div
-                      className={`mb-4 flex items-center gap-3 ${left ? "lg:justify-start" : "lg:justify-end"
+                      className={`mb-3 flex items-center gap-3 ${left ? "lg:justify-start" : "lg:justify-end"
                         }`}
                     >
-                      <span className="bg-gradient-to-r from-brand to-brand-dark bg-clip-text text-6xl font-semibold leading-none tracking-tight text-transparent sm:text-7xl">
+                      <span className="bg-gradient-to-r from-brand to-brand-dark bg-clip-text text-4xl font-semibold leading-none tracking-tight text-transparent sm:text-7xl">
                         {c.year}
                       </span>
 
@@ -380,8 +416,8 @@ A Place We Know Well."
                       </span>
                     </div>
 
-                    <div className="group relative overflow-hidden rounded-[1.5rem] border-line/10 bg-white transition-all duration-500 hover:-translate-y-1.5">
-                      <div className="relative h-48 overflow-hidden sm:h-56">
+                    <div className="group relative overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem] border border-line/50 bg-white p-5 sm:p-7 transition-all duration-500 hover:-translate-y-1.5">
+                      <div className="relative h-40 overflow-hidden rounded-xl sm:h-56">
                         <Media
                           img={c.img}
                           sizes="(max-width: 1024px) 90vw, 40vw"
@@ -390,24 +426,24 @@ A Place We Know Well."
 
                         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
 
-                        <span className="absolute left-4 top-4 grid h-11 w-11 place-items-center rounded-xl bg-white/15 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/20 transition-transform duration-500 group-hover:rotate-6">
+                        <span className="absolute left-3 top-3 sm:left-4 sm:top-4 grid h-9 w-9 sm:h-11 sm:w-11 place-items-center rounded-xl bg-white/15 text-xs sm:text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/20 transition-transform duration-500 group-hover:rotate-6">
                           {String(i + 1).padStart(2, "0")}
                         </span>
 
-                        <span className="absolute bottom-4 left-4 h-1 w-10 bg-brand" />
+                        <span className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 h-1 w-10 bg-brand" />
                       </div>
 
-                      <div className="flex gap-5 pt-7">
+                      <div className="flex gap-3 sm:gap-5 pt-4 sm:pt-6">
                         <div className="hidden flex-none pt-0.5 sm:block">
                           <span className="block h-10 w-px bg-gradient-to-b from-brand to-line" />
                         </div>
 
                         <div>
-                          <h4 className="text-xl font-medium text-ink">
+                          <h4 className="text-lg sm:text-xl font-medium text-ink">
                             {c.title}
                           </h4>
 
-                          <p className="mt-2 leading-relaxed text-ink-2">
+                          <p className="mt-1.5 text-sm sm:text-base leading-relaxed text-ink-2">
                             {c.body}
                           </p>
                         </div>
@@ -424,10 +460,10 @@ A Place We Know Well."
       {/* =========================================================
         06 — FEATURED PROJECT — ASPIRE
     ========================================================== */}
-      <section className="wrap py-24">
-        <div className="group relative overflow-hidden rounded-[2rem] bg-ink shadow-[0_40px_90px_-40px_rgba(16,16,16,0.6)] ring-1 ring-white/10">
+      <section className="wrap py-16 sm:py-24">
+        <div className="group relative overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-ink shadow-[0_40px_90px_-40px_rgba(16,16,16,0.6)] ring-1 ring-white/10">
           <div className="grid lg:grid-cols-[1.15fr_1fr]">
-            <div className="relative min-h-[380px] overflow-hidden sm:min-h-[460px] lg:min-h-[600px]">
+            <div className="relative min-h-[300px] sm:min-h-[460px] lg:min-h-[600px]">
               <Media
                 img={{
                   src: "/images/aspire-02.jpeg",
@@ -439,30 +475,30 @@ A Place We Know Well."
 
               <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/20 to-transparent" />
 
-              <div className="absolute left-6 top-6 flex flex-wrap items-center gap-2.5">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-medium text-white backdrop-blur-md ring-1 ring-white/20">
+              <div className="absolute left-4 top-4 sm:left-6 sm:top-6 flex flex-wrap items-center gap-2 sm:gap-2.5">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[0.7rem] sm:text-xs font-medium text-white backdrop-blur-md ring-1 ring-white/20">
                   <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
                   Under Construction · Pre-booking
                 </span>
 
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-xs font-medium text-white backdrop-blur-md ring-1 ring-white/20">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[0.7rem] sm:text-xs font-medium text-white backdrop-blur-md ring-1 ring-white/20">
                   <MapPin size="12" className="text-brand" />
                   Vaidpura
                 </span>
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 grid grid-cols-3 divide-x divide-white/15 border-t border-white/10 px-2 py-5 backdrop-blur-sm">
+              <div className="absolute inset-x-0 bottom-0 grid grid-cols-3 divide-x divide-white/15 border-t border-white/10 px-1 py-3 sm:px-2 sm:py-5 backdrop-blur-sm">
                 {[
                   ["2 & 3", "BHK homes"],
                   ["Park", "facing edge"],
                   ["100%", "RERA registered"],
                 ].map(([v, l]) => (
-                  <div key={l} className="px-4 text-center">
-                    <p className="text-xl font-medium text-white sm:text-2xl">
+                  <div key={l} className="px-2 sm:px-4 text-center">
+                    <p className="text-base sm:text-2xl font-medium text-white">
                       {v}
                     </p>
 
-                    <p className="mt-0.5 text-[0.7rem] uppercase tracking-[0.12em] text-white/60">
+                    <p className="mt-0.5 text-[0.6rem] sm:text-[0.7rem] uppercase tracking-[0.12em] text-white/60">
                       {l}
                     </p>
                   </div>
@@ -470,8 +506,8 @@ A Place We Know Well."
               </div>
             </div>
 
-            <div className="relative flex flex-col justify-center gap-6 p-8 sm:p-10 lg:p-14">
-              <span className="text-[clamp(2.6rem,6vw,5rem)] font-semibold leading-[0.9] tracking-[-0.03em]">
+            <div className="relative flex flex-col justify-center gap-5 sm:gap-6 p-6 sm:p-10 lg:p-14">
+              <span className="text-[clamp(1.75rem,5vw,5rem)] font-semibold leading-[1.05] sm:leading-[0.9] tracking-[-0.03em]">
                 <span className="bg-gradient-to-br from-white to-white/40 bg-clip-text text-transparent">
                   Our Most Generous Plans Yet.
                 </span>

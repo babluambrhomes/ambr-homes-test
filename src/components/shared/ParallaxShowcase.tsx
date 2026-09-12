@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -29,6 +29,11 @@ export function ParallaxShowcase({
   linkLabel?: string;
 }) {
   const ref = useRef<HTMLElement>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -74,11 +79,12 @@ export function ParallaxShowcase({
   return (
     <section
       ref={ref}
+      suppressHydrationWarning
       className="relative min-h-[100vh] overflow-hidden bg-ink py-[clamp(80px,14vw,200px)]"
     >
       {/* Parallax background (slowest layer) */}
       <motion.div
-        style={{ y: yBg, scale: scaleBg }}
+        style={mounted ? { y: yBg, scale: scaleBg } : undefined}
         className="absolute -top-[15%] -bottom-[25%] inset-x-0"
       >
         <Image
@@ -102,19 +108,25 @@ export function ParallaxShowcase({
         ========================================================== */}
 
         <motion.div
-          style={{ y: yText }}
+          style={mounted ? { y: yText } : undefined}
           className="relative z-10"
         >
           {/* <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-12 after:shrink-0 after:bg-brand/60 after:content-['']">
             {eyebrow}
           </span> */}
 
-          <h2 className="mt-4 bg-gradient-to-br from-white to-white/40 bg-clip-text text-[clamp(3rem,8vw,7rem)] font-semibold leading-[0.9] tracking-[-0.03em] text-transparent">
+          <h2
+            suppressHydrationWarning
+            className="mt-4 bg-gradient-to-br from-white to-white/40 bg-clip-text text-[clamp(2.2rem,6.5vw,7rem)] font-semibold leading-[0.95] lg:leading-[0.9] tracking-[-0.03em] text-transparent"
+          >
             {title}
           </h2>
 
           {desc && (
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-white/70">
+            <p
+              suppressHydrationWarning
+              className="mt-6 max-w-md text-base sm:text-lg leading-relaxed text-white/70"
+            >
               {desc}
             </p>
           )}
@@ -149,14 +161,17 @@ export function ParallaxShowcase({
             RIGHT — FLOATING PARALLAX CARDS
         ========================================================== */}
 
-        <div className="relative h-[520px] translate-y-[80px]">
+        <div
+          suppressHydrationWarning
+          className="relative h-[360px] sm:h-[450px] lg:h-[520px] translate-y-4 lg:translate-y-[80px]"
+        >
           {/* CARD 1 */}
           {cards[0] && (
             <motion.div
-              style={{ y: card1Y }}
+              style={mounted ? { y: card1Y } : undefined}
               whileHover={{ zIndex: 50 }}
               transition={{ duration: 0.25 }}
-              className="absolute left-0 top-0 z-30 w-[58%] cursor-pointer"
+              className="absolute left-0 top-0 z-30 w-[72%] sm:w-[60%] lg:w-[58%] cursor-pointer"
             >
               <ParallaxFrame
                 img={cards[0].img}
@@ -168,10 +183,10 @@ export function ParallaxShowcase({
           {/* CARD 2 */}
           {cards[1] && (
             <motion.div
-              style={{ y: card2Y }}
+              style={mounted ? { y: card2Y } : undefined}
               whileHover={{ zIndex: 50 }}
               transition={{ duration: 0.25 }}
-              className="absolute right-0 top-[26%] z-20 w-[55%] cursor-pointer"
+              className="absolute right-0 top-[26%] z-20 w-[68%] sm:w-[56%] lg:w-[55%] cursor-pointer"
             >
               <ParallaxFrame
                 img={cards[1].img}
@@ -183,10 +198,10 @@ export function ParallaxShowcase({
           {/* CARD 3 */}
           {cards[2] && (
             <motion.div
-              style={{ y: card3Y }}
+              style={mounted ? { y: card3Y } : undefined}
               whileHover={{ zIndex: 50 }}
               transition={{ duration: 0.25 }}
-              className="absolute left-[12%] bottom-0 z-10 w-[50%] cursor-pointer"
+              className="absolute left-[10%] sm:left-[12%] bottom-0 z-10 w-[62%] sm:w-[52%] lg:w-[50%] cursor-pointer"
             >
               <ParallaxFrame
                 img={cards[2].img}

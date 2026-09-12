@@ -86,8 +86,8 @@ export default function ContactPage() {
       {/* Hero — parallax + overlay */}
       <section ref={heroRef} className="relative overflow-hidden bg-ink pb-40 pt-[clamp(90px,15vw,180px)] text-white">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <Media img={{ src: "/images/ambr46.jpeg", alt: "Ambr Homes community at dusk" }} priority sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/40 to-ink" />
+          <Media img={{ src: "/images/ambr46.jpeg", alt: "Ambr Homes community at dusk" }} priority sizes="100vw" className="opacity-70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/35 to-ink" />
         </motion.div>
 
         <div className="wrap relative">
@@ -95,7 +95,7 @@ export default function ContactPage() {
             <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
               LET'S TALK ABOUT THE HOME
             </span>
-            <h1 className="mt-5 text-[clamp(2.4rem,5.2vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
+            <h1 className="mt-5 text-[clamp(1.9rem,4.8vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
               Tell Us What You're Looking For.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">

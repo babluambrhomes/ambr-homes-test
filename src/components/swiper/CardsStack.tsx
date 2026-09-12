@@ -30,7 +30,7 @@ export function CardsStack({ items }: { items: CardItem[] }) {
       >
         {items.map((it) => (
           <SwiperSlide key={it.title} className="!h-auto">
-            <div className="relative overflow-hidden rounded-3xl border border-line bg-white p-10 shadow-[0_35px_70px_-35px_rgba(16,16,16,0.35)]">
+            <div className="relative overflow-hidden rounded-3xl border border-line bg-white p-6 sm:p-10 shadow-[0_35px_70px_-35px_rgba(16,16,16,0.35)]">
               <span className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand/[0.08] blur-2xl" />
               <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand via-brand-dark to-brand" />
 

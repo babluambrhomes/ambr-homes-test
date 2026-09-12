@@ -1,24 +1,25 @@
-﻿export type Img = {
+export type Img = {
   src: string;
   alt: string;
 };
 
 export const NAV = [
   { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
   { label: "Why Ambr Homes", href: "/why-ambr-homes" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const CONTACT = {
-  phone: "+91 00000 00000",
-  phoneHref: "tel:+910000000000",
+  phone: "+91 90 900 900 32",
+  phoneHref: "tel:+919090090032",
   email: "hello@ambrhomes.com",
   emailHref: "mailto:hello@ambrhomes.com",
   officeHours: "Open 10am - 7pm, every day including Sundays.",
-  addressShort: "Vaidpura, Greater Noida West, Uttar Pradesh 201306",
-  addressLine1: "Ambr Homes Site Office, Bishrakh,",
-  addressLine2: "Greater Noida West, Gautam Buddh Nagar, Uttar Pradesh 201306",
+  addressShort: "Sector-10/16C, Vaidpura, Greater Noida West - 203207",
+  addressLine1: "Ambr Homes Site Office, Sector-10/16C, Vaidpura,",
+  addressLine2: "Greater Noida West - 203207, Uttar Pradesh",
   rera:
     "RERA registration numbers — Ambrosia: UPRERAPRJXXXXXX · Atlanta: UPRERAPRJXXXXXX · Amore: UPRERAPRJXXXXXX · Magnolia: UPRERAPRJXXXXXX · Aspire: UPRERAPRJXXXXXX. Available at up-rera.in. Images and plans on this page are indicative. Nothing on this website constitutes an offer or contract; all bookings are governed by the agreement for sale executed between the parties.",
 };
@@ -65,12 +66,12 @@ export type Project = {
 };
 
 const SHARED_TECH = [
-  { title: "RCC Frame", desc: "Earthquake-resistant reinforced concrete frame, designed and checked by an independent structural consultant." },
-  { title: "Waterproofing", desc: "Membrane treatment to terraces, balconies and wet areas - tested before the finishes go on, not after." },
-  { title: "Concealed Services", desc: "Plumbing and electrical routed and pressure-tested before plastering, with access provided for later maintenance." },
-  { title: "Branded Fittings", desc: "Sanitaryware, CP fittings and switchgear from named brands, specified in the agreement rather than left as \"or equivalent\"." },
-  { title: "Finished Interiors", desc: "Vitrified flooring, modular kitchen counter, and finishes chosen for how they look after ten monsoons." },
-  { title: "Power Backup & Lifts", desc: "Lift shafts, backup provision and common-area lighting sized for daily use across the full occupancy of the block." },
+  { title: "Earthquake Resistant Structure", desc: "Designed by highly experienced structural engineers with lab-tested steel & concrete." },
+  { title: "8-Ft Hardwood & UPVC Doors", desc: "8 ft polished hardwood entrance frame with laminated flush door & UPVC sliding doors with wire mesh." },
+  { title: "Smart Digital Door Lock", desc: "Advanced one-touch fingerprint & PIN code digital lock system for keyless entry & emergency key backup." },
+  { title: "Wooden & Vitrified Flooring", desc: "Wooden flooring in Master Bedroom, vitrified tiles in living/bedrooms & anti-skid ceramic tiles in wet areas." },
+  { title: "Modular Kitchen & Granite Slab", desc: "Granite working platform with 2 ft glazed ceramic tile dado, stainless steel sink & modular kitchen." },
+  { title: "Luxury Bathrooms & False Ceiling", desc: "Glazed wall tiles to roof level, E-board false ceiling, vanity washbasin & CERA / Hindware / Paryware sanitaryware." },
 ];
 
 const SHARED_STEPS = [
@@ -114,21 +115,20 @@ export const PROJECTS: Project[] = [
     name: "Aspire",
     tagline: "Aspire by Ambr Homes",
     sub: "2 & 3 BHK in Vaidpura, Greater Noida West",
-    statusLabel: "Under Construction· Pre-booking",
+    statusLabel: "Under Construction · Pre-booking",
     statusTone: "orange",
     locality: "Vaidpura",
     address: "Vaidpura, Greater Noida West, Uttar Pradesh 201306",
-    heroImg: { src: "/images/ambr42.jpeg", alt: "Modern residential building at Ambr Homes, Greater Noida West" },
+    heroImg: { src: "/images/aspire-01.jpeg", alt: "Aspire by Ambr Homes, Vaidpura, Greater Noida West" },
     heroAlt: "Aspire by Ambr Homes, Vaidpura, Greater Noida West",
     heading: "Our Most Generous Plans Yet",
     intro:
       "Wider balconies, larger kitchens and a park edge that most homes look directly onto. Aspire is designed for families buying their second home — not their first compromise. Now open for pre-booking in Vaidpura, Greater Noida West.",
     configs: [
-      { title: "2 BHK — Park facing", tag: "2 BHK", desc: "Every 2 BHK is park-facing, planned for cross ventilation and morning light with a kitchen that sees the living room.", img: { src: "/images/2bhk.jpg", alt: "Park-facing home at Ambr Homes" } },
-      { title: "3 BHK — Corner unit", tag: "3 BHK", desc: "A separate study or third bedroom, and storage where a household actually needs it. Corner units available with extra windows.", img: { src: "/images/3bhk.jpg", alt: "Finished living room at an Ambr Homes flat" } },
+      { title: "2 BHK — Park facing", tag: "2 BHK", desc: "Every 2 BHK is park-facing, planned for cross ventilation and morning light with a kitchen that sees the living room.", img: { src: "/images/2bhk.jpg", alt: "Park-facing home at Aspire" } },
+      { title: "3 BHK — Corner unit", tag: "3 BHK", desc: "A separate study or third bedroom, and storage where a household actually needs it. Corner units available with extra windows.", img: { src: "/images/3bhk.jpg", alt: "Finished living room at Aspire" } },
     ],
     whyTitle: "Planned Around The Park, Not The Parking.",
-
     whyRows: [
       {
         h: "More than an elevation",
@@ -151,12 +151,14 @@ export const PROJECTS: Project[] = [
       { title: "Daylight, Not Just Downlights", desc: "Natural light and ventilation are highlighted as planning priorities — because a home should feel good before the lights are switched on." },
       { title: "Balconies With A Purpose", desc: "Wider balconies are part of the project story. Think morning tea, plants, a little fresh air, or simply somewhere to step outside." },
       { title: "A Kitchen That Works", desc: "The brochure includes modular-kitchen provision and branded fixtures/materials. Final specifications should always be checked against the latest applicable documents." },
-      // { title: "Details You Touch Every Day", desc: "The brochure lists items including 8-ft doors, premium flooring, bathroom fittings, electrical fittings and smart digital door locks." },
-      // { title: "Monthly construction updates", desc: "Every pre-booked buyer receives dated progress photographs and a written update, so you are never finding out about a delay from a neighbour." },
-      // { title: "Pre-launch pricing", desc: "Pre-booking gives first pick of floor, facing and corner units at a price that will not be repeated once the structure tops out." },
     ],
-    uses: SHARED_USES,
-    tech: [],
+    uses: [
+      { title: "First Serious Home", desc: "A 2 BHK can make sense when you want a proper family home with usable rooms and room to grow without immediately moving again.", img: { src: "/images/2bhk-1.jpg", alt: "First Serious Home at Aspire" } },
+      { title: "Growing Families", desc: "A 3 BHK gives a growing family more flexibility — a child’s room, guest room, study or simply more breathing room as life changes.", img: { src: "/images/3bhk-2.jpg", alt: "Growing Families at Aspire" } },
+      { title: "Multi-Generational Families", desc: "For families living across generations, the right plan is the one that makes movement, privacy and shared time easier.", img: { src: "/images/family-1.jpg", alt: "Multi-Generational Families at Aspire" } },
+      { title: "Smart Investors", desc: "For an investor, the starting question is simple: would an actual family want to live here? Location, usability and connectivity matter.", img: { src: "/images/invester.jpg", alt: "Aspire Real Estate Investment" } },
+    ],
+    tech: SHARED_TECH,
     steps: SHARED_STEPS,
     faqs: [
       { q: "What configurations are available?", a: "2 & 3 BHK homes are presented in the project material, with multiple plan variants." },
@@ -177,14 +179,14 @@ export const PROJECTS: Project[] = [
     statusTone: "orange",
     locality: "Vaidpura",
     address: "Vaidpura, Greater Noida West, Uttar Pradesh 201306",
-    heroImg: { src: "/images/ambr38.jpeg", alt: "Under construction at an Ambr Homes project" },
+    heroImg: { src: "/images/ambr38.jpeg", alt: "Magnolia by Ambr Homes, Vaidpura, Greater Noida West" },
     heroAlt: "Magnolia by Ambr Homes, Vaidpura, Greater Noida West",
     heading: "A Home That Makes Room For Everyone.",
     intro:
       "Spacious 2 & 3 BHK low-rise residences planned for families who want room to live, gather, grow and still have a corner of their own. With wide balconies, generous living spaces, landscaped surroundings and everyday amenities close at hand, Magnolia is made for the whole family — not just one moment in life.",
     configs: [
-      { title: "2 BHK · Courtyard facing", tag: "2 BHK", desc: "Park and courtyard-facing 2 BHK homes planned for cross ventilation and morning light.", img: { src: "/images/magno1.jpg", alt: "Park-facing home at Ambr Homes" } },
-      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom and storage for a household.", img: { src: "/images/stu1.jpg", alt: "Finished living room at an Ambr Homes flat" } },
+      { title: "2 BHK · Courtyard facing", tag: "2 BHK", desc: "Park and courtyard-facing 2 BHK homes planned for cross ventilation and morning light.", img: { src: "/images/magno1.jpg", alt: "Magnolia Courtyard Facing 2 BHK" } },
+      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom and storage for a household.", img: { src: "/images/stu1.jpg", alt: "Magnolia Corner 3 BHK" } },
     ],
     whyTitle: "Courtyards Before Car Parks",
     whyRows: [
@@ -199,7 +201,12 @@ export const PROJECTS: Project[] = [
       { title: "Monthly construction updates", desc: "Dated progress photographs and a written update go to every pre-booked buyer." },
       { title: "Pre-launch pricing", desc: "First pick of floor, facing and corner units at a price not repeated once the structure tops out." },
     ],
-    uses: SHARED_USES,
+    uses: [
+      { title: "Courtyard 2 BHK Homes", desc: "Directly overlooking green courtyards with optimal daylight and cross-ventilation.", img: { src: "/images/magno1.jpg", alt: "Magnolia Courtyard 2 BHK" } },
+      { title: "Spacious 3 BHK Layouts", desc: "Corner 3 BHK plans with a dedicated study, balcony access, and extra storage.", img: { src: "/images/stu1.jpg", alt: "Magnolia 3 BHK Living Space" } },
+      { title: "Gated Family Living", desc: "Safe, landscaped walking loops and courtyards for kids and elders alike.", img: { src: "/images/family-1.jpg", alt: "Magnolia Community Environment" } },
+      { title: "Pre-Booking Value", desc: "Early stage entry pricing in Vaidpura with clear RERA milestone assurances.", img: { src: "/images/invester.jpg", alt: "Magnolia Real Estate Investment" } },
+    ],
     tech: SHARED_TECH,
     steps: SHARED_STEPS,
     faqs: [
@@ -220,14 +227,14 @@ export const PROJECTS: Project[] = [
     statusTone: "blue",
     locality: "Bishrakh",
     address: "Bishrakh, Greater Noida West, Uttar Pradesh 201306",
-    heroImg: { src: "/images/ambr10.jpeg", alt: "Ambr Homes building exterior" },
+    heroImg: { src: "/images/ambr10.jpeg", alt: "Amore by Ambr Homes, Bishrakh, Greater Noida West" },
     heroAlt: "Amore by Ambr Homes, Bishrakh, Greater Noida West",
     heading: "Completed And Ready To Move In",
     intro:
       "Amore is complete and ready to occupy. Stand in the actual flat and on the actual balcony before committing - the most useful visit if you want to see exactly what you are buying.",
     configs: [
-      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Ready to move into, with the finishes and balconies you can inspect in person today.", img: { src: "/images/park.jpg", alt: "Park-facing home at Ambr Homes" } },
-      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans ready to occupy, with a study or third bedroom.", img: { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" } },
+      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Ready to move into, with the finishes and balconies you can inspect in person today.", img: { src: "/images/park.jpg", alt: "Amore Park Facing 2 BHK" } },
+      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans ready to occupy, with a study or third bedroom.", img: { src: "/images/hero-4.jpeg", alt: "Amore 3 BHK Corner Unit" } },
     ],
     whyTitle: "Finished Stock You Can Walk Through",
     whyRows: [
@@ -242,7 +249,12 @@ export const PROJECTS: Project[] = [
       { title: "Same crew who built it", desc: "The site office that delivered Amore still supports its residents." },
       { title: "Straightforward paperwork", desc: "Agreement for sale and payment schedule shared in full before you commit." },
     ],
-    uses: SHARED_USES,
+    uses: [
+      { title: "Ready 2 BHK Residences", desc: "Park-facing completed homes ready to inspect and move in immediately.", img: { src: "/images/park.jpg", alt: "Amore Park Facing Home" } },
+      { title: "Move-In Ready 3 BHK", desc: "Fully finished 3 BHK corner homes with expansive living spaces and modern fittings.", img: { src: "/images/hero-4.jpeg", alt: "Amore Finished Living Room" } },
+      { title: "Lived-In Family Comfort", desc: "Active community in Bishrakh with established connectivity and security.", img: { src: "/images/family-1.jpg", alt: "Amore Active Community" } },
+      { title: "Immediate Possession", desc: "No construction delay risk — walk in, inspect the keys, and move right in.", img: { src: "/images/keys.jpg", alt: "Amore Immediate Handover" } },
+    ],
     tech: SHARED_TECH,
     steps: SHARED_STEPS,
     faqs: COMPLETED_FAQS,
@@ -258,14 +270,14 @@ export const PROJECTS: Project[] = [
     statusTone: "green",
     locality: "Bishrakh",
     address: "Bishrakh, Greater Noida West, Uttar Pradesh 201306",
-    heroImg: { src: "/images/ambr9.jpeg", alt: "Ambr Homes residential community in Greater Noida West" },
+    heroImg: { src: "/images/Batlanta.jpg", alt: "Atlanta by Ambr Homes, Bishrakh, Greater Noida West" },
     heroAlt: "Atlanta by Ambr Homes, Bishrakh, Greater Noida West",
     heading: "An Occupied Community In Bishrakh",
     intro:
       "Atlanta has been complete and occupied for years — the more useful visit if you want to see how our buildings age. Registered with UP RERA, delivered on the date we gave at booking.",
     configs: [
-      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Occupied 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/cross.jpg", alt: "Park-facing home at Ambr Homes" } },
-      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom, occupied and lived in.", img: { src: "/images/bal.jpg", alt: "Finished living room at an Ambr Homes flat" } },
+      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Occupied 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/cross.jpg", alt: "Atlanta Sunlit 2 BHK" } },
+      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom, occupied and lived in.", img: { src: "/images/bal.jpg", alt: "Atlanta Wide Balcony 3 BHK" } },
     ],
     whyTitle: "Built To Age, Not Just To Sell",
     whyRows: [
@@ -280,7 +292,12 @@ export const PROJECTS: Project[] = [
       { title: "We stay after handover", desc: "Snag lists, maintenance and resident association support are part of the job." },
       { title: "Same crew, fifteen years", desc: "The teams who built Atlanta still work across the corridor." },
     ],
-    uses: SHARED_USES,
+    uses: [
+      { title: "Sunlit 2 BHK Units", desc: "Cross-ventilated 2 BHK homes with ample natural daylight and garden views.", img: { src: "/images/cross.jpg", alt: "Atlanta Sunlit 2 BHK" } },
+      { title: "Wide Balcony 3 BHK", desc: "Corner 3 BHK residences featuring deep, usable balconies for morning tea.", img: { src: "/images/bal.jpg", alt: "Atlanta Wide Balcony 3 BHK" } },
+      { title: "Settled Community", desc: "Delivered on time and occupied for years with active resident associations.", img: { src: "/images/family-1.jpg", alt: "Atlanta Established Neighborhood" } },
+      { title: "Proven Asset Quality", desc: "Tested through multiple monsoons to prove material durability and upkeep.", img: { src: "/images/invester.jpg", alt: "Atlanta Proven Asset" } },
+    ],
     tech: SHARED_TECH,
     steps: SHARED_STEPS,
     faqs: COMPLETED_FAQS,
@@ -296,29 +313,34 @@ export const PROJECTS: Project[] = [
     statusTone: "green",
     locality: "Bishrakh",
     address: "Bishrakh, Greater Noida West, Uttar Pradesh 201306",
-    heroImg: { src: "/images/ambr8.jpeg", alt: "Ambr Homes community at dusk" },
+    heroImg: { src: "/images/Bambrosia.jpeg", alt: "Ambrosia by Ambr Homes, Bishrakh, Greater Noida West" },
     heroAlt: "Ambrosia by Ambr Homes, Bishrakh, Greater Noida West",
     heading: "Where Ambr Began",
     intro:
-      "Ambrosia was our first community, delivered in 2010 and complete and occupied for years. Its families are still a short drive from our office - proof that we build to stay.",
+      "Ambrosia was our first community, delivered in 2022 and complete and occupied for years. Its families are still a short drive from our office - proof that we build to stay.",
     configs: [
-      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "The original 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/2bhk.jpg", alt: "Park-facing home at Ambr Homes" } },
-      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom.", img: { src: "/images/3bhk.jpg", alt: "Finished living room at an Ambr Homes flat" } },
+      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "The original 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/2bhk.jpg", alt: "Ambrosia Flagship 2 BHK" } },
+      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom.", img: { src: "/images/3bhk.jpg", alt: "Ambrosia Corner 3 BHK" } },
     ],
     whyTitle: "The Project That Started It All",
     whyRows: [
       { h: "A builder who returns", p: "We chose to stay in one corridor rather than spread across the NCR, because a builder who keeps coming back has to live with what they put up." },
-      { h: "Fifteen years later", p: "The residents of our earliest project are still a short drive from our office, and the same crew still supports them." },
+      { h: "Years of trust", p: "The residents of our earliest project are still a short drive from our office, and the same crew still supports them." },
     ],
     benefits: [
       { title: "Built to last", desc: "Structurally, financially and in daily use - for the families who bought here." },
-      { title: "See how it ages", desc: "Occupied since 2010, Ambrosia is the longest record we have to judge." },
+      { title: "See how it ages", desc: "Occupied since 2022, Ambrosia is the longest record we have to judge." },
       { title: "RERA registered", desc: "Registered with UP RERA, approved plans and sanctioned layout published." },
       { title: "Building communities", desc: "Communities that outlast the sales campaign that launched them." },
       { title: "We stay after handover", desc: "Buyers from our earliest project can still reach the people who built for them." },
       { title: "One corridor", desc: "Site teams, vendors and service crews all within a half-hour drive." },
     ],
-    uses: SHARED_USES,
+    uses: [
+      { title: "Flagship 2 BHK Homes", desc: "Our very first delivered 2 BHK floor plans built with precision structural design.", img: { src: "/images/2bhk.jpg", alt: "Ambrosia Flagship 2 BHK" } },
+      { title: "Corner 3 BHK Units", desc: "Corner units with maximum window openings and serene outdoor views.", img: { src: "/images/3bhk.jpg", alt: "Ambrosia Corner 3 BHK" } },
+      { title: "Vibrant Resident Life", desc: "Fully occupied community in Bishrakh, operating smoothly since 2022.", img: { src: "/images/family-1.jpg", alt: "Ambrosia Resident Life" } },
+      { title: "Handover Trust", desc: "A testament to our promise — completed on schedule with long-term builder support.", img: { src: "/images/keys.jpg", alt: "Ambrosia Delivered Community" } },
+    ],
     tech: SHARED_TECH,
     steps: SHARED_STEPS,
     faqs: COMPLETED_FAQS,

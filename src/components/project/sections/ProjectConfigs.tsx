@@ -56,7 +56,7 @@ export function ProjectConfigs({ project }: { project: Project }) {
                   {c.tag}
                 </span>
 
-                <span className="absolute left-5 bottom-0 select-none text-[6rem] leading-none font-semibold tracking-[-0.04em] text-white/12">
+                <span className="absolute left-5 bottom-0 select-none text-[4.2rem] sm:text-[6rem] leading-none font-semibold tracking-[-0.04em] text-white/12">
                   0{i + 1}
                 </span>
               </div>

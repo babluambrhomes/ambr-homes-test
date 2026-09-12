@@ -24,7 +24,7 @@ export function HeroSwiper({
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="relative h-[75vh] w-full overflow-hidden bg-transparent">
+    <div className="relative h-[70vh] sm:h-[75vh] min-h-[460px] sm:min-h-[540px] w-full overflow-hidden bg-transparent">
       <Swiper
         modules={[EffectFade, Autoplay]}
         onSwiper={(swiper) => {
@@ -58,20 +58,20 @@ export function HeroSwiper({
                 className="object-cover"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-black/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/20" />
 
-              <div className="wrap relative z-10 flex h-full items-center justify-center">
+              <div className="wrap relative z-10 flex h-full items-center justify-center px-4 sm:px-6">
                 <div className="mx-auto max-w-5xl text-center">
-                  <span className="inline-flex items-center justify-center gap-2.5 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-md">
+                  <span className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-[0.7rem] sm:text-xs font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-md">
                     <span className="h-1.5 w-1.5 rounded-full bg-white" />
                     {s.eyebrow}
                   </span>
 
-                  <h1 className="mx-auto mt-5 max-w-5xl text-[clamp(2.6rem,6vw,5.4rem)] font-medium leading-[1.02] tracking-[-0.022em] text-white">
+                  <h1 className="mx-auto mt-4 sm:mt-5 max-w-5xl text-[clamp(2rem,5.2vw,5.4rem)] font-medium leading-[1.05] tracking-[-0.022em] text-white">
                     {s.title}
                   </h1>
 
-                  <p className="mx-auto mt-6 max-w-[46ch] text-lg leading-relaxed text-white/85">
+                  <p className="mx-auto mt-4 sm:mt-6 max-w-[46ch] text-sm sm:text-lg leading-relaxed text-white/85">
                     {s.body}
                   </p>
                 </div>
@@ -82,19 +82,19 @@ export function HeroSwiper({
       </Swiper>
 
       {/* SLIDER CONTROLS — IMAGE KE UPAR */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-6 z-30">
-        <div className="wrap flex items-center justify-end">
-          <div className="pointer-events-auto flex items-center gap-3">
+      <div className="pointer-events-none absolute inset-x-0 bottom-4 sm:bottom-6 z-30">
+        <div className="wrap flex items-center justify-end px-4 sm:px-6">
+          <div className="pointer-events-auto flex items-center gap-2 sm:gap-3">
             {/* Previous */}
             <button
               type="button"
               onClick={() => swiperRef.current?.slidePrev()}
               aria-label="Previous slide"
-              className="grid h-12 w-12 place-items-center rounded-full border border-white/40 bg-black/10 text-white backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-white hover:text-ink"
+              className="grid h-10 w-10 sm:h-12 sm:w-12 place-items-center rounded-full border border-white/40 bg-black/20 text-white backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-white hover:text-ink"
             >
               <svg
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 18 18"
                 fill="none"
                 aria-hidden
@@ -114,11 +114,11 @@ export function HeroSwiper({
               type="button"
               onClick={() => swiperRef.current?.slideNext()}
               aria-label="Next slide"
-              className="grid h-12 w-12 place-items-center rounded-full border border-white/40 bg-black/10 text-white backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-white hover:text-ink"
+              className="grid h-10 w-10 sm:h-12 sm:w-12 place-items-center rounded-full border border-white/40 bg-black/20 text-white backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-white hover:text-ink"
             >
               <svg
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 18 18"
                 fill="none"
                 aria-hidden
@@ -137,7 +137,7 @@ export function HeroSwiper({
       </div>
 
       {/* DOTS — IMAGE KE UPAR */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-8 z-30">
+      <div className="pointer-events-none absolute inset-x-0 bottom-5 sm:bottom-8 z-30">
         <div className="flex justify-center">
           <div className="pointer-events-auto flex items-center gap-2">
             {slides.map((_, i) => (
@@ -147,8 +147,8 @@ export function HeroSwiper({
                 aria-label={`Go to slide ${i + 1}`}
                 onClick={() => swiperRef.current?.slideToLoop(i)}
                 className={`h-[2px] transition-all duration-500 ${activeIndex === i
-                  ? "w-11 bg-white"
-                  : "w-6 bg-white/40 hover:bg-white/70"
+                  ? "w-8 sm:w-11 bg-white"
+                  : "w-4 sm:w-6 bg-white/40 hover:bg-white/70"
                   }`}
               />
             ))}

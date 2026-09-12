@@ -15,7 +15,7 @@ export function StickyCTA() {
 
   return (
     <div
-      className={`stickcta fixed bottom-5 right-5 z-[85] flex items-center gap-3 transition-all duration-500 ${
+      className={`stickcta fixed bottom-20 right-4 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 z-[85] flex items-center gap-2.5 transition-all duration-500 ${
         show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0"
       }`}
     >

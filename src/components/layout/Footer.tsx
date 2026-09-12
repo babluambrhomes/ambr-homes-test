@@ -127,7 +127,7 @@ export function Footer() {
           {CONTACT.rera}
         </p>
 
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 py-6">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 py-6 pb-24 lg:pb-6">
 
           <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Legal">
             {["Privacy Policy", "Terms & Conditions", "Disclaimer", "Sitemap"].map((l) => (

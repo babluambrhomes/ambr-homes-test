@@ -13,27 +13,14 @@ export function ProjectAudience({ project }: { project: Project }) {
     ? "A Home For The Life You Are Building"
     : "Designed For Every Stage Of Family Life";
 
-  const aspireAudience = [
-    {
-      title: "A First Serious Home",
-      desc: "A 2 BHK can make sense when you want a proper family home with usable rooms and room to grow without immediately moving again.",
-    },
-    {
-      title: "Growing Families",
-      desc: "A 3 BHK gives a growing family more flexibility — a child’s room, guest room, study or simply more breathing room as life changes.",
-    },
-    {
-      title: "Multi-Generational Families",
-      desc: "For families living across generations, the right plan is the one that makes movement, privacy and shared time easier.",
-    },
-    {
-      title: "Investors",
-      desc: "For an investor, the starting question is simple: would an actual family want to live here? Location, usability, connectivity and the surrounding residential ecosystem matter more than a promise of appreciation.",
-    },
-  ];
+  const cardsData = project.uses.map((u) => ({
+    title: u.title,
+    desc: u.desc,
+    img: u.img,
+  }));
 
   return (
-    <section className="wrap py-[clamp(56px,6vw,96px)]">
+    <section className="wrap py-[clamp(56px,7vw,100px)]">
       <div className="mx-auto max-w-2xl">
         <Reveal>
           <Heading
@@ -44,54 +31,53 @@ export function ProjectAudience({ project }: { project: Project }) {
         </Reveal>
       </div>
 
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {isAspire
-          ? aspireAudience.map((u, i) => (
-              <Reveal key={u.title} delay={i * 0.06}>
-                <div className="group relative h-full overflow-hidden rounded-2xl">
-                  <div className="relative aspect-[3/4] overflow-hidden">
-                    <Media
-                      img={project.uses[i]?.img ?? project.heroImg}
-                      className="absolute inset-0 h-full w-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, 25vw"
-                    />
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {cardsData.map((u, i) => (
+          <Reveal key={u.title} delay={i * 0.08}>
+            <div className="group relative h-[380px] sm:h-[420px] overflow-hidden rounded-[1.4rem] sm:rounded-[1.6rem] bg-ink ring-1 ring-white/10 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:ring-brand/60 hover:shadow-xl">
+              <Media
+                img={u.img}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
-                  </div>
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/10 transition-all duration-500 group-hover:from-black/98 group-hover:via-black/75" />
 
-                  <div className="absolute inset-x-0 bottom-0 p-5">
-                    <h3 className="font-medium text-white">{u.title}</h3>
+              {/* Top Glassmorphic Number Badge */}
+              <div className="absolute left-4 top-4 sm:left-5 sm:top-5 flex items-center gap-2">
+                <span className="rounded-full bg-black/50 px-3 py-1 sm:px-3.5 sm:py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:bg-brand group-hover:border-brand">
+                  0{i + 1} · {u.title.split(" ")[0]}
+                </span>
+              </div>
 
-                    <p className="mt-1.5 text-sm leading-relaxed text-white/70">
+              {/* Top Right Arrow Indicator */}
+              <span className="absolute right-4 top-4 sm:right-5 sm:top-5 grid h-8 w-8 sm:h-9 sm:w-9 place-items-center rounded-full bg-black/50 text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand group-hover:text-white">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M4 12L12 4M5.6 4H12v6.4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+
+              {/* Bottom Content Area */}
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 flex flex-col justify-end">
+                <span className="mb-2.5 sm:mb-3 block h-1 w-8 bg-brand rounded-full transition-all duration-500 group-hover:w-16" />
+
+                <h3 className="text-lg sm:text-xl font-bold leading-tight text-white drop-shadow-sm transition-transform duration-300 group-hover:-translate-y-0.5">
+                  {u.title}
+                </h3>
+
+                {/* Description - readable on mobile, animated hover on desktop */}
+                <div className="grid grid-rows-[1fr] opacity-100 sm:grid-rows-[0fr] sm:opacity-0 transition-all duration-500 ease-out group-hover:grid-rows-[1fr] group-hover:opacity-100">
+                  <div className="overflow-hidden">
+                    <p className="pt-2 text-xs sm:text-sm leading-relaxed text-white/90 font-normal">
                       {u.desc}
                     </p>
                   </div>
                 </div>
-              </Reveal>
-            ))
-          : project.uses.map((u, i) => (
-              <Reveal key={u.title} delay={i * 0.06}>
-                <div className="group relative h-full overflow-hidden rounded-2xl">
-                  <div className="relative aspect-[3/4] overflow-hidden">
-                    <Media
-                      img={u.img}
-                      className="absolute inset-0 h-full w-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, 25vw"
-                    />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
-                  </div>
-
-                  <div className="absolute inset-x-0 bottom-0 p-5">
-                    <h3 className="font-medium text-white">{u.title}</h3>
-
-                    <p className="mt-1.5 text-sm leading-relaxed text-white/70">
-                      {u.desc}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+              </div>
+            </div>
+          </Reveal>
+        ))}
       </div>
     </section>
   );
