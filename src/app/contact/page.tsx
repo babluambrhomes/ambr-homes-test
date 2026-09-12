@@ -227,7 +227,7 @@ export default function ContactPage() {
           {/* Right — image + overlay */}
           <Reveal delay={0.1} className="h-full">
             <div className="relative h-full overflow-hidden rounded-[1.5rem] ">
-              <Media img={{ src: "/images/ambr6.jpeg", alt: "Ambr Homes site office, Bishrakh" }} sizes="(max-width: 768px) 100vw, 50vw" className="absolute inset-0 h-full w-full object-cover" />
+              <Media img={{ src: "/images/office.jpeg", alt: "Ambr Homes site office, Bishrakh" }} sizes="(max-width: 768px) 100vw, 50vw" className="absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
               <div className="relative z-10 flex h-full flex-col justify-end p-8 sm:p-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">Arriving</p>

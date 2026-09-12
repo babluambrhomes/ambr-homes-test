@@ -102,10 +102,10 @@ const COMPLETED_FAQS = [
 ];
 
 const SHARED_USES: Project["uses"] = [
-  { title: "First Home", desc: "First Home Buyer, with room to grow into rather than out of.", img: { src: "/images/ambr8.jpeg", alt: "Family home at Ambr Homes" } },
-  { title: "Growing Family", desc: "Plans with a separate study or third bedroom, and storage where a household actually needs it.", img: { src: "/images/ambr9.jpeg", alt: "Finished living room at an Ambr Homes flat" } },
-  { title: "Parents & Multiple Generations", desc: "Ground-floor and lift-adjacent units suited to older parents, with step-free access from the parking level.", img: { src: "/images/ambr18.jpeg", alt: "Ambr Homes residential community in Greater Noida West" } },
-  { title: "The Years Ahead", desc: "Choose the plan you can imagine living in, not only the one that looks best on a brochure", img: { src: "/images/ambr38.jpeg", alt: "Ambr Homes building at dusk" } },
+  { title: "First Home", desc: "First Home Buyer, with room to grow into rather than out of.", img: { src: "/images/2bhk-1.jpg", alt: "Family home at Ambr Homes" } },
+  { title: "Growing Family", desc: "Plans with a separate study or third bedroom, and storage where a household actually needs it.", img: { src: "/images/3bhk-2.jpg", alt: "Finished living room at an Ambr Homes flat" } },
+  { title: "Parents & Multiple Generations", desc: "Ground-floor and lift-adjacent units suited to older parents, with step-free access from the parking level.", img: { src: "/images/family-1.jpg", alt: "Ambr Homes residential community in Greater Noida West" } },
+  { title: "The Years Ahead", desc: "Choose the plan you can imagine living in, not only the one that looks best on a brochure", img: { src: "/images/invester.jpg", alt: "Ambr Homes building at dusk" } },
 ];
 
 export const PROJECTS: Project[] = [
@@ -129,24 +129,24 @@ export const PROJECTS: Project[] = [
     ],
     whyTitle: "Planned Around The Park, Not The Parking.",
 
-whyRows: [
-  {
-    h: "More than an elevation",
-    p: "The space between buildings matters too.",
-  },
-  {
-    h: "Green where you live",
-    p: "Landscaped areas make the everyday walk feel less like a commute.",
-  },
-  {
-    h: "Light and air",
-    p: "Natural light and cross ventilation are part of the planning story.",
-  },
-  {
-    h: "A place to come back to",
-    p: "The aim is a community that feels comfortable after the first impression wears off.",
-  },
-],
+    whyRows: [
+      {
+        h: "More than an elevation",
+        p: "The space between buildings matters too.",
+      },
+      {
+        h: "Green where you live",
+        p: "Landscaped areas make the everyday walk feel less like a commute.",
+      },
+      {
+        h: "Light and air",
+        p: "Natural light and cross ventilation are part of the planning story.",
+      },
+      {
+        h: "A place to come back to",
+        p: "The aim is a community that feels comfortable after the first impression wears off.",
+      },
+    ],
     benefits: [
       { title: "Daylight, Not Just Downlights", desc: "Natural light and ventilation are highlighted as planning priorities — because a home should feel good before the lights are switched on." },
       { title: "Balconies With A Purpose", desc: "Wider balconies are part of the project story. Think morning tea, plants, a little fresh air, or simply somewhere to step outside." },
@@ -156,7 +156,7 @@ whyRows: [
       // { title: "Pre-launch pricing", desc: "Pre-booking gives first pick of floor, facing and corner units at a price that will not be repeated once the structure tops out." },
     ],
     uses: SHARED_USES,
-    tech: SHARED_TECH,
+    tech: [],
     steps: SHARED_STEPS,
     faqs: [
       { q: "What configurations are available?", a: "2 & 3 BHK homes are presented in the project material, with multiple plan variants." },
@@ -171,7 +171,7 @@ whyRows: [
   {
     slug: "magnolia",
     name: "Magnolia",
-    tagline: "Magnolia by Ambr Homes",
+    tagline: "AMBR Magnolia",
     sub: "2 & 3 BHK in Vaidpura, Greater Noida West",
     statusLabel: "Under Construction · Pre-booking",
     statusTone: "orange",
@@ -179,12 +179,12 @@ whyRows: [
     address: "Vaidpura, Greater Noida West, Uttar Pradesh 201306",
     heroImg: { src: "/images/ambr38.jpeg", alt: "Under construction at an Ambr Homes project" },
     heroAlt: "Magnolia by Ambr Homes, Vaidpura, Greater Noida West",
-    heading: "Now Rising In Vaidpura",
+    heading: "A Home That Makes Room For Everyone.",
     intro:
-      "Magnolia is our second project in Vaidpura, designed around generous courtyards and shaded walking loops. Registered with UP RERA and open for pre-booking with pre-launch pricing.",
+      "Spacious 2 & 3 BHK low-rise residences planned for families who want room to live, gather, grow and still have a corner of their own. With wide balconies, generous living spaces, landscaped surroundings and everyday amenities close at hand, Magnolia is made for the whole family — not just one moment in life.",
     configs: [
-      { title: "2 BHK · Courtyard facing", tag: "2 BHK", desc: "Park and courtyard-facing 2 BHK homes planned for cross ventilation and morning light.", img: { src: "/images/ambr38.jpeg", alt: "Park-facing home at Ambr Homes" } },
-      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom and storage for a household.", img: { src: "/images/ambr38.jpeg", alt: "Finished living room at an Ambr Homes flat" } },
+      { title: "2 BHK · Courtyard facing", tag: "2 BHK", desc: "Park and courtyard-facing 2 BHK homes planned for cross ventilation and morning light.", img: { src: "/images/magno1.jpg", alt: "Park-facing home at Ambr Homes" } },
+      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom and storage for a household.", img: { src: "/images/stu1.jpg", alt: "Finished living room at an Ambr Homes flat" } },
     ],
     whyTitle: "Courtyards Before Car Parks",
     whyRows: [
@@ -226,7 +226,7 @@ whyRows: [
     intro:
       "Amore is complete and ready to occupy. Stand in the actual flat and on the actual balcony before committing - the most useful visit if you want to see exactly what you are buying.",
     configs: [
-      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Ready to move into, with the finishes and balconies you can inspect in person today.", img: { src: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1600&q=80", alt: "Park-facing home at Ambr Homes" } },
+      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Ready to move into, with the finishes and balconies you can inspect in person today.", img: { src: "/images/park.jpg", alt: "Park-facing home at Ambr Homes" } },
       { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans ready to occupy, with a study or third bedroom.", img: { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" } },
     ],
     whyTitle: "Finished Stock You Can Walk Through",
@@ -264,8 +264,8 @@ whyRows: [
     intro:
       "Atlanta has been complete and occupied for years — the more useful visit if you want to see how our buildings age. Registered with UP RERA, delivered on the date we gave at booking.",
     configs: [
-      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Occupied 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/ambr9.jpeg", alt: "Park-facing home at Ambr Homes" } },
-      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom, occupied and lived in.", img: { src: "/images/ambr9.jpeg", alt: "Finished living room at an Ambr Homes flat" } },
+      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Occupied 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/cross.jpg", alt: "Park-facing home at Ambr Homes" } },
+      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom, occupied and lived in.", img: { src: "/images/bal.jpg", alt: "Finished living room at an Ambr Homes flat" } },
     ],
     whyTitle: "Built To Age, Not Just To Sell",
     whyRows: [
@@ -302,8 +302,8 @@ whyRows: [
     intro:
       "Ambrosia was our first community, delivered in 2010 and complete and occupied for years. Its families are still a short drive from our office - proof that we build to stay.",
     configs: [
-      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "The original 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/ambr8.jpeg", alt: "Park-facing home at Ambr Homes" } },
-      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom.", img: { src: "/images/ambr38.jpeg", alt: "Finished living room at an Ambr Homes flat" } },
+      { title: "2 BHK · Park facing", tag: "2 BHK", desc: "The original 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/2bhk.jpg", alt: "Park-facing home at Ambr Homes" } },
+      { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom.", img: { src: "/images/3bhk.jpg", alt: "Finished living room at an Ambr Homes flat" } },
     ],
     whyTitle: "The Project That Started It All",
     whyRows: [

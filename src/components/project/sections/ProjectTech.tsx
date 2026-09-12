@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import type { Project } from "@/lib/data";
 
-const FLYERS = [{ src: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1600&q=80", alt: "Park-facing home at Ambr Homes" }, { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" }, { src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80", alt: "Ambr Homes residential community in Greater Noida West" }];
+const FLYERS = [{ src: "/images/aspire-01.jpeg", alt: "Park-facing home at Ambr Homes" }, { src: "/images/hero-4.jpeg", alt: "Finished living room at an Ambr Homes flat" }, { src: "/images/ambr19.jpeg", alt: "Ambr Homes residential community in Greater Noida West" }];
 
 export function ProjectTech({ project }: { project: Project }) {
   const ref = useRef<HTMLElement>(null);
@@ -40,7 +40,7 @@ export function ProjectTech({ project }: { project: Project }) {
         className="absolute -inset-y-[15%] inset-x-0"
       >
         <Image
-          src={"https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80"}
+          src={"/images/aspire-01.jpg"}
           alt={"Ambr Homes community at dusk"}
           fill
           sizes="100vw"
@@ -77,7 +77,7 @@ export function ProjectTech({ project }: { project: Project }) {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="absolute left-0 top-0 z-30 w-[58%] hover:z-50"
             >
-              <Flyer img={FLYERS[0]} project={project.name} items={groups[0]} prefix={1} rotate="-rotate-2" />
+              <Flyer img={FLYERS[0]} project={project.name} items={[]} prefix={1} rotate="-rotate-2" />
             </motion.div>
           )}
           {groups[1] && (
@@ -87,7 +87,7 @@ export function ProjectTech({ project }: { project: Project }) {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="absolute right-0 top-[26%] z-20 w-[55%] hover:z-50"
             >
-              <Flyer img={FLYERS[1]} project={project.name} items={groups[1]} prefix={3} rotate="rotate-3" />
+              <Flyer img={FLYERS[1]} project={project.name} items={[]} prefix={3} rotate="rotate-3" />
             </motion.div>
           )}
           {groups[2] && (
@@ -97,7 +97,7 @@ export function ProjectTech({ project }: { project: Project }) {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="absolute left-[10%] bottom-0 z-10 w-[50%] hover:z-50"
             >
-              <Flyer img={FLYERS[2]} project={project.name} items={groups[2]} prefix={5} rotate="-rotate-1" />
+              <Flyer img={FLYERS[2]} project={project.name} items={[]} prefix={5} rotate="-rotate-1" />
             </motion.div>
           )}
         </div>
@@ -136,21 +136,29 @@ function Flyer({
           {project}
         </span>
       </div>
-      <div className="px-1.5 py-2.5">
-        {items.map((t, i) => (
-          <div key={t.title} className="group/item flex items-start gap-2.5 border-b border-line/70 py-2 last:border-0">
-            <span className="mt-0.5 flex-none text-[0.625rem] font-bold tracking-wider text-brand">
-              {String(prefix + i).padStart(2, "0")}
-            </span>
-            <div>
-              <h4 className="text-[0.8125rem] font-semibold leading-snug text-ink transition-colors duration-300 group-hover/item:text-brand">
-                {t.title}
-              </h4>
-              <p className="mt-0.5 text-xs leading-relaxed text-muted">{t.desc}</p>
+      {items.length > 0 && (
+        <div className="px-1.5 py-2.5">
+          {items.map((t, i) => (
+            <div
+              key={t.title}
+              className="group/item flex items-start gap-2.5 border-b border-line/70 py-2 last:border-0"
+            >
+              <span className="mt-0.5 flex-none text-[0.625rem] font-bold tracking-wider text-brand">
+                {String(prefix + i).padStart(2, "0")}
+              </span>
+
+              <div>
+                <h4 className="text-[0.8125rem] font-semibold leading-snug text-ink transition-colors duration-300 group-hover/item:text-brand">
+                  {t.title}
+                </h4>
+                <p className="mt-0.5 text-xs leading-relaxed text-muted">
+                  {t.desc}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -34,7 +34,7 @@ const STORY_CHAPTERS = [
   {
     year: "2010",
     img: {
-      src: "/images/about1.jpg",
+      src: "/images/sp1.jpg",
       alt: "Ambr Homes site office, Bishrakh",
     },
     title: "It Started With A Simple Idea.",
@@ -43,7 +43,7 @@ const STORY_CHAPTERS = [
   {
     year: "2013",
     img: {
-      src: "/images/hero-3.jpeg",
+      src: "/images/sp2.jpg",
       alt: "Ambr Homes building exterior",
     },
     title: "The First Handover.",
@@ -61,7 +61,7 @@ const STORY_CHAPTERS = [
   {
     year: "TODAY",
     img: {
-      src: "/images/ambr37.jpeg",
+      src: "/images/ambr19.jpeg",
       alt: "Ambr Homes residential community in Greater Noida West",
     },
     title: "Five Addresses. One Standard.",
