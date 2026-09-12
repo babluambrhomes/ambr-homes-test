@@ -243,10 +243,6 @@ export default function AboutPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
                       <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-transparent to-transparent" />
 
-                      <span className="absolute left-6 top-6 rounded-full bg-brand px-4 py-1.5 text-xs font-semibold tracking-[0.12em] text-white shadow-[0_4px_20px_rgba(226,1,15,0.4)]">
-                        {ch.year}
-                      </span>
-
                       <div className="absolute inset-x-0 bottom-0 p-8">
                         <span className="mb-5 block h-[3px] w-10 rounded-full bg-brand transition-all duration-500 group-hover:w-16" />
 
