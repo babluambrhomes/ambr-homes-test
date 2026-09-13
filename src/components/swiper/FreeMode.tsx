@@ -48,7 +48,7 @@ export function FreeModeStrip({
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden max-w-full">
       {/* CONTROLS */}
       <div className="mb-7 flex items-center justify-end gap-3">
         <button

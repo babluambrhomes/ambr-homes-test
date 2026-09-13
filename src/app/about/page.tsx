@@ -174,7 +174,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story — cinematic horizontal cards */}
-      <section className="bg-gradient-to-b from-white to-band py-[clamp(64px,8vw,110px)]">
+      <section className="bg-gradient-to-b from-white to-band py-[clamp(64px,8vw,110px)] overflow-hidden max-w-full">
         <div className="wrap">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
@@ -228,7 +228,7 @@ export default function AboutPage() {
                 640: { slidesPerView: 1.6 },
                 1024: { slidesPerView: 2.3 },
               }}
-              className="!overflow-visible !pb-4"
+              className="!overflow-hidden !pb-4"
             >
               {STORY_CHAPTERS.map((ch, i) => (
                 <SwiperSlide key={`${ch.year}-${i}`} className="!h-auto">
@@ -265,7 +265,7 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Core Values */}
-      <section className="bg-white pt-28">
+      <section className="bg-white pt-28 overflow-hidden max-w-full">
         <div className="wrap grid gap-12 lg:grid-cols-2">
           <div>
             <Heading

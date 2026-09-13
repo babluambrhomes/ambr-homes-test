@@ -30,7 +30,7 @@ export function FromAmbrSection({
   const [idx, setIdx] = useState(0);
 
   return (
-    <section className="bg-gradient-to-b from-white to-band py-28">
+    <section className="bg-gradient-to-b from-white to-band py-28 overflow-hidden max-w-full">
       <div className="wrap">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">

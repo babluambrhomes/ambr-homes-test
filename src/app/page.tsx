@@ -50,7 +50,7 @@ const FROM_ARMB_ITEMS = [
   },
   {
     img: {
-      src: "/images/builds.jpg",
+      src: "/images/see1.jpg",
       alt: "Under construction at an Ambr Homes project",
     },
     tag: "SEE SOMETHING FINISHED",
@@ -237,7 +237,7 @@ const WHY_ITEMS = [
   },
   {
     img: {
-      src: "/images/hero-1.jpeg",
+      src: "/images/keys.jpg",
       alt: "Support after handover",
     },
     tag: "05",
@@ -297,7 +297,7 @@ export default function HomePage() {
     <>
       {/*  01 — ONE CORRIDOR */}
 
-      <div className="[&>section]:!min-h-[110vh] [&>section]:!pt-[clamp(48px,6vw,80px)] [&>section]:!pb-[clamp(32px,4vw,55px)]">
+      <div className="overflow-hidden max-w-full [&>section]:!min-h-[110vh] [&>section]:!pt-[clamp(48px,6vw,80px)] [&>section]:!pb-[clamp(32px,4vw,55px)]">
         <ParallaxShowcase
           bg={{
             src: "/images/ambr41.jpeg",
@@ -314,14 +314,14 @@ A Place We Know Well."
       </div>
 
       {/*  02 — STATS */}
-      <section className="wrap relative pt-24">
+      <section className="wrap relative pt-24 overflow-hidden">
         <StatCards stats={STATS} />
       </section>
 
 
 
       {/*  04 — WHAT WE OFFER */}
-      <section className="pt-24">
+      <section className="pt-24 overflow-hidden max-w-full">
         <div className="wrap mb-6">
           <Heading
             eyebrow="Made For Real Life"
@@ -460,7 +460,7 @@ A Place We Know Well."
       {/* =========================================================
         06 — FEATURED PROJECT — ASPIRE
     ========================================================== */}
-      <section className="wrap py-16 sm:py-24">
+      <section className="wrap py-16 sm:py-24 overflow-hidden">
         <div className="group relative overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-ink shadow-[0_40px_90px_-40px_rgba(16,16,16,0.6)] ring-1 ring-white/10">
           <div className="grid lg:grid-cols-[1.15fr_1fr]">
             <div className="relative min-h-[300px] sm:min-h-[460px] lg:min-h-[600px]">
@@ -588,7 +588,7 @@ A Place We Know Well."
       {/* =========================================================
         07 — ALL PROJECTS
     ========================================================== */}
-      <section className="mesh bg-gradient-to-b from-white to-band py-24">
+      <section className="mesh bg-gradient-to-b from-white to-band py-24 overflow-hidden max-w-full">
         <div className="wrap">
           <div className="mx-auto max-w-2xl">
             <Heading
@@ -619,7 +619,7 @@ A Place We Know Well."
       {/* =========================================================
         09 — WHY AMBR HOMES
     ========================================================== */}
-      <section className="wrap pt-24">
+      <section className="wrap pt-24 overflow-hidden">
         <div className="grid gap-12 lg:grid-cols-[0.3fr_0.7fr] lg:items-center">
           <div className="lg:pr-8">
             <Heading
@@ -714,7 +714,7 @@ A Place We Know Well."
       </section>
 
       {/* 03 — HERO Premium cinematic slider*/}
-      <section className="relative mt-[5vh] h-[75vh] overflow-hidden bg-ink">
+      <section className="relative mt-[5vh] h-[75vh] overflow-hidden bg-ink max-w-full">
         <HeroSwiper slides={HERO_SLIDES} />
       </section>
       {/*  10 — FROM AMBR */}

@@ -44,24 +44,26 @@ export default function ProjectsPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-65 transition-transform duration-1000 scale-105"
+            className="object-cover object-center opacity-90 transition-transform duration-1000 scale-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/55 to-ink/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-black/20" />
         </div>
 
-        <div className="pointer-events-none absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-brand/25 blur-[140px]" />
-        <div className="pointer-events-none absolute -bottom-32 -left-32 h-[450px] w-[450px] rounded-full bg-brand/15 blur-[120px]" />
+        <div className="pointer-events-none absolute -right-32 -top-32 h-[400px] w-[400px] rounded-full bg-brand/10 blur-[140px]" />
+        <div className="pointer-events-none absolute -bottom-32 -left-32 h-[350px] w-[350px] rounded-full bg-brand/10 blur-[120px]" />
 
         <div className="wrap relative z-10">
           <div className="max-w-3xl">
             <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
               OUR COMMUNITIES & ADDRESSES
             </span>
-            <h1 className="mt-4 text-[clamp(1.9rem,4.8vw,4.2rem)] font-medium leading-[1.08] sm:leading-[1.05] tracking-[-0.02em] text-white">
+
+            <h1 className="mt-5 text-[clamp(2.2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white drop-shadow-md">
               Delivered Communities & Active Projects
             </h1>
-            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg leading-relaxed text-white/75">
+
+            <p className="mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-white/90 drop-shadow">
               Five addresses in Vaidpura & Bishrakh — built with clear specifications, sanctioned floor plans, and possession dates that mean something to the families waiting for them.
             </p>
           </div>

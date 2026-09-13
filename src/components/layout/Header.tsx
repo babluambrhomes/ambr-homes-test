@@ -81,7 +81,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav
-            className="ml-auto hidden items-center lg:flex"
+            className="hidden items-center lg:ml-auto lg:flex"
             aria-label="Primary"
           >
             <div className="flex items-center">
@@ -106,76 +106,65 @@ export function Header() {
                         aria-controls="projMenu"
                         aria-haspopup="true"
                       >
-                        Projects
+                        {item.label}
 
                         <svg
-                          width="10"
+                          width="11"
                           height="7"
-                          viewBox="0 0 10 7"
+                          viewBox="0 0 10 6"
                           fill="none"
-                          aria-hidden="true"
                           className={`transition-transform duration-300 ${
-                            projectOpen ? "rotate-180" : ""
+                            projectOpen ? "rotate-180 text-brand" : ""
                           }`}
+                          aria-hidden="true"
                         >
                           <path
-                            d="M1 1l4 4 4-4"
+                            d="M1 1.25L5 4.75L9 1.25"
                             stroke="currentColor"
-                            strokeWidth="1.5"
+                            strokeWidth="1.6"
                             strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                         </svg>
                       </Link>
-
-                      {/* Projects mega menu */}
+                      {/* Mega Dropdown */}
                       <div
                         id="projMenu"
                         role="menu"
+                        aria-label="Projects list"
                         onMouseEnter={openProjects}
                         onMouseLeave={closeProjectsSoon}
-                        className={`absolute left-1/2 top-[calc(100%+1px)] w-[760px] -translate-x-1/2 border border-black/10 border-t-0 bg-white px-3 pb-3 pt-4 shadow-[0_30px_70px_-34px_rgba(16,16,16,0.34)] transition-all duration-500 ${
+                        className={`mega pointer-events-auto absolute right-[-100px] top-[calc(100%+8px)] w-[640px] max-w-[calc(100vw-2rem)] rounded-2xl border border-line/80 bg-white/98 p-4 shadow-[0_20px_50px_-15px_rgba(16,16,16,0.18),0_4px_16px_rgba(16,16,16,0.06)] backdrop-blur-2xl transition-all duration-300 before:absolute before:-top-3 before:inset-x-0 before:h-3 ${
                           projectOpen
                             ? "visible translate-y-0 opacity-100"
-                            : "pointer-events-none invisible translate-y-2 opacity-0"
+                            : "invisible pointer-events-none -translate-y-2 opacity-0"
                         }`}
                       >
-                        <div className="flex items-center justify-between px-3 pb-3">
-                          <div>
-                            <p className="flex items-center gap-2 text-sm font-semibold text-ink">
-                              Our Communities
-
-                              <span className="grid h-5 w-5 place-items-center rounded-full bg-brand/10 text-brand">
-                                <svg
-                                  width="11"
-                                  height="11"
-                                  viewBox="0 0 16 16"
-                                  fill="none"
-                                  aria-hidden="true"
-                                >
-                                  <path
-                                    d="M2 11 6.5 3l3 1L14 9 9.5 14l-2.5-2z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </span>
+                        <div className="mb-3 flex items-center justify-between border-b border-line/70 px-2 pb-3">
+                          <div className="flex items-center gap-2">
+                            <span className="h-2 w-2 rounded-full bg-brand" />
+                            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink">
+                              Featured Communities
                             </p>
-
-                            <p className="mt-0.5 text-xs text-muted">
-                              Five addresses in Greater Noida West
-                            </p>
+                            <span className="text-xs text-muted">
+                              · Greater Noida West
+                            </span>
                           </div>
 
                           <Link
                             href="/projects"
                             onClick={() => setProjectOpen(false)}
-                            className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-ink transition-colors hover:text-brand"
+                            className="group/link inline-flex items-center gap-1.5 text-xs font-semibold text-brand transition-colors hover:text-brand-dark"
                           >
-                            All Projects
-                            <ArrowUpRight size={15} />
+                            <span>All Projects</span>
+                            <ArrowUpRight
+                              size={14}
+                              className="transition-transform duration-200 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
+                            />
                           </Link>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-1">
+                        <div className="grid grid-cols-2 gap-2">
                           {PROJECTS.map((p, i) => (
                             <Link
                               key={p.slug}
@@ -183,41 +172,57 @@ export function Header() {
                               role="menuitem"
                               onClick={() => setProjectOpen(false)}
                               style={{
-                                ["--md" as string]: `${0.2 + i * 0.06}s`,
+                                ["--md" as string]: `${0.2 + i * 0.05}s`,
                               }}
-                              className="group flex items-center gap-3 rounded-xl p-3 transition-all duration-300 hover:bg-black/[0.035]"
+                              className="group relative flex items-center gap-3.5 rounded-xl border border-transparent p-2.5 transition-all duration-200 hover:border-line/80 hover:bg-[#faf9f6]"
                             >
-                              <span className="relative h-[64px] w-[76px] flex-none overflow-hidden rounded-lg">
+                              <span className="relative h-[66px] w-[82px] flex-none overflow-hidden rounded-lg bg-line/50">
                                 <Image
                                   src={p.heroImg.src}
                                   alt={p.heroImg.alt}
                                   fill
-                                  sizes="76px"
-                                  className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
+                                  sizes="82px"
+                                  className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-108"
                                 />
                               </span>
 
                               <span className="min-w-0 flex-1">
-                                <span className="flex items-center gap-2">
-                                  <b className="truncate text-sm font-medium text-ink">
+                                <span className="flex items-center justify-between gap-1.5">
+                                  <b className="truncate text-sm font-semibold text-ink transition-colors duration-200 group-hover:text-brand">
                                     {p.name}
                                   </b>
 
                                   <span
-                                    className={`inline-block h-1.5 w-1.5 flex-none rounded-full ${
-                                      STATUS_TONE[p.statusTone]
+                                    className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-medium ${
+                                      p.statusTone === "orange"
+                                        ? "bg-amber-50 text-amber-700 ring-1 ring-amber-600/20"
+                                        : p.statusTone === "green"
+                                        ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600/20"
+                                        : "bg-sky-50 text-sky-700 ring-1 ring-sky-600/20"
                                     }`}
-                                  />
+                                  >
+                                    <span
+                                      className={`h-1.5 w-1.5 rounded-full ${
+                                        STATUS_TONE[p.statusTone]
+                                      }`}
+                                    />
+                                    {p.statusTone === "orange"
+                                      ? "Pre-booking"
+                                      : p.statusTone === "green"
+                                      ? "Completed"
+                                      : "Ready"}
+                                  </span>
                                 </span>
 
                                 <span className="mt-1 flex items-center gap-1 text-xs text-muted">
-                                  <MapPin size="11" className="flex-none" />
-                                  {p.locality} · {p.statusLabel}
+                                  <MapPin
+                                    size={11}
+                                    className="flex-none text-muted/70"
+                                  />
+                                  <span className="truncate">
+                                    {p.locality} · 2 & 3 BHK
+                                  </span>
                                 </span>
-                              </span>
-
-                              <span className="grid h-8 w-8 flex-none place-items-center rounded-full bg-black/[0.045] text-ink opacity-0 transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:opacity-100">
-                                <ArrowUpRight size="15" />
                               </span>
                             </Link>
                           ))}
@@ -244,8 +249,8 @@ export function Header() {
             </div>
           </nav>
 
-          {/* Contact CTA */}
-          <div className="ml-4 flex items-center">
+          {/* Contact CTA & Mobile Menu */}
+          <div className="ml-auto flex items-center lg:ml-6">
             <Link
               href="/contact"
               className={`group hidden items-center sm:flex ${

@@ -15,7 +15,7 @@ export function BottomNav() {
 
   return (
     <nav
-      className="bnav glass-nav fixed inset-x-0 bottom-3 z-[80] mx-auto flex w-[92vw] max-w-md rounded-full px-2 py-1.5 lg:hidden"
+      className="bnav glass-nav fixed inset-x-0 bottom-3 z-[80] mx-auto flex w-[calc(100%-1.5rem)] max-w-md rounded-full px-2 py-1.5 lg:hidden"
       aria-label="Section navigation"
     >
       {BOTTOM_NAV.map(({ href, label }) => (

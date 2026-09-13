@@ -206,7 +206,7 @@ const FROM_ARMB_ITEMS = [
   },
   {
     img: {
-      src: "/images/unsp15.jpg",
+      src: "/images/see1.jpg",
       alt: "Under construction at an Ambr Homes project",
     },
     tag: "SEE SOMETHING FINISHED",
@@ -629,7 +629,7 @@ export default function WhyAmbrHomesPage() {
       />
 
       {/* The 12-year view — lifecycle journey */}
-      <section className="bg-gradient-to-b from-white to-band py-[clamp(48px,6vw,96px)]">
+      <section className="bg-gradient-to-b from-white to-band py-[clamp(48px,6vw,96px)] overflow-hidden max-w-full">
         <div className="wrap">
           <div className="flex flex-col gap-5 sm:gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
@@ -665,7 +665,7 @@ export default function WhyAmbrHomesPage() {
                 900: { slidesPerView: 3, spaceBetween: 20 },
                 1440: { slidesPerView: 4.1, spaceBetween: 20 },
               }}
-              className="!overflow-visible !pb-4 [&_.swiper-slide]:!h-auto"
+              className="!overflow-hidden !pb-4 [&_.swiper-slide]:!h-auto"
             >
               {LIFE_STAGES.map((s, i) => (
                 <SwiperSlide key={`${s.year || i}-${i}`} className="!h-auto">

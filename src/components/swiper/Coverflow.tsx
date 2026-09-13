@@ -22,7 +22,7 @@ export function Coverflow({
   const [idx, setIdx] = useState(0);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-hidden max-w-full">
       <Swiper
         modules={[EffectCoverflow, Autoplay, Pagination]}
         effect="coverflow"

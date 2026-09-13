@@ -20,7 +20,7 @@ export function MobileDrawer({
     <div
       id="drawer"
       className={`glass-strong fixed inset-0 z-40 flex flex-col pt-[74px] sm:pt-[82px] transition-all duration-500 lg:hidden ${
-        open ? "translate-x-0" : "pointer-events-none -translate-x-full"
+        open ? "translate-x-0 visible" : "pointer-events-none -translate-x-full invisible"
       }`}
     >
       <div className="mesh pointer-events-none absolute inset-0 -z-10" />
