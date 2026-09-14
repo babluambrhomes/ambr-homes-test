@@ -1,65 +1,132 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { useParams } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { cache } from "react";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { BlogPostPage } from "@/components/blog/BlogPostPage";
-import type { BlogCard, BlogPostDetail } from "@/lib/blog";
 import { fetchPostBySlug, fetchPosts, mapWpPostDetail } from "@/lib/blog";
 
-type State =
-  | { status: "loading" }
-  | { status: "success"; post: BlogPostDetail; related: BlogCard[] }
-  | { status: "error"; message: string };
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-export default function BlogRoute() {
-  const { slug } = useParams<{ slug: string }>();
-  const [state, setState] = useState<State>({ status: "loading" });
+const getPost = cache(async (slug: string) => {
+  return fetchPostBySlug(slug);
+});
 
-  useEffect(() => {
-    (async () => {
-      setState({ status: "loading" });
-      try {
-        const raw = await fetchPostBySlug(slug);
-        if (!raw) {
-          setState({ status: "error", message: "Article not found." });
-          return;
-        }
-        const relatedPosts = await fetchPosts(1, 3);
-        setState({
-          status: "success",
-          post: mapWpPostDetail(raw),
-          related: relatedPosts.posts.filter((p) => p.slug !== slug).slice(0, 3),
-        });
-      } catch (e) {
-        setState({
-          status: "error",
-          message: e instanceof Error ? e.message : "Unknown error",
-        });
-      }
-    })();
-  }, [slug]);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const raw = await getPost(slug);
 
-  if (state.status === "loading") {
-    return (
-      <section className="wrap flex min-h-[50vh] items-center justify-center pt-40 text-sm text-muted">
-        Loading article…
-      </section>
-    );
+  if (!raw) {
+    return {
+      title: "Article Not Found",
+    };
   }
 
-  if (state.status === "error") {
-    return (
-      <section className="wrap flex min-h-[50vh] flex-col items-center justify-center gap-4 pt-40 text-center">
-        <p className="text-sm text-muted">{state.message}</p>
-        <Link href="/blogs" className="tlink inline-flex items-center gap-2 text-sm">
-          <ArrowLeft size="15" />
-          Back to all articles
-        </Link>
-      </section>
-    );
+  const post = mapWpPostDetail(raw);
+  const title = post.title;
+  const description = post.excerpt;
+  const image = post.heroImg.src.startsWith("http")
+    ? post.heroImg.src
+    : `https://ambrhomes.com${post.heroImg.src}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/blogs/${post.slug}`,
+    },
+    openGraph: {
+      title: `${title} | Ambr Homes Blog`,
+      description,
+      url: `https://ambrhomes.com/blogs/${post.slug}`,
+      type: "article",
+      publishedTime: raw.date,
+      images: [
+        {
+          url: image,
+          alt: post.heroImg.alt || title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Ambr Homes Blog`,
+      description,
+      images: [image],
+    },
+  };
+}
+
+export default async function BlogRoute({ params }: Props) {
+  const { slug } = await params;
+  const raw = await getPost(slug);
+
+  if (!raw) {
+    notFound();
   }
 
-  return <BlogPostPage post={state.post} related={state.related} />;
+  const post = mapWpPostDetail(raw);
+  const relatedPosts = await fetchPosts(1, 3);
+  const related = relatedPosts.posts
+    .filter((p) => p.slug !== slug)
+    .slice(0, 3);
+
+  const image = post.heroImg.src.startsWith("http")
+    ? post.heroImg.src
+    : `https://ambrhomes.com${post.heroImg.src}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `https://ambrhomes.com/blogs/${post.slug}#article`,
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: raw.date,
+        image,
+        mainEntityOfPage: `https://ambrhomes.com/blogs/${post.slug}`,
+        publisher: {
+          "@type": "Organization",
+          name: "Ambr Homes",
+          url: "https://ambrhomes.com",
+          logo: "https://ambrhomes.com/images/logo_white.png",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://ambrhomes.com/blogs/${post.slug}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://ambrhomes.com",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: "https://ambrhomes.com/blogs",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: post.title,
+            item: `https://ambrhomes.com/blogs/${post.slug}`,
+          },
+        ],
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <BlogPostPage post={post} related={related} />
+    </>
+  );
 }

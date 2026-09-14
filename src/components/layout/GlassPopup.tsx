@@ -50,7 +50,7 @@ export function GlassPopup() {
 
         <p className="text-lg font-semibold text-ink">Come see what we&apos;ve built</p>
         <p className="small mt-2">
-          Compare 2 &amp; 3 BHK options or walk through something we finished years ago.
+          Compare 2 & 3 BHK options or walk through something we finished years ago.
         </p>
 
         <div className="mt-4 space-y-1">
