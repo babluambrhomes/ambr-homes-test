@@ -22,9 +22,108 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Ambr Homes | 2 & 3 BHK in Greater Noida West",
+  metadataBase: new URL("https://ambrhomes.com"),
+  title: {
+    default: "Ambr Homes | 2 & 3 BHK in Greater Noida West",
+    template: "%s | Ambr Homes",
+  },
   description:
-    "Five communities. All RERA registered. Ambr Homes builds 2 & 3 BHK homes in Greater Noida West — designed for light, ventilation and the twelve years after handover.",
+    "Five communities. Fully sanctioned & approved. Ambr Homes builds 2 & 3 BHK homes in Greater Noida West — designed for light, ventilation and the twelve years after handover.",
+  keywords: [
+    "Ambr Homes",
+    "2 BHK in Greater Noida West",
+    "3 BHK in Greater Noida West",
+    "Flats in Vaidpura",
+    "Flats in Bishrakh",
+    "Residential projects Greater Noida West",
+    "Ambr Aspire",
+    "Ambr Magnolia",
+    "Ambr Amore",
+    "Ambr Atlanta",
+    "Ambr Ambrosia",
+  ],
+  authors: [{ name: "Ambr Homes", url: "https://ambrhomes.com" }],
+  creator: "Ambr Homes",
+  publisher: "Ambr Homes",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://ambrhomes.com",
+    siteName: "Ambr Homes",
+    title: "Ambr Homes | 2 & 3 BHK in Greater Noida West",
+    description:
+      "Five communities. Fully sanctioned & approved. Ambr Homes builds 2 & 3 BHK homes in Greater Noida West — designed for light, ventilation and the twelve years after handover.",
+    images: [
+      {
+        url: "/images/hero-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Ambr Homes — Residential Communities in Greater Noida West",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ambr Homes | 2 & 3 BHK in Greater Noida West",
+    description:
+      "Five communities. Fully sanctioned & approved. Ambr Homes builds 2 & 3 BHK homes in Greater Noida West — designed for light, ventilation and the twelve years after handover.",
+    images: ["/images/hero-1.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "RealEstateAgent"],
+      "@id": "https://ambrhomes.com/#organization",
+      name: "Ambr Homes",
+      url: "https://ambrhomes.com",
+      logo: "https://ambrhomes.com/images/logo_white.png",
+      telephone: "+919090090032",
+      email: "hello@ambrhomes.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Ambr Homes Site Office, Sector-10/16C, Vaidpura",
+        addressLocality: "Greater Noida West",
+        postalCode: "203207",
+        addressRegion: "Uttar Pradesh",
+        addressCountry: "IN",
+      },
+      sameAs: [
+        "https://instagram.com/",
+        "https://facebook.com/",
+        "https://youtube.com/",
+        "https://linkedin.com/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ambrhomes.com/#website",
+      url: "https://ambrhomes.com",
+      name: "Ambr Homes",
+      publisher: {
+        "@id": "https://ambrhomes.com/#organization",
+      },
+    },
+  ],
 };
 
 export default function RootLayout(props: LayoutProps<"/">) {
@@ -33,6 +132,12 @@ export default function RootLayout(props: LayoutProps<"/">) {
       lang="en"
       className={`${figtree.variable} ${manrope.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <Preloader />
       

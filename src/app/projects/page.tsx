@@ -175,7 +175,7 @@ export default function ProjectsPage() {
                 {/* Body Content */}
                 <div className="flex flex-1 flex-col justify-between p-6 sm:p-7">
                   <div>
-                    <p className="text-sm leading-relaxed text-ink-2">
+                    <p className="line-clamp-3 min-h-[4.25rem] text-sm leading-relaxed text-ink-2">
                       {project.intro}
                     </p>
 
@@ -190,7 +190,7 @@ export default function ProjectsPage() {
                         </span>
                       ))}
                       <span className="rounded-full border border-brand/30 bg-brand/5 px-3 py-1 text-xs font-semibold text-brand">
-                        UP RERA Registered
+                        Sanctioned & Approved
                       </span>
                     </div>
                   </div>

@@ -106,7 +106,7 @@ export function ProjectHero({ project }: { project: Project }) {
             <div className="mt-8 flex flex-wrap gap-3">
               {[
                 `${project.locality}, Greater Noida West`,
-                "RERA Registered",
+                "Sanctioned & Approved",
               ].map((t) => (
                 <span
                   key={t}

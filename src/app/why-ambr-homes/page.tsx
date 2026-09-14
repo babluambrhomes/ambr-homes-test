@@ -553,7 +553,7 @@ export default function WhyAmbrHomesPage() {
               <div className="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 border-t border-white/10 p-4 sm:px-6 sm:py-5">
                 <span className="inline-flex items-center gap-2 text-[0.7rem] sm:text-xs font-semibold uppercase tracking-[0.12em] text-white/70">
                   <ShieldCheck size="15" className="text-brand flex-none" />
-                  Verified at up-rera.in
+                  Verified & Sanctioned Plans
                 </span>
 
                 <span className="hidden h-3 w-px bg-white/15 sm:block" />

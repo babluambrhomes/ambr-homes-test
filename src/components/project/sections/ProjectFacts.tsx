@@ -132,8 +132,8 @@ const FACTS = (p: Project) => {
       ),
     },
     {
-      label: "RERA",
-      value: "Registered — UP RERA",
+      label: "Approvals",
+      value: "Sanctioned & Approved",
       icon: (
         <svg
           width="20"

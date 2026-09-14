@@ -491,7 +491,7 @@ A Place We Know Well."
                 {[
                   ["2 & 3", "BHK homes"],
                   ["Park", "facing edge"],
-                  ["100%", "RERA registered"],
+                  ["100%", "Sanctioned plans"],
                 ].map(([v, l]) => (
                   <div key={l} className="px-2 sm:px-4 text-center">
                     <p className="text-base sm:text-2xl font-medium text-white">

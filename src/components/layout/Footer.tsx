@@ -123,11 +123,10 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="relative z-10 max-w-[118ch] pb-28 text-[0.76rem] leading-relaxed text-white/40">
-          {CONTACT.rera}
-        </p>
-
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 py-6 pb-24 lg:pb-6">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 py-6 pb-24 lg:pb-8">
+          <p className="text-[0.82rem] text-white/40">
+            © {new Date().getFullYear()} Ambr Homes. All rights reserved.
+          </p>
 
           <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Legal">
             {["Privacy Policy", "Terms & Conditions", "Disclaimer", "Sitemap"].map((l) => (

@@ -174,7 +174,7 @@ export function BlogPostPage({
       <RedCta
         eyebrow="Turn the reading into a visit"
         title="Come, Compare It In Person"
-        description="Articles are useful; a floor plan is better than an opinion. Walk a delivered flat, read the sanctioned layout and check the RERA filing — then decide."
+        description="Articles are useful; a floor plan is better than an opinion. Walk a delivered flat, read the sanctioned layout and check the approved documents — then decide."
         buttons={[
           { label: "Book A Site Visit", href: "/contact", className: "border border-white/40 hover:!bg-white hover:!text-ink" },
           { label: "Why Ambr Homes", href: "/why-ambr-homes", className: "!bg-white !text-brand hover:!bg-ink hover:!text-white" },

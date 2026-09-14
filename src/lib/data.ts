@@ -20,8 +20,6 @@ export const CONTACT = {
   addressShort: "Sector-10/16C, Vaidpura, Greater Noida West - 203207",
   addressLine1: "Ambr Homes Site Office, Sector-10/16C, Vaidpura,",
   addressLine2: "Greater Noida West - 203207, Uttar Pradesh",
-  rera:
-    "RERA registration numbers — Ambrosia: UPRERAPRJXXXXXX · Atlanta: UPRERAPRJXXXXXX · Amore: UPRERAPRJXXXXXX · Magnolia: UPRERAPRJXXXXXX · Aspire: UPRERAPRJXXXXXX. Available at up-rera.in. Images and plans on this page are indicative. Nothing on this website constitutes an offer or contract; all bookings are governed by the agreement for sale executed between the parties.",
 };
 
 export const SOCIALS = [
@@ -183,7 +181,7 @@ export const PROJECTS: Project[] = [
     heroAlt: "Magnolia by Ambr Homes, Vaidpura, Greater Noida West",
     heading: "A Home That Makes Room For Everyone.",
     intro:
-      "Spacious 2 & 3 BHK low-rise residences planned for families who want room to live, gather, grow and still have a corner of their own. With wide balconies, generous living spaces, landscaped surroundings and everyday amenities close at hand, Magnolia is made for the whole family — not just one moment in life.",
+      "Spacious 2 & 3 BHK low-rise residences planned for families who want room to live, gather and grow together. Featuring wide balconies, lush courtyards and open living spaces, Magnolia is crafted for peaceful community living in Vaidpura.",
     configs: [
       { title: "2 BHK · Courtyard facing", tag: "2 BHK", desc: "Park and courtyard-facing 2 BHK homes planned for cross ventilation and morning light.", img: { src: "/images/magno1.jpg", alt: "Magnolia Courtyard Facing 2 BHK" } },
       { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom and storage for a household.", img: { src: "/images/stu1.jpg", alt: "Magnolia Corner 3 BHK" } },
@@ -196,7 +194,7 @@ export const PROJECTS: Project[] = [
     benefits: [
       { title: "Courtyard light in every home", desc: "Homes look onto planted courtyards rather than onto another block, bringing daylight and cross ventilation to living rooms." },
       { title: "Balconies you can use", desc: "Deep enough for two chairs and a table - not a ledge that every family discovers in the first week." },
-      { title: "RERA registered", desc: "Registered with UP RERA before booking opened, with approved plans and sanctioned layout published." },
+      { title: "Fully Approved", desc: "Approved plans and sanctioned layout published before booking opened." },
       { title: "Landscape held in the plan", desc: "Planting, play courts and walking loops are part of the sanctioned drawing." },
       { title: "Monthly construction updates", desc: "Dated progress photographs and a written update go to every pre-booked buyer." },
       { title: "Pre-launch pricing", desc: "First pick of floor, facing and corner units at a price not repeated once the structure tops out." },
@@ -205,18 +203,18 @@ export const PROJECTS: Project[] = [
       { title: "Courtyard 2 BHK Homes", desc: "Directly overlooking green courtyards with optimal daylight and cross-ventilation.", img: { src: "/images/magno1.jpg", alt: "Magnolia Courtyard 2 BHK" } },
       { title: "Spacious 3 BHK Layouts", desc: "Corner 3 BHK plans with a dedicated study, balcony access, and extra storage.", img: { src: "/images/stu1.jpg", alt: "Magnolia 3 BHK Living Space" } },
       { title: "Gated Family Living", desc: "Safe, landscaped walking loops and courtyards for kids and elders alike.", img: { src: "/images/family-1.jpg", alt: "Magnolia Community Environment" } },
-      { title: "Pre-Booking Value", desc: "Early stage entry pricing in Vaidpura with clear RERA milestone assurances.", img: { src: "/images/invester.jpg", alt: "Magnolia Real Estate Investment" } },
+      { title: "Pre-Booking Value", desc: "Early stage entry pricing in Vaidpura with clear milestone assurances.", img: { src: "/images/invester.jpg", alt: "Magnolia Real Estate Investment" } },
     ],
     tech: SHARED_TECH,
     steps: SHARED_STEPS,
     faqs: [
-      { q: "Is Magnolia RERA registered?", a: "Yes. Magnolia was registered with UP RERA before pre-booking opened. The registration number is published on this page and can be verified at up-rera.in." },
+      { q: "Are Magnolia's plans and sanctions approved?", a: "Yes. All plans and layouts were sanctioned and approved before pre-booking opened, and full documentation is available to review." },
       { q: "What does pre-booking involve, and is it refundable?", a: "Pre-booking reserves your choice of floor, facing and unit at pre-launch pricing. Payment schedule, cancellation terms and refund conditions are set out in the agreement for sale." },
       { q: "Can I see the site while it is under construction?", a: "Yes, and we also suggest visiting Ambrosia or Atlanta - occupied for years and more revealing about how our buildings age." },
-      { q: "When is handover, and what happens if it slips?", a: "The committed handover date is in the RERA registration and your agreement, with compensation terms if it is not met. We publish monthly progress." },
+      { q: "When is handover, and what happens if it slips?", a: "The committed handover date is in your agreement, with compensation terms if it is not met. We publish monthly progress." },
     ],
     finalTitle: "Pre-Book Your Home At Magnolia",
-    finalBody: "Best floors and corner units go first. Tell us what you are looking for and we will send the sanctioned layout, payment schedule and RERA filing before you visit.",
+    finalBody: "Best floors and corner units go first. Tell us what you are looking for and we will send the sanctioned layout, payment schedule and project documentation before you visit.",
   },
   {
     slug: "amore",
@@ -231,7 +229,7 @@ export const PROJECTS: Project[] = [
     heroAlt: "Amore by Ambr Homes, Bishrakh, Greater Noida West",
     heading: "Completed And Ready To Move In",
     intro:
-      "Amore is complete and ready to occupy. Stand in the actual flat and on the actual balcony before committing - the most useful visit if you want to see exactly what you are buying.",
+      "Amore is completely finished and ready to occupy immediately. Stand in the actual flat, walk the wide balcony and check all fittings before deciding — the most reassuring visit to see exactly what you are purchasing in Bishrakh.",
     configs: [
       { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Ready to move into, with the finishes and balconies you can inspect in person today.", img: { src: "/images/park.jpg", alt: "Amore Park Facing 2 BHK" } },
       { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans ready to occupy, with a study or third bedroom.", img: { src: "/images/hero-4.jpeg", alt: "Amore 3 BHK Corner Unit" } },
@@ -244,7 +242,7 @@ export const PROJECTS: Project[] = [
     benefits: [
       { title: "Move in now", desc: "Amore is complete and ready to occupy - no wait for construction." },
       { title: "See how it ages", desc: "Occupied homes show how waterproofing, fittings and planting hold up in daily use." },
-      { title: "RERA registered", desc: "Registered with UP RERA, with approved plans and sanctioned layout published." },
+      { title: "Fully Approved", desc: "Approved plans and sanctioned layout published." },
       { title: "Balconies you can use", desc: "Deep enough for two chairs and a table - check them in person." },
       { title: "Same crew who built it", desc: "The site office that delivered Amore still supports its residents." },
       { title: "Straightforward paperwork", desc: "Agreement for sale and payment schedule shared in full before you commit." },
@@ -274,7 +272,7 @@ export const PROJECTS: Project[] = [
     heroAlt: "Atlanta by Ambr Homes, Bishrakh, Greater Noida West",
     heading: "An Occupied Community In Bishrakh",
     intro:
-      "Atlanta has been complete and occupied for years — the more useful visit if you want to see how our buildings age. Registered with UP RERA, delivered on the date we gave at booking.",
+      "Atlanta has been fully completed and warmly occupied for years, offering a settled neighborhood in Bishrakh. Built with durable materials to gracefully withstand monsoons, delivered on schedule with lifelong builder support.",
     configs: [
       { title: "2 BHK · Park facing", tag: "2 BHK", desc: "Occupied 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/cross.jpg", alt: "Atlanta Sunlit 2 BHK" } },
       { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom, occupied and lived in.", img: { src: "/images/bal.jpg", alt: "Atlanta Wide Balcony 3 BHK" } },
@@ -287,7 +285,7 @@ export const PROJECTS: Project[] = [
     benefits: [
       { title: "Delivered on time", desc: "Four communities delivered on the dates we gave at booking." },
       { title: "See how it ages", desc: "Occupied for years, Atlanta shows how our buildings hold up in daily use." },
-      { title: "RERA registered", desc: "Registered with UP RERA, approved plans and sanctioned layout published." },
+      { title: "Fully Approved", desc: "Approved plans and sanctioned layout published." },
       { title: "Building communities", desc: "Play courts, shaded seating and walking loops sized for daily use." },
       { title: "We stay after handover", desc: "Snag lists, maintenance and resident association support are part of the job." },
       { title: "Same crew, fifteen years", desc: "The teams who built Atlanta still work across the corridor." },
@@ -317,7 +315,7 @@ export const PROJECTS: Project[] = [
     heroAlt: "Ambrosia by Ambr Homes, Bishrakh, Greater Noida West",
     heading: "Where Ambr Began",
     intro:
-      "Ambrosia was our first community, delivered in 2022 and complete and occupied for years. Its families are still a short drive from our office - proof that we build to stay.",
+      "Ambrosia was our flagship community in Bishrakh, delivered in 2022 and thriving with happy resident families. Built for long-term comfort, open cross ventilation and backed by our on-site team just a short drive away.",
     configs: [
       { title: "2 BHK · Park facing", tag: "2 BHK", desc: "The original 2 BHK homes, planned for cross ventilation and morning light.", img: { src: "/images/2bhk.jpg", alt: "Ambrosia Flagship 2 BHK" } },
       { title: "3 BHK · Corner unit", tag: "3 BHK", desc: "Corner 3 BHK plans with a study or third bedroom.", img: { src: "/images/3bhk.jpg", alt: "Ambrosia Corner 3 BHK" } },
@@ -330,7 +328,7 @@ export const PROJECTS: Project[] = [
     benefits: [
       { title: "Built to last", desc: "Structurally, financially and in daily use - for the families who bought here." },
       { title: "See how it ages", desc: "Occupied since 2022, Ambrosia is the longest record we have to judge." },
-      { title: "RERA registered", desc: "Registered with UP RERA, approved plans and sanctioned layout published." },
+      { title: "Fully Approved", desc: "Approved plans and sanctioned layout published." },
       { title: "Building communities", desc: "Communities that outlast the sales campaign that launched them." },
       { title: "We stay after handover", desc: "Buyers from our earliest project can still reach the people who built for them." },
       { title: "One corridor", desc: "Site teams, vendors and service crews all within a half-hour drive." },

@@ -95,7 +95,7 @@ const CONSULTANTS = [
   "Structural Consultant",
   "MEP Consultant",
   "Landscape Architect",
-  "Legal & RERA Compliance",
+  "Legal & Statutory Compliance",
 ];
 
 export default function AboutPage() {
@@ -128,7 +128,7 @@ export default function AboutPage() {
             </h1>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {["EST. 2022", "UP RERA", "Bishrakh · Vaidpura"].map((t) => (
+              {["EST. 2022", "Approved Layouts", "Bishrakh · Vaidpura"].map((t) => (
                 <span key={t} className="rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-[0.12em] text-white ring-1 ring-white/20 backdrop-blur-md">
                   {t}
                 </span>
@@ -306,8 +306,8 @@ export default function AboutPage() {
               alt: "Home layout plan",
             },
             tag: "01",
-            title: "Read The RERA Number, Not The Brochure.",
-            body: "A project should be easy to verify. Know the registration details. Check the documents. Understand what is promised before you book.",
+            title: "Read The Sanctioned Plan, Not The Brochure.",
+            body: "A project should be easy to verify. Know the legal details. Check the documents. Understand what is promised before you book.",
           },
           {
             img: {

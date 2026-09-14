@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 
 const BOTTOM_NAV = [
   { href: "/", label: "Home" },
-  { href: "/projects/aspire", label: "Projects" },
-  { href: "/why", label: "Why Ambr" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/why-ambr-homes", label: "Why Ambr" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -15,20 +16,29 @@ export function BottomNav() {
 
   return (
     <nav
-      className="bnav glass-nav fixed inset-x-0 bottom-3 z-[80] mx-auto flex w-[calc(100%-1.5rem)] max-w-md rounded-full px-2 py-1.5 lg:hidden"
+      className="bnav glass-nav fixed inset-x-0 bottom-3 z-[80] mx-auto flex w-[calc(100%-1.25rem)] max-w-md items-center justify-between rounded-full px-1.5 py-1.5 shadow-[0_8px_30px_rgb(0,0,0,0.12)] lg:hidden"
       aria-label="Section navigation"
     >
-      {BOTTOM_NAV.map(({ href, label }) => (
-        <Link
-          key={href}
-          href={href}
-          className={`flex-1 py-2.5 sm:py-3.5 text-center text-xs sm:text-sm transition-colors ${
-            pathname === href ? "font-semibold text-brand" : "text-ink-2 font-medium"
-          }`}
-        >
-          {label}
-        </Link>
-      ))}
+      {BOTTOM_NAV.map(({ href, label }) => {
+        const isActive =
+          href === "/"
+            ? pathname === "/"
+            : pathname === href || pathname.startsWith(`${href}/`);
+
+        return (
+          <Link
+            key={href}
+            href={href}
+            className={`flex-1 px-1 py-2 sm:py-2.5 text-center text-[0.72rem] xs:text-xs sm:text-sm whitespace-nowrap transition-colors ${
+              isActive
+                ? "font-semibold text-brand"
+                : "font-medium text-ink-2 hover:text-ink"
+            }`}
+          >
+            {label}
+          </Link>
+        );
+      })}
     </nav>
   );
 }
