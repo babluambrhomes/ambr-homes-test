@@ -87,22 +87,6 @@ export function ProjectGallery({ project }: { project: Project }) {
                 <span className="text-sm font-medium text-white">
                   {item.label || project.name}
                 </span>
-
-                <span className="grid h-8 w-8 flex-none place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 opacity-0 transition-all duration-500 group-hover:opacity-100">
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    className="text-white"
-                  >
-                    <path
-                      d="M4 12L12 4M5.6 4H12v6.4"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                    />
-                  </svg>
-                </span>
               </figcaption>
             </figure>
           </Reveal>

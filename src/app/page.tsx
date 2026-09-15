@@ -12,7 +12,7 @@ import { RedCta } from "@/components/shared/RedCta";
 import { FromAmbrSection } from "@/components/shared/FromAmbrSection";
 import { PartnerSection } from "@/components/shared/PartnerSection";
 import { ParallaxShowcase } from "@/components/shared/ParallaxShowcase";
-import { Calendar, Building2, Layers, ShieldCheck, MapPin, ArrowUpRight, LandPlot, Handshake, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, Building2, Layers, ShieldCheck, MapPin, LandPlot, Handshake, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   HeroSwiper,
   FreeModeStrip,
@@ -69,7 +69,7 @@ const FROM_ARMB_ITEMS = [
 ];
 
 const STATS = [
-  { value: "4+", label: "Years Building Homes", icon: Calendar },
+  { value: "6+", label: "Years Building Homes", icon: Calendar },
   { value: "11", label: "Completed Communities", icon: Building2 },
   { value: "250+", label: "Homes Under Construction", icon: LandPlot },
   { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
@@ -517,7 +517,7 @@ A Place We Know Well."
                 Growing families rarely need just another room. They need somewhere for grandparents to stay. A kitchen that can handle Sunday lunch. A balcony people actually use. Space for children to grow without making the whole home feel smaller. That's what we had in mind.
               </p>
 
-              <div className="space-y-3">
+              <div className="space-y-2 max-w-xs">
                 {[
                   {
                     tag: "2 BHK",
@@ -554,10 +554,6 @@ A Place We Know Well."
                       </p>
                       <p className="text-xs text-white/60">{c.t}</p>
                     </div>
-
-                    <span className="grid h-9 w-9 place-items-center rounded-full bg-white/10 text-white transition-all duration-300 group-hover/config:bg-brand group-hover/config:text-white">
-                      <ArrowUpRight size="15" />
-                    </span>
                   </div>
                 ))}
               </div>
@@ -601,12 +597,6 @@ A Place We Know Well."
 
           <div className="mt-10">
             <Coverflow items={COVERFLOW_ITEMS} />
-          </div>
-
-          <div className="mt-4 flex justify-center">
-            <Link href="/projects/aspire" className="tlink">
-              All Projects
-            </Link>
           </div>
         </div>
       </section>

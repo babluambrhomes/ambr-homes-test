@@ -23,7 +23,6 @@ import {
   Award,
   Quote,
   Star,
-  ArrowUpRight,
   CalendarCheck,
   FileCheck,
   SearchCheck,
@@ -38,7 +37,7 @@ import { FromAmbrSection } from "@/components/shared/FromAmbrSection";
 import { ParallaxShowcase } from "@/components/shared/ParallaxShowcase";
 
 const STATS = [
-  { value: "4+", label: "Years Building Homes", icon: Calendar },
+  { value: "6+", label: "Years Building Homes", icon: Calendar },
   { value: "11", label: "Completed Communities", icon: Building2 },
   { value: "250+", label: "Homes Under Construction", icon: LandPlot },
   { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
@@ -157,22 +156,22 @@ const SHOWCASE_CARDS = [
 const PRAISE = [
   {
     quote: "Does it still feel comfortable when the house is full?",
-    name: "THE HOME",
-    home: "The home",
+    name: "NISHANT BHARDWAJ",
+    home: "",
     years: "",
   },
   {
     quote:
       "Do the things that looked good on day one still make sense years later?",
-    name: "THE DETAILS",
-    home: "The details",
+    name: "AYUSH KUMAR",
+    home: "",
     years: "",
   },
   {
     quote:
       "When something needs attention, is there still someone to speak to?",
-    name: "THE PEOPLE",
-    home: "The people",
+    name: "RAKSHIT SHARMA",
+    home: "",
     years: "",
   },
 ];
@@ -431,7 +430,7 @@ export default function WhyAmbrHomesPage() {
                         {num}
                       </span>
 
-                      <div className="relative grid items-start sm:items-center gap-4 sm:gap-6 text-left lg:grid-cols-[auto_1fr_auto] lg:items-center">
+                      <div className="relative grid items-start sm:items-center gap-4 sm:gap-6 text-left lg:grid-cols-[auto_1fr] lg:items-center">
                         <span className="grid h-12 w-12 sm:h-16 sm:w-16 place-items-center rounded-2xl bg-brand/10 text-brand transition-all duration-500 group-hover:rotate-6 group-hover:bg-brand group-hover:text-white">
                           <MessageSquare size="22" className="sm:h-6 sm:w-6" strokeWidth={1.8} />
                         </span>
@@ -449,10 +448,6 @@ export default function WhyAmbrHomesPage() {
                             {c.desc}
                           </p>
                         </div>
-
-                        <span className="hidden h-12 w-12 flex-none place-items-center rounded-full border border-line text-ink transition-all duration-500 group-hover:border-brand group-hover:bg-brand group-hover:text-white lg:grid">
-                          <ArrowUpRight size="18" />
-                        </span>
                       </div>
                     </div>
                   </Reveal>
@@ -640,16 +635,16 @@ export default function WhyAmbrHomesPage() {
               />
             </div>
 
-            <div className="flex flex-col items-start gap-4 sm:gap-5 md:items-end">
+            {/* <div className="flex flex-col items-start gap-4 sm:gap-5 md:items-end">
               <span className="hidden items-baseline gap-2 text-sm text-muted md:inline-flex">
-                <span className="bg-gradient-to-b from-brand to-brand-dark bg-clip-text text-6xl font-semibold leading-none text-transparent">
+                {/* <span className="bg-gradient-to-b from-brand to-brand-dark bg-clip-text text-6xl font-semibold leading-none text-transparent">
                   12
-                </span>
+                </span> 
                 <span className="uppercase tracking-[0.12em]">
                   year journey
                 </span>
               </span>
-            </div>
+            </div> */}
           </div>
 
           <div className="mt-10 sm:mt-12">

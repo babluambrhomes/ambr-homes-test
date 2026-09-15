@@ -24,7 +24,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 const STATS = [
-  { value: "4+", label: "Years Building Homes", icon: Calendar },
+  { value: "6+", label: "Years Building Homes", icon: Calendar },
   { value: "11", label: "Completed Communities", icon: Building2 },
   { value: "250+", label: "Homes Under Construction", icon: LandPlot },
   { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
@@ -305,7 +305,7 @@ export default function AboutPage() {
               src: "/images/about2.jpg",
               alt: "Home layout plan",
             },
-            tag: "01",
+            tag: "SANCTIONED PLAN",
             title: "Read The Sanctioned Plan, Not The Brochure.",
             body: "A project should be easy to verify. Know the legal details. Check the documents. Understand what is promised before you book.",
           },
@@ -314,7 +314,7 @@ export default function AboutPage() {
               src: "/images/about3.jpg",
               alt: "Balcony view at an Ambr Homes flat",
             },
-            tag: "02",
+            tag: "BALCONY & SPACE",
             title: "A Balcony, Or A Ledge?",
             body: "The difference matters. Think about how you'll actually use the space — morning tea, plants, children, evenings, guests.",
           },
@@ -323,7 +323,7 @@ export default function AboutPage() {
               src: "/images/about4.jpg",
               alt: "Finished living room at an Ambr Homes flat",
             },
-            tag: "03",
+            tag: "VENTILATION & LIGHT",
             title: "Cross Ventilation & Morning Light.",
             body: "Visit at different times of day. See where the light comes from. Notice how air moves through the home.",
           },
@@ -359,7 +359,7 @@ export default function AboutPage() {
         title="One Corridor. A Place We Know Well."
         eyebrow="06 — ONE CORRIDOR"
         desc="We didn't try to be everywhere. We chose to know one place properly. The roads. The neighbourhoods. The everyday routes. The questions families ask before buying. And what happens after they move in. From Bishrakh towards Vaidpura, our projects sit within a corridor we have kept coming back to. Because being close changes the way you build."
-        link="/projects"
+        link="/contact#map"
         linkLabel="Explore The Location"
       />
 

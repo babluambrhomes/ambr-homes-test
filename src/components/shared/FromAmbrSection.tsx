@@ -10,7 +10,7 @@ import type { Img } from "@/lib/data";
 
 export type FromAmbrItem = {
   img: Img;
-  tag: string;
+  tag?: string;
   title: string;
   body: string;
 };
@@ -93,7 +93,7 @@ export function FromAmbrSection({
             }}
             className="!overflow-hidden !pb-4"
           >
-            {items.map((c, i) => (
+            {items.map((c) => (
               <SwiperSlide key={c.title} className="!h-auto">
                 <div className="group relative h-[430px] overflow-hidden rounded-[1.5rem] bg-ink shadow-lg transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-[0_30px_70px_-25px_rgba(226,1,15,0.3)]">
                   <Media
@@ -105,15 +105,12 @@ export function FromAmbrSection({
                   {/* Gradient Overlay with smooth transition on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/20 transition-all duration-500 group-hover:from-black/98 group-hover:via-black/75" />
 
-                  {/* Top Left Tag Badge */}
-                  <span className="absolute left-5 top-5 rounded-full bg-black/40 px-3.5 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:border-brand group-hover:bg-brand">
-                    {c.tag}
-                  </span>
-
-                  {/* Top Right Number Badge */}
-                  <span className="absolute right-5 top-5 grid h-9 w-9 place-items-center rounded-full bg-black/40 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/20 transition-transform duration-300 group-hover:scale-110">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+                  {/* Top Left Tag Badge (if provided) */}
+                  {c.tag && (
+                    <span className="absolute left-5 top-5 rounded-full bg-black/40 px-3.5 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:border-brand group-hover:bg-brand">
+                      {c.tag}
+                    </span>
+                  )}
 
                   {/* Bottom Content Area with Hover Reveal */}
                   <div className="absolute inset-x-0 bottom-0 p-7 flex flex-col justify-end">

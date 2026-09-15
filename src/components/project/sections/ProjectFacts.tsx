@@ -159,11 +159,11 @@ export function ProjectFacts({ project }: { project: Project }) {
     <section className="relative -mt-1 z-10">
       <div className="wrap grid grid-cols-2 gap-3 py-12 sm:gap-4 md:grid-cols-4 md:py-16">
         {facts.map((f, i) => (
-          <Reveal key={f.label} delay={i * 0.06}>
+          <Reveal key={f.label} delay={i * 0.06} className="h-full">
             <Glass
               variant="strong"
               sheen
-              className="group relative !overflow-visible !rounded-2xl p-6 sm:p-7"
+              className="group relative flex h-full flex-col justify-start !overflow-visible !rounded-2xl p-6 sm:p-7"
             >
               <span className="pointer-events-none absolute -top-px left-6 h-px w-10 bg-brand/60 transition-all duration-500 group-hover:w-16 group-hover:bg-brand" />
 

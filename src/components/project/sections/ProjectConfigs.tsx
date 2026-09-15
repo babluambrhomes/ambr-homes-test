@@ -74,23 +74,6 @@ export function ProjectConfigs({ project }: { project: Project }) {
                   <span className="text-[0.6875rem] font-semibold tracking-[0.14em] text-white/45 uppercase">
                     Configuration {String(i + 1).padStart(2, "0")}
                   </span>
-
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-brand bg-brand text-white transition-all duration-500 group-hover:bg-white group-hover:text-ink">
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="transition-transform duration-500 group-hover:rotate-45"
-                    >
-                      <path d="M7 17 17 7" />
-                      <path d="M8 7h9v9" />
-                    </svg>
-                  </span>
                 </div>
               </div>
             </article>
