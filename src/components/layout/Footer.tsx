@@ -18,12 +18,6 @@ const SOCIAL_ICONS: Record<string, React.ReactNode> = {
       <path d="M14 8h3V4.5h-3c-2.2 0-3.5 1.4-3.5 3.6V11H8v3.4h2.5V21H14v-6.6h2.6L17 11h-3V8.6c0-.4.3-.6 1-.6z" />
     </svg>
   ),
-  YouTube: (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-      <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
-      <path d="M10.5 9.5l5 2.5-5 2.5z" />
-    </svg>
-  ),
   LinkedIn: (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
       <rect x="3" y="3" width="18" height="18" rx="3" />

@@ -820,7 +820,7 @@ export default function WhyAmbrHomesPage() {
           },
           {
             label: "Book A Site Visit",
-            href: "/contact",
+            href: "/contact#enquiry",
             className: "!bg-white !text-brand hover:!bg-ink hover:!text-white",
           },
         ]}

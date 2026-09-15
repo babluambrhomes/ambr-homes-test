@@ -69,7 +69,7 @@ export function ProjectHero({ project }: { project: Project }) {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               {/* BOOK A SITE VISIT */}
               <Button
-                href="/contact"
+                href="/contact#enquiry"
                 className="!min-h-[54px] !rounded-xl !bg-brand !px-7 !py-3.5 !text-[15px] !font-semibold !text-white shadow-[0_14px_40px_-14px_rgba(226,1,15,0.8)] transition-all duration-300 hover:-translate-y-0.5 hover:!bg-brand-dark hover:shadow-[0_18px_45px_-12px_rgba(226,1,15,0.9)]"
               >
                 Book A Site Visit

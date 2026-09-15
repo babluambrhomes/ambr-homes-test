@@ -30,7 +30,7 @@ export function Heading({
         {eyebrow}
       </span>
       <Tag
-        className={`mt-4 sm:mt-5 font-medium ${
+        className={`mt-4 sm:mt-5 font-medium break-words ${
           level === 1
             ? "text-[clamp(1.9rem,4.8vw,4.6rem)] leading-[1.08] sm:leading-[1.05] tracking-[-0.02em]"
             : "text-[clamp(1.65rem,3.2vw,3.5rem)] leading-[1.15] sm:leading-[1.1] tracking-[-0.015em]"

@@ -53,7 +53,7 @@ export function Header() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-[200] transition-all duration-500 ${
-          scrolled
+          scrolled || drawerOpen
             ? "bg-white shadow-[0_1px_0_rgba(16,16,16,0.12)]"
             : "bg-transparent"
         }`}
@@ -70,7 +70,7 @@ export function Header() {
             aria-label="Ambr Homes — Strength in every brick"
           >
             <Image
-              src={scrolled ? "/images/logo_dark.png" : "/images/logo_white.png"}
+              src={scrolled || drawerOpen ? "/images/logo_dark.png" : "/images/logo_white.png"}
               alt="Ambr Homes"
               fill
               priority
@@ -253,27 +253,20 @@ export function Header() {
           <div className="ml-auto flex items-center lg:ml-6">
             <Link
               href="/contact"
-              className={`group hidden items-center sm:flex ${
-                scrolled ? "text-ink" : "text-white"
-              }`}
+              className="group hidden items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[14px] sm:text-[15px] font-medium text-white shadow-[0_4px_14px_rgba(226,1,15,0.35)] transition-all duration-300 hover:bg-brand-dark hover:shadow-[0_6px_20px_rgba(226,1,15,0.45)] hover:scale-[1.02] active:scale-[0.98] sm:flex"
             >
-              <span className="px-4 text-[15px] font-medium transition-colors duration-300 group-hover:text-brand">
-                Contact
-              </span>
-
-              <span className="grid h-[40px] w-[40px] place-items-center bg-brand text-white transition-colors duration-300 group-hover:bg-brand-dark">
-                <ArrowUpRight
-                  size={17}
-                  className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </span>
+              <span>Contact</span>
+              <ArrowUpRight
+                size={16}
+                className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              />
             </Link>
 
             {/* Mobile */}
             <button
               type="button"
               className={`ml-auto flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden ${
-                scrolled ? "text-ink" : "text-white"
+                scrolled || drawerOpen ? "text-ink" : "text-white"
               }`}
               aria-expanded={drawerOpen}
               aria-controls="drawer"

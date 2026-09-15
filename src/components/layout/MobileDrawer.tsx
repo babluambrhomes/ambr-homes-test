@@ -19,11 +19,10 @@ export function MobileDrawer({
   return (
     <div
       id="drawer"
-      className={`glass-strong fixed inset-0 z-40 flex flex-col pt-[74px] sm:pt-[82px] transition-all duration-500 lg:hidden ${
+      className={`drawer fixed inset-0 z-[190] flex flex-col bg-white pt-[74px] sm:pt-[82px] transition-all duration-500 lg:hidden ${
         open ? "translate-x-0 visible" : "pointer-events-none -translate-x-full invisible"
       }`}
     >
-      <div className="mesh pointer-events-none absolute inset-0 -z-10" />
       <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-5 py-4 pb-28 sm:px-8" aria-label="Mobile">
         {NAV.filter((item) => item.label !== "Contact").map((item) => {
           if (item.label === "Projects") {
@@ -93,7 +92,7 @@ export function MobileDrawer({
 
         <div className="mt-6 pt-2">
           <Link
-            href="/contact"
+            href="/contact#enquiry"
             onClick={onClose}
             className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-base font-medium text-white shadow-lg transition-all hover:bg-brand-dark"
           >

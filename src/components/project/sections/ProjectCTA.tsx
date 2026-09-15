@@ -10,7 +10,7 @@ export function ProjectCTA({ project }: { project: Project }) {
       buttons={[
         {
           label: "Book A Site Visit",
-          href: "/contact",
+          href: "/contact#enquiry",
           className:
             "border border-white/40 hover:!bg-white hover:!text-ink",
         },

@@ -221,7 +221,7 @@ export default function BlogsPage() {
         title="The Corridor Is Better Seen Than Explained"
         description="Every claim in these articles can be checked in person — walk an approved project, a finished flat and a community occupied for years. Pick a time and we will keep it open."
         buttons={[
-          { label: "Book A Site Visit", href: "/contact", className: "border border-white/40 hover:!bg-white hover:!text-ink" },
+          { label: "Book A Site Visit", href: "/contact#enquiry", className: "border border-white/40 hover:!bg-white hover:!text-ink" },
           { label: "Explore The Projects", href: "/projects/aspire", className: "!bg-white !text-brand hover:!bg-ink hover:!text-white" },
         ]}
       />

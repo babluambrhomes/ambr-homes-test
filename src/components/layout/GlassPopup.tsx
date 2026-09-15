@@ -32,12 +32,11 @@ export function GlassPopup() {
   return (
     <>
       <aside
-        className={`pop glass-strong  fixed bottom-6 right-6 z-[95] w-[min(92vw,340px)] overflow-hidden rounded-2xl p-6 shadow-2xl transition-all duration-400 ${
+        className={`pop fixed bottom-6 right-6 z-[95] w-[min(92vw,340px)] overflow-hidden rounded-2xl border border-line/80 bg-white p-6 shadow-[0_20px_50px_rgba(0,0,0,0.18)] transition-all duration-400 ${
           dismissed ? "translate-y-6 opacity-0" : "translate-y-0 opacity-100"
         }`}
         aria-label="Book a site visit"
       >
-        <div className="mesh pointer-events-none absolute inset-0 -z-10" />
         <button
           className="absolute right-3 top-3 grid h-8 w-8 place-items-center text-ink-2 hover:text-brand"
           onClick={close}
@@ -70,7 +69,7 @@ export function GlassPopup() {
         </div>
 
         <Link
-          href="/contact"
+          href="/contact#enquiry"
           onClick={close}
           className="mt-4 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-brand px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-dark"
         >
