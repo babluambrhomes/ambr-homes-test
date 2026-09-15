@@ -12,10 +12,11 @@ export const NAV = [
 ];
 
 export const CONTACT = {
-  phone: "+91 90 900 900 32",
-  phoneHref: "tel:+919090090032",
-  email: "hello@ambrhomes.com",
-  emailHref: "mailto:hello@ambrhomes.com",
+  phone: process.env.NEXT_PUBLIC_PHONE ?? "",
+  phoneHref: process.env.NEXT_PUBLIC_PHONE_HREF ?? "",
+  email: process.env.NEXT_PUBLIC_EMAIL ?? "",
+  emailHref: process.env.NEXT_PUBLIC_EMAIL_HREF ?? "",
+  whatsappHref: process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "",
   officeHours: "Open 10am - 7pm, every day including Sundays.",
   addressShort: "Sector-10/16C, Vaidpura, Greater Noida West - 203207",
   addressLine1: "Ambr Homes Site Office, Sector-10/16C, Vaidpura,",
@@ -100,12 +101,7 @@ const COMPLETED_FAQS = [
   },
 ];
 
-const SHARED_USES: Project["uses"] = [
-  { title: "First Home", desc: "First Home Buyer, with room to grow into rather than out of.", img: { src: "/images/2bhk-1.jpg", alt: "Family home at Ambr Homes" } },
-  { title: "Growing Family", desc: "Plans with a separate study or third bedroom, and storage where a household actually needs it.", img: { src: "/images/3bhk-2.jpg", alt: "Finished living room at an Ambr Homes flat" } },
-  { title: "Parents & Multiple Generations", desc: "Ground-floor and lift-adjacent units suited to older parents, with step-free access from the parking level.", img: { src: "/images/family-1.jpg", alt: "Ambr Homes residential community in Greater Noida West" } },
-  { title: "The Years Ahead", desc: "Choose the plan you can imagine living in, not only the one that looks best on a brochure", img: { src: "/images/invester.jpg", alt: "Ambr Homes building at dusk" } },
-];
+
 
 export const PROJECTS: Project[] = [
   {

@@ -97,8 +97,8 @@ const orgSchema = {
       name: "Ambr Homes",
       url: "https://ambrhomes.com",
       logo: "https://ambrhomes.com/images/logo_white.png",
-      telephone: "+919090090032",
-      email: "hello@ambrhomes.com",
+      telephone: process.env.NEXT_PUBLIC_PHONE_HREF?.replace("tel:", "") ?? "",
+      email: process.env.NEXT_PUBLIC_EMAIL ?? "",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Ambr Homes Site Office, Sector-10/16C, Vaidpura",

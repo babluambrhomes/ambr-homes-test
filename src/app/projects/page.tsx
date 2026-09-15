@@ -7,7 +7,7 @@ import { Reveal } from "@/components/shared/Reveal";
 import { Heading, Media } from "@/components/shared/ui";
 import { RedCta } from "@/components/shared/RedCta";
 import { ProjectBankPartners } from "@/components/project/sections/ProjectBankPartners";
-import { PROJECTS, STATUS_TONES } from "@/lib/data";
+import { CONTACT, PROJECTS, STATUS_TONES } from "@/lib/data";
 import { MapPin, ArrowUpRight, ShieldCheck, Layers } from "lucide-react";
 
 export default function ProjectsPage() {
@@ -232,7 +232,7 @@ export default function ProjectsPage() {
           },
           {
             label: "Call Sales Desk",
-            href: "tel:+919090090032",
+            href: CONTACT.phoneHref,
             className: "!bg-white !text-brand hover:!bg-ink hover:!text-white",
           },
         ]}

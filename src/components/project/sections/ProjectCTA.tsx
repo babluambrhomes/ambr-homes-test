@@ -1,5 +1,5 @@
 import { RedCta } from "@/components/shared/RedCta";
-import type { Project } from "@/lib/data";
+import { CONTACT, type Project } from "@/lib/data";
 
 export function ProjectCTA({ project }: { project: Project }) {
   return (
@@ -15,8 +15,8 @@ export function ProjectCTA({ project }: { project: Project }) {
             "border border-white/40 hover:!bg-white hover:!text-ink",
         },
         {
-          label: "+91 00000 00000",
-          href: "tel:+910000000000",
+          label: CONTACT.phone,
+          href: CONTACT.phoneHref,
           className: "!bg-white !text-brand hover:!bg-ink hover:!text-white",
         },
       ]}

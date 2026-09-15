@@ -1,9 +1,11 @@
 "use client";
 
+import { CONTACT } from "@/lib/data";
+
 export function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/919090090032"
+      href={CONTACT.whatsappHref}
       target="_blank"
       aria-label="Chat on WhatsApp"
       className="fixed bottom-20 left-4 z-[85] grid h-12 w-12 sm:h-14 sm:w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl sm:bottom-6 sm:left-6 lg:bottom-8 lg:left-8"

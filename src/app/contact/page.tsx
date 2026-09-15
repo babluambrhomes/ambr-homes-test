@@ -8,9 +8,9 @@ import { Heading, Media } from "@/components/shared/ui";
 import { Button } from "@/components/shared/Button";
 import { CONTACT, SOCIALS } from "@/lib/data";
 
-const PHONE = "+91 90900 90032";
-const PHONE_HREF = "tel:+919090090032";
-const WHATSAPP_HREF = "https://wa.me/919090090032";
+const PHONE = CONTACT.phone;
+const PHONE_HREF = CONTACT.phoneHref;
+const WHATSAPP_HREF = CONTACT.whatsappHref;
 
 const FIELD =
   "w-full rounded-lg border border-white/20 bg-white/[0.07] px-3.5 py-3 text-sm text-white outline-none backdrop-blur-md transition-colors placeholder:text-white/40 focus:border-brand focus:bg-white/[0.12]";
@@ -78,7 +78,7 @@ export default function ContactPage() {
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0.2]);
 
-  const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [msg, setMsg] = useState("");
 
   return (
@@ -321,27 +321,28 @@ export default function ContactPage() {
 
           <div>
 
-            {sent ? (
-              <div className="py-10 text-center">
-                <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-medium text-white">Thank you — we received your enquiry.</h3>
-                <p className="mt-2 text-sm text-white/60">We reply within one working day.</p>
-              </div>
-            ) : (
-              <form
+            <form
                 className="space-y-4"
+                action={process.env.NEXT_PUBLIC_FORMSUBMIT_URL ?? ""}
+                method="POST"
                 onSubmit={(e) => {
+                  // const fd = new FormData(e.currentTarget);
+                  // const data = Object.fromEntries(fd.entries());
+                  
+                  // console.log("📩 Ambr Homes — Form Submitted:", data);
+                  // console.log("📩 Ambr Homes — email:", process.env.NEXT_PUBLIC_FORMSUBMIT_URL);
+                  setSubmitting(true);
                   e.preventDefault();
-                  setSent(true);
                 }}
               >
+                <input type="hidden" name="_subject" value="New Enquiry — Ambr Homes Contact Form" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://ambrhomes.com/contact" />
+
                 <div>
                   <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-white/60">Name *</label>
-                  <input required className={FIELD} type="text" autoComplete="name" />
+                  <input required className={FIELD} type="text" autoComplete="name" name="Name" />
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -354,7 +355,8 @@ export default function ContactPage() {
                       className={FIELD}
                       type="tel"
                       autoComplete="tel"
-                      placeholder="910000000000"
+                      placeholder="Enter your mobile number"
+                      name="Phone"
                     />
                   </div>
 
@@ -366,6 +368,7 @@ export default function ContactPage() {
                       className={FIELD}
                       type="text"
                       placeholder="Tell us what you need"
+                      name="Help With"
                     />
                   </div>
                 </div>
@@ -378,6 +381,7 @@ export default function ContactPage() {
                     className={FIELD}
                     type="text"
                     placeholder="Project or home type"
+                    name="Preferred Project"
                   />
                 </div>
 
@@ -390,22 +394,23 @@ export default function ContactPage() {
                     maxLength={300}
                     value={msg}
                     onChange={(e) => setMsg(e.target.value)}
+                    name="Message"
                   />
                   <div className="mt-1 text-right text-xs text-white/50">{msg.length}/300</div>
                 </div>
 
                 <button
                   type="submit"
-                  className="group w-full flex justify-center gap-3 rounded-full bg-brand py-2 px-5 text-base font-medium text-white transition-all duration-[0.45s] ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-brand-dark hover:shadow-[0_16px_40px_-12px_rgba(226,1,15,0.55)] hover:-translate-y-0.5 focus-visible:outline-none"
+                  disabled={submitting}
+                  className="group w-full flex justify-center gap-3 rounded-full bg-brand py-2 px-5 text-base font-medium text-white transition-all duration-[0.45s] ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-brand-dark hover:shadow-[0_16px_40px_-12px_rgba(226,1,15,0.55)] hover:-translate-y-0.5 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:shadow-none"
                 >
-                  Talk To AMBR →
+                  {submitting ? "Sending…" : "Talk To AMBR →"}
                 </button>
                 <p className="mt-3 text-center text-xs text-white/60">
                   We’ll understand what you need and suggest the most useful next step.
                 </p>
 
               </form>
-            )}
           </div>
         </div>
       </section>
