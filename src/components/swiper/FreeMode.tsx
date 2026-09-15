@@ -26,25 +26,18 @@ export function FreeModeStrip({
 
   const goPrevious = () => {
     if (!swiperRef.current) return;
-
-    swiperRef.current.slideTo(
-      Math.max(swiperRef.current.activeIndex - 1, 0),
-      600
-    );
+    const current = swiperRef.current.activeIndex;
+    const target = current > 0 ? current - 1 : items.length - 1;
+    swiperRef.current.slideTo(target, 600);
+    setActiveIndex(target);
   };
 
   const goNext = () => {
     if (!swiperRef.current) return;
-
-    const maxIndex = Math.max(
-      items.length - Math.floor(slidesPerView),
-      0
-    );
-
-    swiperRef.current.slideTo(
-      Math.min(swiperRef.current.activeIndex + 1, maxIndex),
-      600
-    );
+    const current = swiperRef.current.activeIndex;
+    const target = current < items.length - 1 ? current + 1 : 0;
+    swiperRef.current.slideTo(target, 600);
+    setActiveIndex(target);
   };
 
   return (
@@ -98,6 +91,9 @@ export function FreeModeStrip({
           swiperRef.current = swiper;
         }}
         onSlideChange={(swiper) => {
+          setActiveIndex(swiper.activeIndex);
+        }}
+        onActiveIndexChange={(swiper) => {
           setActiveIndex(swiper.activeIndex);
         }}
       >
@@ -167,11 +163,19 @@ export function FreeModeStrip({
       {/* PROGRESS */}
       <div className="mt-7 flex items-center gap-3">
         {items.map((_, i) => (
-          <span
+          <button
             key={i}
-            className={`h-[2px] transition-all duration-500 ${i === activeIndex
+            type="button"
+            onClick={() => {
+              if (swiperRef.current) {
+                swiperRef.current.slideTo(i, 600);
+                setActiveIndex(i);
+              }
+            }}
+            aria-label={`Go to slide ${i + 1}`}
+            className={`h-[3px] rounded-full transition-all duration-500 ${i === activeIndex
               ? "w-10 bg-brand"
-              : "w-5 bg-line"
+              : "w-5 bg-line hover:bg-ink/40"
               }`}
           />
         ))}

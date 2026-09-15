@@ -227,7 +227,7 @@ export default function ProjectsPage() {
         buttons={[
           {
             label: "Book Site Visit Now",
-            href: "/contact",
+            href: "/contact#enquiry",
             className: "border border-white/40 hover:!bg-white hover:!text-ink",
           },
           {

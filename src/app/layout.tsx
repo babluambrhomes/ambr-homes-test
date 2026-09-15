@@ -108,10 +108,12 @@ const orgSchema = {
         addressCountry: "IN",
       },
       sameAs: [
-        "https://instagram.com/",
-        "https://facebook.com/",
-        "https://youtube.com/",
-        "https://linkedin.com/",
+        process.env.NEXT_PUBLIC_INSTAGRAM_URL ||
+          "https://www.instagram.com/ambrhomes?stkn=Y3JkcWN1MXl3bWRl&utm_source=qr",
+        process.env.NEXT_PUBLIC_FACEBOOK_URL ||
+          "https://www.facebook.com/share/1DBFLJSCRv/?mibextid=wwXIfr",
+        process.env.NEXT_PUBLIC_LINKEDIN_URL ||
+          "https://www.linkedin.com/company/ambr-homes-pvt-ltd/",
       ],
     },
     {

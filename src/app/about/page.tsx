@@ -265,21 +265,21 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Core Values */}
-      <section className="bg-white pt-28 overflow-hidden max-w-full">
-        <div className="wrap grid gap-12 lg:grid-cols-2">
-          <div>
+      <section className="bg-white pt-16 sm:pt-28 overflow-hidden max-w-full">
+        <div className="wrap grid grid-cols-1 gap-10 sm:gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="w-full min-w-0">
             <Heading
               eyebrow="Core Values"
               title="Built On The Things That Matter When No One Is Looking."
             />
 
-            <p className="mt-4 leading-relaxed text-ink-2">
+            <p className="mt-4 text-sm sm:text-base leading-relaxed text-ink-2">
               A building shows you what a developer wants you to see. Our values show up in the things you may never notice. How we communicate. How we handle a problem. How carefully we finish something that won't make it into a photograph. That's where trust is built.
             </p>
           </div>
 
-          <Reveal>
-            <div className="mx-auto max-w-lg">
+          <Reveal className="w-full min-w-0">
+            <div className="mx-auto w-full max-w-lg min-w-0">
               <CardsStack
                 items={VALUES.map((v, i) => ({
                   no: String(i + 1).padStart(2, "0"),
@@ -394,7 +394,7 @@ export default function AboutPage() {
         buttons={[
           {
             label: "Book A Site Visit",
-            href: "/contact",
+            href: "/contact#enquiry",
             className: "border border-white/40 hover:!bg-white hover:!text-ink",
           },
           {

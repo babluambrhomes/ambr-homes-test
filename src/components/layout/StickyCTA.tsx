@@ -20,7 +20,7 @@ export function StickyCTA() {
       }`}
     >
       <button
-        className="glass grid h-8 w-8 place-items-center rounded-full text-ink-2"
+        className="grid h-8 w-8 place-items-center rounded-full border border-line/80 bg-white text-ink-2 shadow-md transition-colors hover:text-brand"
         aria-label="Dismiss booking shortcut"
         onClick={() => setShow(false)}
       >
@@ -29,8 +29,8 @@ export function StickyCTA() {
         </svg>
       </button>
       <Link
-        href="/contact"
-        className="glass inline-flex items-center gap-1.5 rounded-full border border-white/50 px-6 py-3.5 text-sm font-medium text-ink shadow-[0_12px_40px_-12px_rgba(226,1,15,0.45)] transition-colors hover:bg-white"
+        href="/contact#enquiry"
+        className="inline-flex items-center gap-1.5 rounded-full border border-line/80 bg-white px-6 py-3.5 text-sm font-medium text-ink shadow-[0_12px_40px_-12px_rgba(0,0,0,0.2)] transition-colors hover:bg-neutral-50"
       >
         Book A Site Visit
         <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>

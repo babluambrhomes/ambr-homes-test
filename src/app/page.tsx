@@ -570,13 +570,13 @@ A Place We Know Well."
                   Explore Aspire
                 </Button>
 
-                <Button
+                {/* <Button
                   href="/contact"
                   variant="ghost"
                   className="border border-white/30 text-white hover:!bg-white hover:!text-ink"
                 >
                   View Floor Plans
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -730,7 +730,7 @@ A Place We Know Well."
         buttons={[
           {
             label: "Book A Site Visit",
-            href: "/contact",
+            href: "/contact#enquiry",
             className: "border border-white/40 hover:!bg-white hover:!text-ink",
           },
           {

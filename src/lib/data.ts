@@ -24,10 +24,24 @@ export const CONTACT = {
 };
 
 export const SOCIALS = [
-  { label: "Instagram", href: "https://instagram.com/" },
-  { label: "Facebook", href: "https://facebook.com/" },
-  { label: "YouTube", href: "https://youtube.com/" },
-  { label: "LinkedIn", href: "https://linkedin.com/" },
+  {
+    label: "Instagram",
+    href:
+      process.env.NEXT_PUBLIC_INSTAGRAM_URL ||
+      "https://www.instagram.com/ambrhomes?stkn=Y3JkcWN1MXl3bWRl&utm_source=qr",
+  },
+  {
+    label: "Facebook",
+    href:
+      process.env.NEXT_PUBLIC_FACEBOOK_URL ||
+      "https://www.facebook.com/share/1DBFLJSCRv/?mibextid=wwXIfr",
+  },
+  {
+    label: "LinkedIn",
+    href:
+      process.env.NEXT_PUBLIC_LINKEDIN_URL ||
+      "https://www.linkedin.com/company/ambr-homes-pvt-ltd/",
+  },
 ];
 
 export type ProjectStatus = "completed" | "ready" | "construction";
