@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import { Reveal } from "@/components/shared/Reveal";
@@ -80,6 +80,12 @@ export default function ContactPage() {
 
   const [submitting, setSubmitting] = useState(false);
   const [msg, setMsg] = useState("");
+
+  useEffect(()=>{
+
+    console.log("📩 log test message:", JSON.stringify(CONTACT, null, 2));
+
+  },[])
 
   return (
     <>
