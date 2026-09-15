@@ -81,11 +81,7 @@ export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
   const [msg, setMsg] = useState("");
 
-  useEffect(()=>{
 
-    console.log("📩 log test message:", JSON.stringify(CONTACT, null, 2));
-
-  },[])
 
   return (
     <>
@@ -329,22 +325,31 @@ export default function ContactPage() {
 
             <form
                 className="space-y-4"
-                action={process.env.NEXT_PUBLIC_FORMSUBMIT_URL ?? ""}
-                method="POST"
                 onSubmit={(e) => {
-                  // const fd = new FormData(e.currentTarget);
-                  // const data = Object.fromEntries(fd.entries());
-                  
-                  // console.log("📩 Ambr Homes — Form Submitted:", data);
-                  // console.log("📩 Ambr Homes — email:", process.env.NEXT_PUBLIC_FORMSUBMIT_URL);
-                  setSubmitting(true);
                   e.preventDefault();
+                  const fd = new FormData(e.currentTarget);
+                  const data = Object.fromEntries(fd.entries());
+                  console.log("📩 Ambr Homes — WhatsApp Enquiry:", data);
+
+                  const text = [
+                    "*New Enquiry — Ambr Homes*",
+                    "",
+                    `*Name:* ${data.Name ?? ""}`,
+                    `*Phone:* ${data.Phone ?? ""}`,
+                    `*Help With:* ${data["Help With"] ?? ""}`,
+                    `*Preferred Project:* ${data["Preferred Project"] ?? ""}`,
+                    `*Message:* ${data.Message ?? ""}`,
+                  ].join("\n");
+
+                  window.open(
+                    `${CONTACT.whatsappHref}?text=${encodeURIComponent(text)}`,
+                    "_blank"
+                  );
+
+                  setSubmitting(true);
+                  setTimeout(() => setSubmitting(false), 1200);
                 }}
               >
-                <input type="hidden" name="_subject" value="New Enquiry — Ambr Homes Contact Form" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://ambrhomes.com/contact" />
 
                 <div>
                   <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-white/60">Name *</label>
@@ -410,7 +415,7 @@ export default function ContactPage() {
                   disabled={submitting}
                   className="group w-full flex justify-center gap-3 rounded-full bg-brand py-2 px-5 text-base font-medium text-white transition-all duration-[0.45s] ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-brand-dark hover:shadow-[0_16px_40px_-12px_rgba(226,1,15,0.55)] hover:-translate-y-0.5 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:shadow-none"
                 >
-                  {submitting ? "Sending…" : "Talk To AMBR →"}
+                  {submitting ? "Opening WhatsApp…" : "Talk To AMBR →"}
                 </button>
                 <p className="mt-3 text-center text-xs text-white/60">
                   We’ll understand what you need and suggest the most useful next step.
