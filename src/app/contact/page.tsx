@@ -110,7 +110,7 @@ export default function ContactPage() {
               </Button>
 
               <a
-                href={PHONE_HREF}
+                href={WHATSAPP_HREF}
                 className="rounded-lg border border-white/20 bg-white/[0.07] px-5 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/[0.12]"
               >
                 Call AMBR · WhatsApp Us

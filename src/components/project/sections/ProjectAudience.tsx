@@ -51,13 +51,6 @@ export function ProjectAudience({ project }: { project: Project }) {
                 </span>
               </div>
 
-              {/* Top Right Arrow Indicator */}
-              <span className="absolute right-4 top-4 sm:right-5 sm:top-5 grid h-8 w-8 sm:h-9 sm:w-9 place-items-center rounded-full bg-black/50 text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand group-hover:text-white">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                  <path d="M4 12L12 4M5.6 4H12v6.4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
-
               {/* Bottom Content Area */}
               <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 flex flex-col justify-end">
                 <span className="mb-2.5 sm:mb-3 block h-1 w-8 bg-brand rounded-full transition-all duration-500 group-hover:w-16" />

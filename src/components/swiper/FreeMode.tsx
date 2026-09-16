@@ -134,11 +134,11 @@ export function FreeModeStrip({
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-[0.7rem] font-semibold uppercase tracking-wider text-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  {/* <span className="text-[0.7rem] font-semibold uppercase tracking-wider text-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     Hover details
-                  </span>
+                  </span> */}
 
-                  <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-ink transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:scale-110">
+                  {/* <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-ink transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:scale-110">
                     <svg
                       width="16"
                       height="16"
@@ -152,7 +152,7 @@ export function FreeModeStrip({
                         strokeWidth="1.6"
                       />
                     </svg>
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </article>

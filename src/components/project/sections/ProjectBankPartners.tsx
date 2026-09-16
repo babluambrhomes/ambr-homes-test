@@ -78,12 +78,13 @@ export function ProjectBankPartners() {
       </Reveal>
 
       <div className="mt-8 sm:mt-10 grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-4">
-        {BANK_PARTNERS.map((bank, i) => (
-          <Reveal key={bank} delay={i * 0.04}>
-            <div className="flex min-h-[64px] sm:min-h-[76px] items-center justify-center rounded-2xl border border-line bg-surface p-3 sm:p-5 text-center transition-all duration-300 hover:border-brand/40 hover:bg-white hover:shadow-lg dark:hover:bg-ink">
-              <span className="text-xs sm:text-sm font-semibold text-ink">{bank}</span>
-            </div>
-          </Reveal>
+        {BANK_PARTNERS.map((bank) => (
+          <div
+            key={bank}
+            className="flex min-h-[64px] sm:min-h-[76px] items-center justify-center rounded-2xl border border-line bg-surface p-3 sm:p-5 text-center"
+          >
+            <span className="text-xs sm:text-sm font-semibold text-ink">{bank}</span>
+          </div>
         ))}
       </div>
 
