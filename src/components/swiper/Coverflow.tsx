@@ -9,6 +9,8 @@ export type CoverflowItem = {
   img: string;
   alt: string;
   label?: string;
+  num?: string;
+  href?: string;
 };
 
 export function Coverflow({
@@ -19,59 +21,53 @@ export function Coverflow({
   pagination?: boolean;
 }) {
   const swiper = useRef<any>(null);
-  const [idx, setIdx] = useState(0);
+  const [activeIdx, setActiveIdx] = useState(2);
 
   return (
-    <div className="relative w-full overflow-hidden max-w-full">
+    <div className="relative w-full overflow-hidden max-w-full py-4">
       <Swiper
         modules={[EffectCoverflow, Autoplay, Pagination]}
         effect="coverflow"
         grabCursor
         centeredSlides
         slidesPerView="auto"
+        slideToClickedSlide
         loop
         initialSlide={2}
-
         coverflowEffect={{
-          rotate: 25,
-          stretch: 0,
-          depth: 180,
-          modifier: 1.15,
+          rotate: 18,
+          stretch: -10,
+          depth: 170,
+          modifier: 1,
           slideShadows: true,
         }}
-
         autoplay={{
-          delay: 1800,
+          delay: 2200,
           disableOnInteraction: false,
-          pauseOnMouseEnter: false,
+          pauseOnMouseEnter: true,
           waitForTransition: false,
         }}
-
-        speed={1200}
-
+        speed={900}
         onSwiper={(s) => {
           swiper.current = s;
         }}
-
         onSlideChange={(s) => {
-          setIdx(s.realIndex);
+          setActiveIdx(s.realIndex);
         }}
-
         pagination={
           pagination
             ? {
-              clickable: true,
-              el: ".coverflow-pagination",
-            }
+                clickable: true,
+                el: ".coverflow-pagination",
+              }
             : false
         }
-
-        className="!pb-16"
+        className="!pb-14"
       >
         {items.map((it, i) => (
           <SwiperSlide
             key={i}
-            className="!w-[82%] sm:!w-[52%] md:!w-[34%] lg:!w-[24%]"
+            className="!w-[76%] sm:!w-[46%] md:!w-[30%] lg:!w-[21%]"
           >
             <div
               className="
@@ -83,6 +79,7 @@ export function Coverflow({
                 shadow-[0_30px_80px_-30px_rgba(16,16,16,0.6)]
                 ring-1
                 ring-white/20
+                cursor-pointer
               "
             >
               <Image
@@ -96,7 +93,7 @@ export function Coverflow({
                   ease-[cubic-bezier(0.22,1,0.36,1)]
                   group-hover:scale-110
                 "
-                sizes="(max-width: 768px) 60vw, 30vw"
+                sizes="(max-width: 768px) 70vw, 25vw"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
@@ -124,7 +121,7 @@ export function Coverflow({
                   group-hover:rotate-6
                 "
               >
-                {String(i + 1).padStart(2, "0")}
+                {it.num || String(i + 1).padStart(2, "0")}
               </span>
 
               {/* Label */}
@@ -158,9 +155,7 @@ export function Coverflow({
         ))}
       </Swiper>
 
-      {pagination ? (
-        <div className="coverflow-pagination mt-5" />
-      ) : null}
+      {pagination ? <div className="coverflow-pagination mt-5" /> : null}
     </div>
   );
 }

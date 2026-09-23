@@ -56,7 +56,7 @@ export default function NotFound() {
           {[
             { label: "Why Ambr Homes", href: "/why-ambr-homes" },
             { label: "Blogs", href: "/blogs" },
-            { label: "Projects", href: "/projects/aspire" },
+            { label: "Projects", href: "/projects" },
           ].map((l) => (
             <Link
               key={l.href}

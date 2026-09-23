@@ -39,7 +39,7 @@ import { ParallaxShowcase } from "@/components/shared/ParallaxShowcase";
 const STATS = [
   { value: "6+", label: "Years Building Homes", icon: Calendar },
   { value: "11", label: "Completed Communities", icon: Building2 },
-  { value: "250+", label: "Homes Under Construction", icon: LandPlot },
+  { value: "600+", label: "Homes Under Construction", icon: LandPlot },
   { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
 ];
 
@@ -330,7 +330,7 @@ export default function WhyAmbrHomesPage() {
 
         <div className="wrap relative">
           <div className="max-w-3xl">
-            <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
+            <span className="inline-block text-sm sm:text-[0.95rem] font-semibold uppercase tracking-[0.08em] text-brand">
               WHY AMBR HOMES
             </span>
 

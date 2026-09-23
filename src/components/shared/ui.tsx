@@ -23,9 +23,9 @@ export function Heading({
   return (
     <>
       <span
-        className={`flex items-center gap-[13px] text-[0.8125rem] font-semibold tracking-[0.06em] uppercase after:h-px after:w-[54px] after:shrink-0 after:bg-current after:content-[''] ${
+        className={`inline-block text-sm sm:text-[0.95rem] font-semibold tracking-[0.08em] uppercase ${
           light ? "text-white" : "text-brand"
-        } ${centered ? "justify-center" : ""} ${centered ? "before:h-px before:w-[54px] before:shrink-0 before:bg-current before:content-['']":""}`}
+        } ${centered ? "text-center block" : ""}`}
       >
         {eyebrow}
       </span>

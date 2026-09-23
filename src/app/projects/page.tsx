@@ -55,7 +55,7 @@ export default function ProjectsPage() {
 
         <div className="wrap relative z-10">
           <div className="max-w-3xl">
-            <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
+            <span className="inline-block text-sm sm:text-[0.95rem] font-semibold uppercase tracking-[0.08em] text-brand">
               OUR COMMUNITIES & ADDRESSES
             </span>
 

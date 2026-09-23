@@ -15,6 +15,14 @@ const WHATSAPP_HREF = CONTACT.whatsappHref;
 const FIELD =
   "w-full rounded-lg border border-white/20 bg-white/[0.07] px-3.5 py-3 text-sm text-white outline-none backdrop-blur-md transition-colors placeholder:text-white/40 focus:border-brand focus:bg-white/[0.12]";
 
+function WhatsAppIcon({ size = 22, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  );
+}
+
 const QUICK = [
   {
     icon: Phone,
@@ -24,7 +32,7 @@ const QUICK = [
     href: PHONE_HREF,
   },
   {
-    icon: Phone,
+    icon: WhatsAppIcon,
     label: "WHATSAPP",
     value: PHONE,
     desc: "Send a message when it suits you. We'll take it from there.",
@@ -80,6 +88,7 @@ export default function ContactPage() {
 
   const [submitting, setSubmitting] = useState(false);
   const [msg, setMsg] = useState("");
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
 
 
@@ -94,8 +103,8 @@ export default function ContactPage() {
 
         <div className="wrap relative">
           <div className="max-w-3xl">
-            <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
-              LET'S TALK ABOUT THE HOME
+            <span className="inline-block text-sm sm:text-[0.95rem] font-semibold uppercase tracking-[0.08em] text-brand">
+              LET&apos;S TALK ABOUT THE HOME
             </span>
             <h1 className="mt-5 text-[clamp(1.9rem,4.8vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
               Tell Us What You're Looking For.
@@ -111,9 +120,11 @@ export default function ContactPage() {
 
               <a
                 href={WHATSAPP_HREF}
-                className="rounded-lg border border-white/20 bg-white/[0.07] px-5 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/[0.12]"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/[0.07] px-5 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/[0.12]"
               >
-                Call AMBR · WhatsApp Us
+                <WhatsAppIcon size={18} /> WhatsApp Us
               </a>
 
               <span className="basis-full text-sm text-white/60">
@@ -178,7 +189,7 @@ export default function ContactPage() {
               <h3 className="text-2xl font-medium text-ink">AMBR Homes Site Office</h3>
 
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                Plot No. 768, Near ACE Divine, Sector 1, Aimnabad, Bisrakh Jalalpur, Greater Noida, Uttar Pradesh 201318
+                Plot no 768, near ACE divine, Sector 1, Aimnabad, Bisrakh Jalalpur, Greater Noida, Uttar Pradesh 203207
               </p>
 
               <div className="mt-7 space-y-4">
@@ -186,7 +197,7 @@ export default function ContactPage() {
                   { icon: Clock, label: "Hours", value: CONTACT.officeHours, href: "#enquiry" },
                   { icon: Phone, label: "Tel", value: CONTACT.phone, href: CONTACT.phoneHref },
                   { icon: Mail, label: "Email", value: CONTACT.email, href: CONTACT.emailHref },
-                  { icon: MapPin, label: "Nearest landmarks", value: "Opposite Gaur City Mall, Near Parthala crossing", href: "#" },
+                  { icon: MapPin, label: "Nearest landmarks", value: "ACE Divino, ACE City", href: "#" },
                 ].map((r) => {
                   const Icon = r.icon;
                   return (
@@ -229,7 +240,7 @@ export default function ContactPage() {
           {/* Right — image + overlay */}
           <Reveal delay={0.1} className="h-full">
             <div className="relative h-full overflow-hidden rounded-[1.5rem] ">
-              <Media img={{ src: "/images/office.jpeg", alt: "Ambr Homes site office, Bishrakh" }} sizes="(max-width: 768px) 100vw, 50vw" className="absolute inset-0 h-full w-full object-cover" />
+              <Media img={{ src: "/images/office.jpeg", alt: " Bisrakh Jalalpur, Greater Noida." }} sizes="(max-width: 768px) 100vw, 50vw" className="absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
               <div className="relative z-10 flex h-full flex-col justify-end p-8 sm:p-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">Arriving</p>
@@ -481,9 +492,6 @@ export default function ContactPage() {
           </div>
           <div className="flex flex-wrap gap-4 md:justify-end">
             <Button href="#enquiry">Get Support</Button>
-            <Button href={CONTACT.phoneHref} variant="ghost" className="!bg-grey !border !border-line !text-ink hover:!bg-brand hover:!text-white">
-              {CONTACT.phone}
-            </Button>
           </div>
         </div>
       </section>
@@ -498,19 +506,49 @@ export default function ContactPage() {
           />
         </div>
         <div className="mx-auto mt-10 max-w-3xl space-y-3">
-          {FAQS.map((f) => (
-            <details key={f.q} className="group rounded-xl border border-line bg-white transition-colors open:border-brand/40 open:shadow-[0_20px_40px_-30px_rgba(226,1,15,0.4)]">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-medium text-ink">
-                {f.q}
-                <span className="grid h-7 w-7 flex-none place-items-center rounded-full border border-line text-ink transition-transform duration-300 group-open:rotate-45 group-open:border-brand group-open:text-brand">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
-                    <path d="M8 3v10M3 8h10" stroke="currentColor" strokeWidth="1.5" />
-                  </svg>
-                </span>
-              </summary>
-              <p className="border-t border-line/70 px-5 py-4 text-sm leading-relaxed text-ink-2">{f.a}</p>
-            </details>
-          ))}
+          {FAQS.map((f, i) => {
+            const isOpen = openFaq === i;
+            return (
+              <div
+                key={f.q}
+                className={`rounded-xl border transition-all duration-300 ${
+                  isOpen
+                    ? "border-brand/40 bg-white shadow-[0_20px_40px_-30px_rgba(226,1,15,0.4)]"
+                    : "border-line bg-white"
+                }`}
+              >
+                <button
+                  type="button"
+                  className="flex w-full cursor-pointer list-none items-center justify-between gap-4 p-5 text-left font-medium text-ink"
+                  onClick={() => setOpenFaq(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                >
+                  <span>{f.q}</span>
+                  <span
+                    className={`grid h-7 w-7 flex-none place-items-center rounded-full transition-transform duration-300 ${
+                      isOpen
+                        ? "rotate-45 border border-brand text-brand"
+                        : "border border-line text-ink"
+                    }`}
+                  >
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
+                      <path d="M8 3v10M3 8h10" stroke="currentColor" strokeWidth="1.5" />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  className="grid transition-[grid-template-rows] duration-300 ease-out"
+                  style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+                >
+                  <div className="overflow-hidden">
+                    <p className="border-t border-line/70 px-5 py-4 text-sm leading-relaxed text-ink-2">
+                      {f.a}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

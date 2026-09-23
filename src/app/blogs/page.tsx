@@ -74,7 +74,7 @@ export default function BlogsPage() {
 
         <div className="wrap relative">
           <div className="max-w-3xl">
-            <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
+            <span className="inline-block text-sm sm:text-[0.95rem] font-semibold uppercase tracking-[0.08em] text-brand">
               The Ambr Journal
             </span>
             <h1 className="mt-5 text-[clamp(1.9rem,4.8vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">
@@ -222,7 +222,7 @@ export default function BlogsPage() {
         description="Every claim in these articles can be checked in person — walk an approved project, a finished flat and a community occupied for years. Pick a time and we will keep it open."
         buttons={[
           { label: "Book A Site Visit", href: "/contact#enquiry", className: "border border-white/40 hover:!bg-white hover:!text-ink" },
-          { label: "Explore The Projects", href: "/projects/aspire", className: "!bg-white !text-brand hover:!bg-ink hover:!text-white" },
+          { label: "Explore The Projects", href: "/projects", className: "!bg-white !text-brand hover:!bg-ink hover:!text-white" },
         ]}
       />
     </>
