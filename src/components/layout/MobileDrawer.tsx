@@ -101,7 +101,7 @@ export function MobileDrawer({
               <path d="M4 12L12 4M5.6 4H12v6.4" stroke="currentColor" strokeWidth="1.7" />
             </svg>
           </Link>
-          <p className="small mt-4 text-center">Vaidpura, Greater Noida West, Uttar Pradesh 201306</p>
+          <p className="small mt-4 text-center">Sector 1, Bisrakh Jalalpur, Greater Noida, UP 203207</p>
         </div>
       </nav>
     </div>

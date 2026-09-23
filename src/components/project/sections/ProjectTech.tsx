@@ -83,7 +83,7 @@ export function ProjectTech({ project }: { project: Project }) {
       <div className="wrap relative grid items-center gap-10 lg:gap-14 lg:grid-cols-[1fr_1.15fr]">
         {/* Left — parallax heading */}
         <motion.div style={{ y: yText }} className="relative z-10">
-          <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-12 after:shrink-0 after:bg-brand/60 after:content-['']">
+          <span className="inline-block text-sm sm:text-[0.95rem] font-semibold uppercase tracking-[0.08em] text-brand">
             Technical Overview
           </span>
           <h2 className="mt-3 sm:mt-4 bg-gradient-to-br from-white to-white/40 bg-clip-text text-[clamp(1.9rem,4.5vw,4.2rem)] font-semibold leading-[1.05] sm:leading-[1.02] tracking-[-0.03em] text-transparent">

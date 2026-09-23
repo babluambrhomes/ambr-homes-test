@@ -14,13 +14,13 @@ export const NAV = [
 export const CONTACT = {
   phone: process.env.NEXT_PUBLIC_PHONE ?? "",
   phoneHref: process.env.NEXT_PUBLIC_PHONE_HREF ?? "",
-  email: process.env.NEXT_PUBLIC_EMAIL ?? "",
-  emailHref: process.env.NEXT_PUBLIC_EMAIL_HREF ?? "",
+  email: process.env.NEXT_PUBLIC_EMAIL || "homesambr@gmail.com",
+  emailHref: process.env.NEXT_PUBLIC_EMAIL_HREF || "mailto:homesambr@gmail.com",
   whatsappHref: process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "",
   officeHours: "Open 10am - 7pm, every day including Sundays.",
-  addressShort: "Sector-10/16C, Vaidpura, Greater Noida West - 203207",
-  addressLine1: "Ambr Homes Site Office, Sector-10/16C, Vaidpura,",
-  addressLine2: "Greater Noida West - 203207, Uttar Pradesh",
+  addressShort: "Plot no 768, near ACE divine, Sector 1, Aimnabad, Bisrakh Jalalpur, Greater Noida - 203207",
+  addressLine1: "Plot no 768, near ACE divine, Sector 1, Aimnabad,",
+  addressLine2: "Bisrakh Jalalpur, Greater Noida, Uttar Pradesh - 203207",
 };
 
 export const SOCIALS = [

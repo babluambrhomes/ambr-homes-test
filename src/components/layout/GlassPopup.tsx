@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const POP_LINKS = [
   { label: "About", href: "/about" },
-  { label: "Why Ambr Homes", href: "/why" },
-  { label: "Projects", href: "/projects/aspire" },
+  { label: "Why Ambr Homes", href: "/why-ambr-homes" },
+  { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
 
