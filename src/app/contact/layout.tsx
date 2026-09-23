@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us | Site Office & Visits",
   description:
-    "Connect with Ambr Homes. Visit our site office at Sector-10/16C, Vaidpura, Greater Noida West or schedule a walkthrough of our completed and upcoming communities.",
+    "Connect with Ambr Homes. Visit our site office at Plot no 768, near ACE divine, Sector 1, Aimnabad, Bisrakh Jalalpur, Greater Noida or schedule a walkthrough of our completed and upcoming communities.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "Contact Us | Site Office & Visits | Ambr Homes",
     description:
-      "Connect with Ambr Homes. Visit our site office at Sector-10/16C, Vaidpura, Greater Noida West or schedule a walkthrough of our completed and upcoming communities.",
+      "Connect with Ambr Homes. Visit our site office at Plot no 768, near ACE divine, Sector 1, Aimnabad, Bisrakh Jalalpur, Greater Noida or schedule a walkthrough of our completed and upcoming communities.",
     url: "https://ambrhomes.com/contact",
     type: "website",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Us | Site Office & Visits | Ambr Homes",
     description:
-      "Connect with Ambr Homes. Visit our site office at Sector-10/16C, Vaidpura, Greater Noida West or schedule a walkthrough of our completed and upcoming communities.",
+      "Connect with Ambr Homes. Visit our site office at Plot no 768, near ACE divine, Sector 1, Aimnabad, Bisrakh Jalalpur, Greater Noida or schedule a walkthrough of our completed and upcoming communities.",
     images: ["/images/hero-1.jpeg"],
   },
 };
@@ -40,7 +40,7 @@ const contactSchema = {
       url: "https://ambrhomes.com/contact",
       name: "Contact Us | Ambr Homes",
       description:
-        "Connect with Ambr Homes. Visit our site office at Sector-10/16C, Vaidpura, Greater Noida West or schedule a walkthrough of our completed and upcoming communities.",
+        "Connect with Ambr Homes. Visit our site office at Plot no 768, near ACE divine, Sector 1, Aimnabad, Bisrakh Jalalpur, Greater Noida or schedule a walkthrough of our completed and upcoming communities.",
       isPartOf: {
         "@id": "https://ambrhomes.com/#website",
       },

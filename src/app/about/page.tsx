@@ -26,7 +26,7 @@ import {
 const STATS = [
   { value: "6+", label: "Years Building Homes", icon: Calendar },
   { value: "11", label: "Completed Communities", icon: Building2 },
-  { value: "250+", label: "Homes Under Construction", icon: LandPlot },
+  { value: "600+", label: "Homes Under Construction", icon: LandPlot },
   { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
 ];
 
@@ -35,7 +35,7 @@ const STORY_CHAPTERS = [
     year: "2022",
     img: {
       src: "/images/sp1.jpg",
-      alt: "Ambr Homes site office, Bishrakh",
+      alt: " Bisrakh Jalalpur, Greater Noida",
     },
     title: "It Started With A Simple Idea.",
     body: "Build homes the way we would want our own family to live in them. The first address gave us a place to start in 2022. The families who moved in gave us something more important — a standard to live up to.",
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
         <div className="wrap relative">
           <div className="max-w-3xl">
-            <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
+            <span className="inline-block text-sm sm:text-[0.95rem] font-semibold uppercase tracking-[0.08em] text-brand">
               About Us
             </span>
             <h1 className="mt-5 text-[clamp(1.9rem,4.8vw,4.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-white">

@@ -71,7 +71,7 @@ const FROM_ARMB_ITEMS = [
 const STATS = [
   { value: "6+", label: "Years Building Homes", icon: Calendar },
   { value: "11", label: "Completed Communities", icon: Building2 },
-  { value: "250+", label: "Homes Under Construction", icon: LandPlot },
+  { value: "600+", label: "Homes Under Construction", icon: LandPlot },
   { value: "100%", label: "Projects Built With Care", icon: ShieldCheck },
 ];
 
@@ -280,10 +280,12 @@ const STRIP_ITEMS = [
 ];
 
 
-const COVERFLOW_ITEMS = PROJECTS.slice(0, 5).map((p) => ({
+const COVERFLOW_ITEMS = PROJECTS.slice(0, 5).map((p, idx) => ({
   img: p.heroImg.src,
   alt: p.heroAlt,
   label: `${p.name} · ${p.statusLabel}`,
+  num: String(idx + 1).padStart(2, "0"),
+  href: `/projects/${p.slug}`,
 }));
 
 

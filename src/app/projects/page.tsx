@@ -7,7 +7,7 @@ import { Reveal } from "@/components/shared/Reveal";
 import { Heading, Media } from "@/components/shared/ui";
 import { RedCta } from "@/components/shared/RedCta";
 import { ProjectBankPartners } from "@/components/project/sections/ProjectBankPartners";
-import { PROJECTS, STATUS_TONES } from "@/lib/data";
+import { CONTACT, PROJECTS, STATUS_TONES } from "@/lib/data";
 import { MapPin, ArrowUpRight, ShieldCheck, Layers } from "lucide-react";
 
 export default function ProjectsPage() {
@@ -55,7 +55,7 @@ export default function ProjectsPage() {
 
         <div className="wrap relative z-10">
           <div className="max-w-3xl">
-            <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
+            <span className="inline-block text-sm sm:text-[0.95rem] font-semibold uppercase tracking-[0.08em] text-brand">
               OUR COMMUNITIES & ADDRESSES
             </span>
 
@@ -232,7 +232,7 @@ export default function ProjectsPage() {
           },
           {
             label: "Call Sales Desk",
-            href: "tel:+919090090032",
+            href: CONTACT.phoneHref,
             className: "!bg-white !text-brand hover:!bg-ink hover:!text-white",
           },
         ]}

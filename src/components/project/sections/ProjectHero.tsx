@@ -50,7 +50,7 @@ export function ProjectHero({ project }: { project: Project }) {
               <Pill label={statusLabel} tone={project.statusTone} />
             </div>
 
-            <span className="flex items-center gap-[13px] text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-brand after:h-px after:w-14 after:shrink-0 after:bg-brand/60 after:content-['']">
+            <span className="inline-block text-sm sm:text-[0.95rem] font-semibold uppercase tracking-[0.08em] text-brand">
               {tagline}
             </span>
           </Reveal>

@@ -7,6 +7,7 @@ import { BottomNav } from "@/components/layout/BottomNav";
 import { StickyCTA } from "@/components/layout/StickyCTA";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { Preloader } from "@/components/layout/Preloader";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -97,12 +98,13 @@ const orgSchema = {
       name: "Ambr Homes",
       url: "https://ambrhomes.com",
       logo: "https://ambrhomes.com/images/logo_white.png",
-      telephone: "+919090090032",
-      email: "hello@ambrhomes.com",
+      telephone: process.env.NEXT_PUBLIC_PHONE_HREF?.replace("tel:", "") ?? "",
+      email: process.env.NEXT_PUBLIC_EMAIL || "homesambr@gmail.com",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Ambr Homes Site Office, Sector-10/16C, Vaidpura",
-        addressLocality: "Greater Noida West",
+        streetAddress:
+          "Plot no 768, near ACE divine, Sector 1, Aimnabad, Bisrakh Jalalpur",
+        addressLocality: "Greater Noida",
         postalCode: "203207",
         addressRegion: "Uttar Pradesh",
         addressCountry: "IN",
@@ -141,6 +143,7 @@ export default function RootLayout(props: LayoutProps<"/">) {
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <ScrollToTop />
         <Preloader />
       
         <Header />
