@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Figtree, Manrope } from "next/font/google";
+import { GoogleAnalytics } from "@/components/layout/GoogleAnalytics";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { GlassPopup } from "@/components/layout/GlassPopup";
@@ -145,7 +147,10 @@ export default function RootLayout(props: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <ScrollToTop />
         <Preloader />
-      
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
+
         <Header />
         <main id="main" className="flex-1">
           {props.children}
