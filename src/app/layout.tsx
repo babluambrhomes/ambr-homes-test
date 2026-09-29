@@ -25,6 +25,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "XXXXXXXXXXXX",
+  },
   metadataBase: new URL("https://ambrhomes.com"),
   title: {
     default: "Ambr Homes | 2 & 3 BHK in Greater Noida West",
