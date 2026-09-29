@@ -26,7 +26,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   verification: {
-    google: "XXXXXXXXXXXX",
+    google: "5Xhx6Rjgh0ETAWyOInAkhtfBVjAJ8IloF36ikh7_jQQ",
   },
   metadataBase: new URL("https://ambrhomes.com"),
   title: {
